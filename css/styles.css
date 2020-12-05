@@ -11,7 +11,14 @@ html {
 body {
     height: 100%;
     background-color: #1F2937;
+    line-height: 1.5;
+    color: #f5f5f5;
     font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .full-content-div {
@@ -26,6 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     height: auto;
+    margin-right: 40px;
 }
 
 .nav-header {
@@ -36,7 +44,7 @@ body {
 }
 
 .nav-header h1 {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     margin-right: 1rem;
 }
 
@@ -44,23 +52,28 @@ body {
     width: 1.75rem;
 }
 
-.concepts-btn {
-    margin-top: 2rem;
+
+.projects-btn {
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: #f5f5f5;
+    background-color: inherit;
+    margin: 0;
+    padding: 2px 0;
     margin-bottom: 0.25rem;
     text-align: right;
     padding-right: 0.5rem;
-    font-size: 1.25rem;
     border: 2px solid #EC4899;
     cursor: pointer;
     transition: padding 0.5s;
 }
 
-.concepts-btn:hover {
-    padding-right: 1.5rem;
+.projects-btn:hover {
+    padding-right: 1rem;
     background-color: #EC4899;
 }
 
-.concept-ul {
+.projects-ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -71,34 +84,36 @@ body {
     margin-bottom: 0.25rem;
 }
 
-.concept-li {
-    
+.projects-ul-closed {
+    display: none;
+}
+
+.projects-li {
+    font-size: 0.9rem;
     padding-right: 0.5rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
     border: 1px solid #7C3AED;
     cursor: pointer;
     transition: padding 0.5s;
+    color: white;
 }
 
-.concept-li:hover {
-    padding-right: 1.5rem;
+.projects-li:hover {
+    padding-right: 1rem;
     background-color: #7C3AED;
 }
 
-.projects-btn {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 0.25rem;
-    text-align: right;
-    padding-right: 0.5rem;
-    font-size: 1.25rem;
-    border: 2px solid #EC4899;
-    cursor: pointer;
-    transition: padding 0.5s;
+.content-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.projects-btn:hover {
-    padding-right: 1.5rem;
-    background-color: #EC4899;
+.main {
+    max-width: 800px;
+    color: #fff;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -123,7 +138,15 @@ body {
     }
 
     .nav {
-        width: 100%;
+        width: 30%;
+    }
+
+    .content-container {
+        width: 70%;
+    }
+
+    .main {
+        margin-top: 8rem;
     }
 }
 

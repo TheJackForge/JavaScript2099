@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #1F2937;
+    font-family: 'Roboto', sans-serif;
+}
+
+.full-content-div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+.nav {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.nav-header h1 {
+    font-size: 1.25rem;
+    margin-right: 1rem;
+}
+
+.envelope-svg {
+    width: 1.75rem;
+}
+
+.concepts-btn {
+    margin-top: 2rem;
+    margin-bottom: 0.25rem;
+    text-align: right;
+    padding-right: 0.5rem;
+    font-size: 1.25rem;
+    border: 2px solid #EC4899;
+    cursor: pointer;
+    transition: padding 0.5s;
+}
+
+.concepts-btn:hover {
+    padding-right: 1.5rem;
+    background-color: #EC4899;
+}
+
+.concept-ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #7C3AED;
+    text-align: right;
+    margin-bottom: 0.25rem;
+}
+
+.concept-li {
+    
+    padding-right: 0.5rem;
+    border: 1px solid #7C3AED;
+    cursor: pointer;
+    transition: padding 0.5s;
+}
+
+.concept-li:hover {
+    padding-right: 1.5rem;
+    background-color: #7C3AED;
+}
+
+.projects-btn {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.25rem;
+    text-align: right;
+    padding-right: 0.5rem;
+    font-size: 1.25rem;
+    border: 2px solid #EC4899;
+    cursor: pointer;
+    transition: padding 0.5s;
+}
+
+.projects-btn:hover {
+    padding-right: 1.5rem;
+    background-color: #EC4899;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .full-content-div { 
+        flex-direction: row;
+    }
+
+    .nav {
+        width: 100%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

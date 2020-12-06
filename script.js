@@ -41,14 +41,14 @@ function projectsList() {
 }
 
 
-function populateDomProjects(index) {
-    main.innerHTML = '';
-    const operatorDiv = document.createElement('div')
-    operatorDiv.className = "mb-20"
-    const operatorData = projectsArray[index].data
-    operatorDiv.innerHTML = operatorData;
-    main.appendChild(operatorDiv)
-}
+// function populateDomProjects(index) {
+//     main.innerHTML = '';
+//     const operatorDiv = document.createElement('div')
+//     operatorDiv.className = "mb-20"
+//     const operatorData = projectsArray[index].data
+//     operatorDiv.innerHTML = operatorData;
+//     main.appendChild(operatorDiv)
+// }
 
 // Event Listeners for Navigation
 

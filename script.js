@@ -71,9 +71,11 @@ projectsUl.addEventListener('click', (e) => {
 function progressInitialHack() {
     console.log('CONNECTION MADE')
     const progressInitialHackComplete = document.getElementById('progress-initial-hack-complete')
+    
     let height = 0;
     let hack = setInterval(progress, 20);
         function progress() {
+            progressInitialHackComplete.className = 'progress-initial-hack-complete'
             if (height >= 100) {
                 clearInterval(hack);
             } else {
@@ -92,6 +94,7 @@ function progressConnectHack() {
     let width = 0;
     const hack = setInterval(progress, 40);
         function progress() {
+            progressConnectHackComplete.className = 'progress-connect-hack-complete'
             if (width >= 100) {
                 clearInterval(hack);
             } else {

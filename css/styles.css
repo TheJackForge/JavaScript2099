@@ -276,7 +276,111 @@ a {
     margin-bottom: 1rem;
 }
 
-.progress-monitor {
+/* PROJECT SECTION CONTAINER AND LAYOUT */
+
+.project-main-container {
+    /* border: 1px solid #EC4899; */
+}
+
+.project-navigation {
+    
+}
+
+.project-navbar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.project-navbar li {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    margin: 0;
+    padding: 5px 0;
+    cursor: pointer;
+    /* border: 1px solid #EC4899; */
+}
+
+.project-li-summary {
+    border: 1px solid #EC4899;
+    border-bottom: none;
+}
+
+.project-li-html {
+    border: 1px solid #EC4899;
+}
+
+.project-li-css {
+    border: 1px solid #EC4899;
+}
+
+.project-li-js {
+    border: 1px solid #EC4899;
+}
+
+.project-navbar li button {
+    background: inherit;
+    cursor: pointer;
+    border: none;
+    color: white;
+    width: 100%;
+}
+
+.project-inner-container {
+    padding: 1em 1em;
+    border-right: 1px solid #EC4899;
+    border-left: 1px solid #EC4899;
+    border-bottom: 1px solid #EC4899;
+}
+
+.project-summary {
+    display: block;
+}
+
+.project-html {
+    display: none;
+}
+
+.project-css {
+    display: none;
+}
+
+.project-javascript {
+    display: none;
+}
+
+.backwards-button {
+    text-align: center;
+    background: inherit;
+    cursor: pointer;
+    border: none;
+    color: white;
+    width: 100%;
+}
+
+.forwards-button {
+    text-align: center;
+    background: inherit;
+    cursor: pointer;
+    border: none;
+    color: white;
+    width: 100%;
+}
+
+/* .img-div-tutorial-wide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-div-tutorial-wide img {
+    max-width: 680px;
+} */
+
+/* .progress-monitor {
     background-color: black;
     padding: 1rem;
 }
@@ -313,9 +417,9 @@ a {
     width: 0.5em;
     height: 80px;
     background-color: black;
-}
+} */
 
-.progress-initial-hack-complete {
+/* .progress-initial-hack-complete {
     position: absolute;
     height: 80px;
     width: 0.5em;
@@ -345,16 +449,16 @@ a {
     border: none;
     border-radius: 10px;
     padding:5px;
-}
+} */
 
-.progress-hack {
+/* .progress-hack {
     position: relative;
     height: 16px;
     width: 200px;
     background-color: red;
-}
+} */
 
-.progress-hack-complete {
+/* .progress-hack-complete {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -395,7 +499,7 @@ a {
     height: 20px;
     position: absolute;
     text-align: center;
-}
+} */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

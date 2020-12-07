@@ -2,13 +2,20 @@ const projectsBtn = document.getElementById('projects-button')
 const projectsUl = document.getElementById('project-list')
 const main = document.getElementById('main')
 const nav = document.getElementById('nav')
+const showModalBtn = document.getElementById('info-show-modal-button')
+const modalCloseBtn = document.getElementById('modal-close-button')
 
 
 const projectsArray = [
     {
-        'title': 'PROGRESS BAR',
+        'title': 'HOW TO BUILD A PROGRESS BAR',
         'id': 'progressBar',
         'link': 'pages/progress.html'
+    },
+    {
+        'title': 'HOW TO BUILD A MODAL',
+        'id': 'modal',
+        'link': 'pages/buildmodal.html'
     }
 ];
 
@@ -51,6 +58,27 @@ function projectsList() {
 // }
 
 // Event Listeners for Navigation
+
+showModalBtn.addEventListener('click', () => {
+    const infoModalShow = document.getElementById('info-modal-show')
+    infoModalShow.style.display = 'flex'     
+})
+
+
+modalCloseBtn.addEventListener('click', () => {
+    const infoModalShow = document.getElementById('info-modal-show');
+    infoModalShow.style.display = 'none'
+})
+
+window.addEventListener('click', (e) => {
+    const infoModalShow = document.getElementById('info-modal-show');
+    const modalContent = document.getElementById('modal-content');
+    if (infoModalShow.style.display === 'flex') {
+        if (e.target === infoModalShow) {
+            infoModalShow.style.display = 'none';
+        }
+    }
+})
 
 
 projectsBtn.addEventListener('click', projectsOpen)

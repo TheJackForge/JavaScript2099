@@ -4,14 +4,11 @@ const main = document.getElementById('main')
 const nav = document.getElementById('nav')
 const showModalBtn = document.getElementById('info-show-modal-button')
 const modalCloseBtn = document.getElementById('modal-close-button')
-const projectSummaryBtn = document.getElementById('project-summary-button')
-const projectHtmlBtn = document.getElementById('project-html-button')
-const projectCssBtn = document.getElementById('project-css-button')
-const projectJavascriptBtn = document.getElementById('project-javascript-button')
-const projectSummary = document.getElementById('project-summary')
-const projectHtml = document.getElementById('project-html')
-const projectCss = document.getElementById('project-css')
-const projectJavaScript = document.getElementById('project-javascript')
+// const projectSummary = document.getElementById('project-summary')
+// const projectHtml = document.getElementById('project-html')
+// const projectCss = document.getElementById('project-css')
+// const projectJavaScript = document.getElementById('project-javascript')
+const contentContainer = document.getElementById('content-container')
 
 
 const projectsArray = [
@@ -86,14 +83,26 @@ projectsBtn.addEventListener('click', projectsOpen)
 projectsUl.addEventListener('click', (e) => {
     if (e.target.tagName = 'li') {
         const index = e.target.dataset.index
-        populateDomProjects(index)
+        // populateDomProjects(index)
     }
 })
 
 // PROJECT NAVIGATION EVENT LISTENERS
 
-projectSummaryBtn.addEventListener('click', () => {
-    const projectSummary = document.getElementById('project-summary')
+contentContainer.addEventListener('click', (e) => {
+    console.log(e.target.id)
+})
+
+contentContainer.addEventListener('click', (e) => {
+    if (e.target.id === 'project-summary-button')   {
+        const projectSummary = document.getElementById('project-summary')
+        const projectHtml = document.getElementById('project-html')
+        const projectCss = document.getElementById('project-css')
+        const projectJavaScript = document.getElementById('project-javascript')
+        const projectSummaryBtn = document.getElementById('project-summary-button')
+        const projectHtmlBtn = document.getElementById('project-html-button')
+        const projectCssBtn = document.getElementById('project-css-button')
+        const projectJavascriptBtn = document.getElementById('project-javascript-button')
     // BUTTON BORDER BOTTOM REMOVED ON SUMMARY
     projectSummaryBtn.classList.add('active')
     projectHtmlBtn.classList.remove('active')
@@ -105,48 +114,77 @@ projectSummaryBtn.addEventListener('click', () => {
     projectHtml.classList.remove('active');
     projectCss.classList.remove('active');
     projectJavaScript.classList.remove('active');
+    }
 })
 
-projectHtmlBtn.addEventListener('click', () => {
-    // BUTTON BORDER BOTTOM REMOVED ON HTML
-    projectHtmlBtn.classList.add('active')
-    projectSummaryBtn.classList.remove('active')
-    projectCssBtn.classList.remove('active')
-    projectJavascriptBtn.classList.remove('active')
+contentContainer.addEventListener('click', (e) => {
+    if (e.target.id === 'project-html-button') {
+        const projectSummary = document.getElementById('project-summary')
+        const projectHtml = document.getElementById('project-html')
+        const projectCss = document.getElementById('project-css')
+        const projectJavaScript = document.getElementById('project-javascript')
+        const projectSummaryBtn = document.getElementById('project-summary-button')
+        const projectHtmlBtn = document.getElementById('project-html-button')
+        const projectCssBtn = document.getElementById('project-css-button')
+        const projectJavascriptBtn = document.getElementById('project-javascript-button')
+        // BUTTON BORDER BOTTOM REMOVED ON HTML
+        projectHtmlBtn.classList.add('active')
+        projectSummaryBtn.classList.remove('active')
+        projectCssBtn.classList.remove('active')
+        projectJavascriptBtn.classList.remove('active')
 
-    // OPEN HTML SECTION PAGE - CLOSE ALL OTHERS
-    projectSummary.classList.remove('active');
-    projectHtml.classList.add('active');
-    projectCss.classList.remove('active');
-    projectJavaScript.classList.remove('active');
+        // OPEN HTML SECTION PAGE - CLOSE ALL OTHERS
+        projectSummary.classList.remove('active');
+        projectHtml.classList.add('active');
+        projectCss.classList.remove('active');
+        projectJavaScript.classList.remove('active');
+    }
 })
 
-projectCssBtn.addEventListener('click', () => {
-    // BUTTON BORDER BOTTOM REMOVED ON CSS
-    projectCssBtn.classList.add('active')
-    projectHtmlBtn.classList.remove('active')
-    projectSummaryBtn.classList.remove('active')
-    projectJavascriptBtn.classList.remove('active')
-
-    // OPEN CSS SECTION PAGE - CLOSE ALL OTHERS
-    projectSummary.classList.remove('active');
-    projectHtml.classList.remove('active');
-    projectCss.classList.add('active');
-    projectJavaScript.classList.remove('active');
+contentContainer.addEventListener('click', (e) => {
+    if (e.target.id === 'project-css-button') {
+        const projectSummary = document.getElementById('project-summary')
+        const projectHtml = document.getElementById('project-html')
+        const projectCss = document.getElementById('project-css')
+        const projectJavaScript = document.getElementById('project-javascript')
+        const projectSummaryBtn = document.getElementById('project-summary-button')
+        const projectHtmlBtn = document.getElementById('project-html-button')
+        const projectCssBtn = document.getElementById('project-css-button')
+        const projectJavascriptBtn = document.getElementById('project-javascript-button')
+        // BUTTON BORDER BOTTOM REMOVED ON CSS
+        projectCssBtn.classList.add('active')
+        projectHtmlBtn.classList.remove('active')
+        projectSummaryBtn.classList.remove('active')
+        projectJavascriptBtn.classList.remove('active')
+        // OPEN CSS SECTION PAGE - CLOSE ALL OTHERS
+        projectSummary.classList.remove('active');
+        projectHtml.classList.remove('active');
+        projectCss.classList.add('active');
+        projectJavaScript.classList.remove('active');
+    }
 })
 
-projectJavascriptBtn.addEventListener('click', () => {
-    // BUTTON BORDER BOTTOM REMOVED ON JAVASCRIPT
-    projectJavascriptBtn.classList.add('active')
-    projectHtmlBtn.classList.remove('active')
-    projectCssBtn.classList.remove('active')
-    projectSummaryBtn.classList.remove('active')
-
-    // OPEN JAVASCRIPT SECTION PAGE - CLOSE ALL OTHERS
-    projectSummary.classList.remove('active');
-    projectHtml.classList.remove('active');
-    projectCss.classList.remove('active');
-    projectJavaScript.classList.add('active');
+contentContainer.addEventListener('click', (e) => {
+    if (e.target.id === 'project-javascript-button') {
+        const projectSummary = document.getElementById('project-summary')
+        const projectHtml = document.getElementById('project-html')
+        const projectCss = document.getElementById('project-css')
+        const projectJavaScript = document.getElementById('project-javascript')
+        const projectSummaryBtn = document.getElementById('project-summary-button')
+        const projectHtmlBtn = document.getElementById('project-html-button')
+        const projectCssBtn = document.getElementById('project-css-button')
+        const projectJavascriptBtn = document.getElementById('project-javascript-button')
+        // BUTTON BORDER BOTTOM REMOVED ON JAVASCRIPT
+        projectJavascriptBtn.classList.add('active')
+        projectHtmlBtn.classList.remove('active')
+        projectCssBtn.classList.remove('active')
+        projectSummaryBtn.classList.remove('active')
+        // OPEN JAVASCRIPT SECTION PAGE - CLOSE ALL OTHERS
+        projectSummary.classList.remove('active');
+        projectHtml.classList.remove('active');
+        projectCss.classList.remove('active');
+        projectJavaScript.classList.add('active');
+    }
 })
 
 
@@ -154,20 +192,20 @@ projectJavascriptBtn.addEventListener('click', () => {
 
 // How to Build a Progress Bar Project
 
-const activateProgressButton = document.getElementById('activate-progress-button')
+// const activateProgressButton = document.getElementById('activate-progress-button')
 
-activateProgressButton.addEventListener('click', () => {
-    
-    const movingProgressBar = document.getElementById('moving-progress-bar')
-
-    let width = 0;
-    const progress = setInterval(percentage, 20)
-    function percentage() {
-        if (width >= 100) {
-            clearInterval(progress)
-        } else {
-            width++;
-            movingProgressBar.style.width = width + '%';
+contentContainer.addEventListener('click', (e) => {
+    if (e.target.id === 'activate-progress-button') {
+        const movingProgressBar = document.getElementById('moving-progress-bar')
+        let width = 0;
+        const progress = setInterval(percentage, 20)
+        function percentage() {
+            if (width >= 100) {
+                clearInterval(progress)
+            } else {
+                width++;
+                movingProgressBar.style.width = width + '%';
+            }
         }
     }
 })

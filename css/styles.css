@@ -306,7 +306,6 @@ a {
 
 .project-li-summary {
     border: 1px solid #EC4899;
-    border-bottom: none;
 }
 
 .project-li-html {
@@ -319,6 +318,26 @@ a {
 
 .project-li-js {
     border: 1px solid #EC4899;
+}
+
+.project-li-summary.active {
+    border: 1px solid #EC4899;
+    border-bottom: none;
+}
+
+.project-li-html.active {
+    border: 1px solid #EC4899;
+    border-bottom: none;
+}
+
+.project-li-css.active {
+    border: 1px solid #EC4899;
+    border-bottom: none;
+}
+
+.project-li-js.active {
+    border: 1px solid #EC4899;
+    border-bottom: none;
 }
 
 .project-navbar li button {
@@ -337,7 +356,7 @@ a {
 }
 
 .project-summary {
-    display: block;
+    display: none;
 }
 
 .project-html {
@@ -350,6 +369,22 @@ a {
 
 .project-javascript {
     display: none;
+}
+
+.project-summary.active {
+    display: block;
+}
+
+.project-html.active {
+    display: block;
+}
+
+.project-css.active {
+    display: block;
+}
+
+.project-javascript.active {
+    display: block;
 }
 
 .backwards-button {

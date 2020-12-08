@@ -4,6 +4,14 @@ const main = document.getElementById('main')
 const nav = document.getElementById('nav')
 const showModalBtn = document.getElementById('info-show-modal-button')
 const modalCloseBtn = document.getElementById('modal-close-button')
+const projectSummaryBtn = document.getElementById('project-summary-button')
+const projectHtmlBtn = document.getElementById('project-html-button')
+const projectCssBtn = document.getElementById('project-css-button')
+const projectJavascriptBtn = document.getElementById('project-javascript-button')
+const projectSummary = document.getElementById('project-summary')
+const projectHtml = document.getElementById('project-html')
+const projectCss = document.getElementById('project-css')
+const projectJavaScript = document.getElementById('project-javascript')
 
 
 const projectsArray = [
@@ -79,6 +87,64 @@ projectsUl.addEventListener('click', (e) => {
     }
 })
 
+// PROJECT NAVIGATION EVENT LISTENERS
+
+projectSummaryBtn.addEventListener('click', () => {
+    const projectSummary = document.getElementById('project-summary')
+    // BUTTON BORDER BOTTOM REMOVED ON SUMMARY
+    projectSummaryBtn.classList.add('active')
+    projectHtmlBtn.classList.remove('active')
+    projectCssBtn.classList.remove('active')
+    projectJavascriptBtn.classList.remove('active')
+
+    // OPEN SUMMARY SECTION PAGE - CLOSE ALL OTHERS
+    projectSummary.classList.add('active');
+    projectHtml.classList.remove('active');
+    projectCss.classList.remove('active');
+    projectJavaScript.classList.remove('active');
+})
+
+projectHtmlBtn.addEventListener('click', () => {
+    // BUTTON BORDER BOTTOM REMOVED ON HTML
+    projectHtmlBtn.classList.add('active')
+    projectSummaryBtn.classList.remove('active')
+    projectCssBtn.classList.remove('active')
+    projectJavascriptBtn.classList.remove('active')
+
+    // OPEN HTML SECTION PAGE - CLOSE ALL OTHERS
+    projectSummary.classList.remove('active');
+    projectHtml.classList.add('active');
+    projectCss.classList.remove('active');
+    projectJavaScript.classList.remove('active');
+})
+
+projectCssBtn.addEventListener('click', () => {
+    // BUTTON BORDER BOTTOM REMOVED ON CSS
+    projectCssBtn.classList.add('active')
+    projectHtmlBtn.classList.remove('active')
+    projectSummaryBtn.classList.remove('active')
+    projectJavascriptBtn.classList.remove('active')
+
+    // OPEN CSS SECTION PAGE - CLOSE ALL OTHERS
+    projectSummary.classList.remove('active');
+    projectHtml.classList.remove('active');
+    projectCss.classList.add('active');
+    projectJavaScript.classList.remove('active');
+})
+
+projectJavascriptBtn.addEventListener('click', () => {
+    // BUTTON BORDER BOTTOM REMOVED ON JAVASCRIPT
+    projectJavascriptBtn.classList.add('active')
+    projectHtmlBtn.classList.remove('active')
+    projectCssBtn.classList.remove('active')
+    projectSummaryBtn.classList.remove('active')
+
+    // OPEN JAVASCRIPT SECTION PAGE - CLOSE ALL OTHERS
+    projectSummary.classList.remove('active');
+    projectHtml.classList.remove('active');
+    projectCss.classList.remove('active');
+    projectJavaScript.classList.add('active');
+})
 
 
 // PROJECTS SECTION

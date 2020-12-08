@@ -60,13 +60,15 @@ function projectsList() {
 
 showModalBtn.addEventListener('click', () => {
     const infoModalShow = document.getElementById('info-modal-show')
-    infoModalShow.style.display = 'flex'     
+    infoModalShow.style.display = 'flex'
+    document.body.style.overflow = 'hidden'     
 })
 
 
 modalCloseBtn.addEventListener('click', () => {
     const infoModalShow = document.getElementById('info-modal-show');
     infoModalShow.style.display = 'none'
+    document.body.style.overflow = 'scroll'
 })
 
 window.addEventListener('click', (e) => {
@@ -74,6 +76,7 @@ window.addEventListener('click', (e) => {
     if (infoModalShow.style.display === 'flex') {
         if (e.target === infoModalShow) {
             infoModalShow.style.display = 'none';
+            document.body.style.overflow = 'scroll'
         }
     }
 })

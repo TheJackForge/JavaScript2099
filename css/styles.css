@@ -430,6 +430,14 @@ a {
     padding-left: 3.5em;
 }
 
+.quad-tab {
+    padding-left: 4.5em;
+}
+
+.quint-tab {
+    padding-left: 5em;
+}
+
 /* PROGRESS BAR PROJECT */
 
 .progress-bar-container {

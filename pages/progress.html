@@ -83,12 +83,6 @@
                     </div>
                         
                     <div class="project-html" id="project-html">
-                        
-                        <p><span class="ide-yellow">[1]</span> The first thing you want to do is create a button that will activate the progress bar.</p>
-
-                        <p><span class="ide-yellow">[2]</span> Next create a DIV that will serve as the "static-progress-bar". Try to think of this as a container that is going to be filled with the liquid of the moving progress bar.</p>
-
-                        <p><span class="ide-yellow">[3]</span> Create a DIV for the "moving-progress-bar" and place it inside the DIV you created in step 2. Try to think of this as the liquid that will be filling up the "static-progress-bar" container.
 
                         <div class="ide-mockup">
                             
@@ -100,9 +94,34 @@
 
                             <p>&#60;/div&#62;</p>
                         </div>
+                        
+                        <p><span class="ide-yellow">[1]</span> The first thing you want to do is create a button that will activate the progress bar.</p>
+
+                        <p><span class="ide-yellow">[2]</span> Next create a DIV that will serve as the "static-progress-bar". Try to think of this as a container that is going to be filled with the liquid of the moving progress bar.</p>
+
+                        <p><span class="ide-yellow">[3]</span> Create a DIV for the "moving-progress-bar" and place it inside the DIV you created in step 2. Try to think of this as the liquid that will be filling up the "static-progress-bar" container.
+
                     </div>
                 
                     <div class="project-css" id="project-css">
+
+                        <div class="ide-mockup">
+
+                            <p><span class="ide-yellow">[1]</span> .static-progress-bar {</p>
+                                <p class="double-tab">position: relative;</p>
+                                <p class="double-tab">background-color: #000;</p>
+                                <p class="double-tab">height: 40px;</p>
+                                <p class="double-tab">width: 180px;</p>
+                                <p class="single-tab">}</p>
+                            <div class="ide-linebreak"></div>
+    
+                            <p><span class="ide-yellow">[2]</span> .moving-progress-bar {</p>
+                                <p class="double-tab">position: absolute;</p>
+                                <p class="double-tab">background-color: #EC4899;</p>
+                                <p class="double-tab">height: 40px;</p>
+                            <p class="single-tab">}</p>
+                            </div>
+
                         <p>Next will come the styling of the components. While you can style the button and progress bars however you would like, there are a few things that are needed in the CSS to get the progress bars to function properly.</p>
 
                         <p><span class="ide-yellow">[1]</span> The first thing you want to is style the "static-progress-bar." There are 4 elements that you will want to populate here, position (relative), background-color, width, and height.</p>
@@ -119,25 +138,27 @@
 
                         <p>Keep the height the same as what you used in step 1.</p>
 
-                        <div class="ide-mockup">
-
-                        <p><span class="ide-yellow">[1]</span> .static-progress-bar {</p>
-                            <p class="double-tab">position: relative;</p>
-                            <p class="double-tab">background-color: #000;</p>
-                            <p class="double-tab">height: 40px;</p>
-                            <p class="double-tab">width: 180px;</p>
-                            <p class="single-tab">}</p>
-                        <div class="ide-linebreak"></div>
-
-                        <p><span class="ide-yellow">[2]</span> .moving-progress-bar {</p>
-                            <p class="double-tab">position: absolute;</p>
-                            <p class="double-tab">background-color: #EC4899;</p>
-                            <p class="double-tab">height: 40px;</p>
-                        <p class="single-tab">}</p>
-                        </div>
-
                     </div>
                     <div class="project-javascript" id="project-javascript">
+
+                        <div class="ide-mockup">
+                            <p><span class="ide-yellow">[1]</span> const activateProgressButton = document.getElementById('activate-progress-button')</p>
+                            <div class="ide-linebreak"></div>
+                            <p><p><span class="ide-yellow">[2]</span> activateProgressButton.addEventListener('click', () => {</p>
+                                <p><span class="ide-yellow single-tab">[3]</span> const movingProgressBar = document.getElementById('moving-progress-bar')</p>
+                                <p><span class="ide-yellow single-tab">[4]</span> let width = 0;</p>
+                                <p><span class="ide-yellow single-tab">[5]</span> const progress = setInterval(percentage, 20)</p>
+                                <p><span class="ide-yellow single-tab">[6]</span> function percentage() {</p>
+                                    <p class="triple-tab">if (width >= 100) {</p>
+                                        <p class="quint-tab">clearInterval(progress)</p>
+                                    <p class="triple-tab">} else {</p>
+                                        <p class="quint-tab">width++;</p>
+                                        <p class="quint-tab">movingProgressBar.style.width = width + '%';</p>
+                                <p class="triple-tab">}</p>
+                            <p class="double-tab">}</p>
+                        <p class="single-tab">})</p>
+                        </div>
+
                         <p><span class="ide-yellow">[1]</span> The first thing you need to do is tell the browser what to look for to activate the progress bar code. In this case it would be button. We will use the ID of "activate-progress-button" to grab the button and set it to the variable of activateProgressButton</p>
                         
                         <p><span class="ide-yellow">[2]</span> Now we need to tell the browser to listen for a click on the button. We will do this by using addEventListener on the variable of activateProgressButton. This will lead directly into us passing a function into that click.</p>
@@ -156,27 +177,8 @@
 
                         <p>The first of these 2 lines will cause the width to increase by 1 every interval. The second line will alter the width of movingProgressBar variable that we assigned in step 3. This will use the current value of "width" and by using concatenation we will convert that to a percentage.</p>
 
-                        <p>Congratulations! You should now have a fully functional progress bar!</p>
+                        <p>Congratulations! You should now have a fully functional progress bar! I have some future projects in mind that will expand on this concept, so keep checking back!</p>
 
-                        <div class="ide-mockup">
-                            <p><span class="ide-yellow">[1]</span> const activateProgressButton = document.getElementById('activate-progress-button')</p>
-                            <div class="ide-linebreak"></div>
-                            <p><p><span class="ide-yellow">[2]</span> activateProgressButton.addEventListener('click', () => {</p>
-                                <div class="ide-linebreak"></div>
-                                <p><span class="ide-yellow">[3]</span> const movingProgressBar = document.getElementById('moving-progress-bar')</p>
-                                <div class="ide-linebreak"></div>
-                                <p><span class="ide-yellow">[4]</span> let width = 0;</p>
-                                <p><span class="ide-yellow">[5]</span> const progress = setInterval(percentage, 20)</p>
-                                <p><span class="ide-yellow">[6]</span> function percentage() {</p>
-                                    <p>if (width >= 100) {</p>
-                                        <p>clearInterval(progress)</p>
-                                    <p>} else {></p>
-                                        <p>width++;</p>
-                                        <p>movingProgressBar.style.width = width + '%';</p>
-                                }
-                            }
-                        })
-                        </div>
                     </div>
                 </div>
                 </div>

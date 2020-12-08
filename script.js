@@ -151,4 +151,22 @@ projectJavascriptBtn.addEventListener('click', () => {
 
 // How to Build a Progress Bar Project
 
+const activateProgressButton = document.getElementById('activate-progress-button')
+
+activateProgressButton.addEventListener('click', () => {
+    
+    const movingProgressBar = document.getElementById('moving-progress-bar')
+
+    let width = 0;
+    const progress = setInterval(percentage, 20)
+    function percentage() {
+        if (width >= 100) {
+            clearInterval(progress)
+        } else {
+            width++;
+            movingProgressBar.style.width = width + '%';
+        }
+    }
+})
+
 // How to Build a Modal Project

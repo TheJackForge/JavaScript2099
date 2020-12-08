@@ -262,6 +262,7 @@ a {
     padding-left: 0.2em;
     font-size: 2.5em;
     font-weight: lighter;
+    margin-bottom: 0;
 }
 
 .main-content h4 {
@@ -301,7 +302,6 @@ a {
     margin: 0;
     padding: 5px 0;
     cursor: pointer;
-    /* border: 1px solid #EC4899; */
 }
 
 .project-li-summary {
@@ -346,10 +346,12 @@ a {
     border: none;
     color: white;
     width: 100%;
+    font-size: 10px;
 }
 
 .project-inner-container {
-    padding: 1em 1em;
+    padding: 1em 1em 3em 1em;
+    margin-bottom: 3em;
     border-right: 1px solid #EC4899;
     border-left: 1px solid #EC4899;
     border-bottom: 1px solid #EC4899;
@@ -387,154 +389,84 @@ a {
     display: block;
 }
 
-.backwards-button {
-    text-align: center;
-    background: inherit;
-    cursor: pointer;
-    border: none;
-    color: white;
-    width: 100%;
-}
+/* PROJECT IDE SETTINGS */
 
-.forwards-button {
-    text-align: center;
-    background: inherit;
-    cursor: pointer;
-    border: none;
-    color: white;
-    width: 100%;
-}
-
-/* .img-div-tutorial-wide {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.img-div-tutorial-wide img {
-    max-width: 680px;
-} */
-
-/* .progress-monitor {
-    background-color: black;
-    padding: 1rem;
-}
-
-.progress-terminal {
-    background-color: #696969;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 14px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #f5f5f5;
-    height: auto;
-    width: 90%;
-    display: flex;
-    
-}
-
-.progress-initial-button {
-    display: flex;
-    background-color: black;
-    color: #f5f5f5;
-    width: 40%;
-    margin: 0 10px;
-    border-radius: 10px;
-    border: 0;
-}
-
-.progress-initial-hack {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 0.5em;
-    height: 80px;
-    background-color: black;
-} */
-
-/* .progress-initial-hack-complete {
-    position: absolute;
-    height: 80px;
-    width: 0.5em;
-    background-color: yellow;
-}
-
-.progress-connect-hack {
-    position: relative;
-    height: 5px;
-    width: 8em;
-    background-color: black;
-}
-
-.progress-connect-hack-complete {
-    position: absolute;
-    height: 5px;
-    width: 8em;
-    background-color: yellow;
-}
-
-.progress-hack-button {
-    display: flex;
-    width: 6em;
-    background-color: black;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 10px;
-    padding:5px;
-} */
-
-/* .progress-hack {
-    position: relative;
-    height: 16px;
-    width: 200px;
-    background-color: red;
-} */
-
-/* .progress-hack-complete {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    height: 16px;
-    width: 200px;
-    background-color: blue;
-    font-size: 0.6em;
-    text-align: center;
-}
-
-.rookie-progress-hack-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.progress-button {
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
+.ide-mockup {
+    background-color: #282a36;
     padding: 20px;
-    cursor: pointer;
+    color: #50fa7b;
 }
 
-.progress-computer {
-    background-color: black;
+.ide-mockup p {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+.ide-linebreak {
+    height: 1em;
+}
+
+.ide-pink {
+    color: #EC4899;
+}
+
+.ide-green {
+    color: #50fa7b;
+}
+
+.ide-yellow {
+    color: #f1fa8c;
+}
+
+.single-tab {
+    padding-left: 1.5em;
+}
+
+.double-tab {
+    padding-left: 2.5em;
+}
+
+.triple-tab {
+    padding-left: 3.5em;
+}
+
+/* PROGRESS BAR PROJECT */
+
+.progress-bar-container {
     display: flex;
-    width: 200px;
-    height: 20px;
-    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
 }
 
-.rookie-progress-hack {
-    background-color: #EC4899;
-    width: 200px;
-    height: 20px;
+.activate-progress-button {
+    background: inherit;
+    cursor: pointer;
+    border: none;
+    color: white;
+    width: auto;
+    font-size: 1em;
+    border: 1px solid #EC4899;
+    display: inline-block;
+    margin-right: 40px;
+    height: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.static-progress-bar {
+    position: relative;
+    background-color: #000;;
+    height: 40px;
+    width: 180px;
+}
+
+.moving-progress-bar {
     position: absolute;
-    text-align: center;
-} */
+    background-color: #EC4899;
+    height: 40px;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -562,6 +494,10 @@ a {
     
     .modal-close-button:focus {
         outline: 2px solid #f5f5f5;
+    }
+
+    .project-navbar li button {
+        font-size: 14px;
     }
 
 }
@@ -594,7 +530,7 @@ a {
     }
 
     .main-content h1 {
-        font-size: 4em;
+        font-size: 3em;
     }
 
     .full-content-div {

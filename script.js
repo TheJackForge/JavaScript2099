@@ -205,3 +205,29 @@ contentContainer.addEventListener('click', (e) => {
 })
 
 // How to Build a Modal Project
+
+contentContainer.addEventListener('click', (e) => {
+    const showModal = document.getElementById('build-modal-show');
+    if (e.target.id === 'build-modal-button') {
+        showModal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'
+        showModalExample()  
+    }
+})
+
+function showModalExample() {
+    const showModal = document.getElementById('build-modal-show');
+    const closeButton = document.getElementById('build-modal-close-button');
+        closeButton.addEventListener('click', () => {
+            showModal.style.display = 'none'
+            document.body.style.overflow = 'scroll'
+    })
+}
+
+window.addEventListener('click', (e) => {
+    const showModal = document.getElementById('build-modal-show');
+    if (e.target === showModal) {
+        showModal.style.display = 'none'
+        document.body.style.overflow = 'scroll'
+    }
+})

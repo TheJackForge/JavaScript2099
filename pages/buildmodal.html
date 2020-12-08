@@ -8,6 +8,7 @@
 </head>
 <body>
 
+    <!-- NAVIGATION MODAL CODE -->
     <div class="info-modal-show" id="info-modal-show">
         <div class="modal-content">
             <div class="modal-content-left">
@@ -17,10 +18,24 @@
             </div>
             <div class="modal-content-right">
                 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum, sapiente provident repellendus voluptatibus quia, perferendis veniam odio laudantium dolor exercitationem, labore totam numquam nobis aut velit animi suscipit. Odit nulla dolore incidunt. Soluta molestiae in, ipsum animi voluptates quas labore iusto consequuntur maiores amet accusantium cum, assumenda, et aut!</p></div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia rerum, sapiente provident repellendus voluptatibus quia, perferendis veniam odio laudantium dolor exercitationem, labore totam numquam nobis aut velit animi suscipit. Odit nulla dolore incidunt. Soluta molestiae in, ipsum animi voluptates quas labore iusto consequuntur maiores amet accusantium cum, assumenda, et aut!</p>
+            </div>
         </div>
-
     </div>
+
+    <!-- BUILD MODAL EXAMPLE -->
+    <div id="build-modal-show" class="build-modal-show"> 
+        <div class="build-modal-example-content">
+                <div class="build-modal-example-navbar">
+                    <button id="build-modal-close-button" class="build-modal-close-button"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                </div>
+                <div id="modal-content-section" class="modal-content-section">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+        </div>
+    </div>
+
+    <!-- BUILD MODAL EXAMPLE END -->
 
     <div class="full-content-div"> <!-- Full Content Div-->
         <nav id="nav" class="nav" > <!-- Navigation Bar -->
@@ -53,33 +68,192 @@
     <div class="content-container" id="content-container">
             
         <div id="main" class="main-content">
-            <h1>How to Build a Modal</h1> 
-               
+            <div id="main-content-header" class="main-content-header">
+                <h1>How to Build a Modal</h1> 
+            </div>
+
+    <!-- BUILD MODAL EXAMPLE BUTTON START -->
+    <div id="build-modal-button-container" class="build-modal-button-container">
+        <button id="build-modal-button" class="build-modal-button">ACTIVATE MODAL</button>
+    </div>
+
+    <!-- BUILD MODAL EXAMPLE BUTTON END -->
+
             <div class="project-main-container" id="project-main-container">
                 <div class="project-navigation">
                         <ul class="project-navbar">
-                            <li class="project-li-summary  active" id="project-summary-button"><button>SUMMARY</button></li>
-                            <li class="project-li-html" id="project-html-button"><button>HTML</button></li>
-                            <li class="project-li-css" id="project-css-button"><button>CSS</button></li>
-                            <li class="project-li-js" id="project-javascript-button"><button>JAVASCRIPT</button></li>
+                            <li class="project-li-summary active"><button id="project-summary-button">SUMMARY</button></li>
+                            <li class="project-li-html"><button id="project-html-button">HTML</button></li>
+                            <li class="project-li-css"><button id="project-css-button">CSS</button></li>
+                            <li class="project-li-js"><button id="project-javascript-button">JAVASCRIPT</button></li>
                         </ul>
 
                 </div>
                 <div class="project-inner-container">
                     <div class="project-summary active" id="project-summary">
-                    <p>If you have been on the Internet for more than 2 hours, there's a good chance you have come across a progress bar.</p>
-                    <p>From each and every YouTube video to every single music player, progress bars are everywhere! What you may not realize is how they function and how data works to alter and change them.</p>
-                    <p>After working your way through this small tutorial, you will have an understanding of how a basic progress bar functions. With that information, you can create a surprisingly wide array of handy things.</p>
+                    <p>Modals! You see them every single day on the Internet and you might not even realize it. They're the fancy little overlay that pops up when the website wants you to focus on something specific. They are often used in a way to get you to sign up to a newsletter or something annoying like that, but they can also be used in many useful ways.</p>
+
+                    <p>If you haven't yet, click the "ACTIVATE MODAL" button above to see a quick example then we will get started!</p>
                     </div>
                         
                     <div class="project-html" id="project-html">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis assumenda architecto vitae doloremque libero. Blanditiis possimus sit alias doloribus, nobis asperiores voluptas fuga! Eos dolores numquam ipsa voluptate molestias nihil quam fugiat minus maiores fuga corrupti facere nostrum quasi, placeat maxime fugit ratione. Nostrum ipsa expedita assumenda atque illo facere dignissimos ducimus corporis maxime quo quidem magnam, distinctio provident asperiores?</p>
+                        <div class="ide-mockup">
+
+                            <p><span class="ide-yellow">[1]</span> &#60;div id="modal-showing" class="modal-showing"&#62;</p> 
+                            <p><span class="ide-yellow">[2]</span>&#60;div id="modal-container" class="modal-container"&#62;
+                                <p><span class="ide-yellow">[3]</span>&#60;div class="modal-navbar"&#62;
+                                            <p>&#60;button id="modal-close-button" class="modal-close-button"&#62;X&#60;/button&#62;</p>
+                                        <p>&#60;/div&#62;</p>
+                                        <p><span class="ide-yellow">[4]</span>&#60;div id="modal-content" class="modal-content">&#62;</p>
+                                        <p>You can put whatever you want here. I put an SVG of an exclamation mark</p>
+                                <p>&#60;/div&#62;</p>
+                            <p>&#60;/div&#62;</p>
+
+                            <p><span class="ide-yellow">[5]</span>&#60;button id="open-modal-button" class="open-modal-button"&#62;&#60;/button&#62;</p>        
+                        </div>
+
+                        <p>The HTML for a modal is pretty straight forward but what matters is where you place it. In this example, I have hardcoded it to the HTML but when you get a little more experienced at JavaScript, you will be able to generate a modal on the fly through the use of appending it to the document. Let's keep it easy for now and we will eventually get to the more complicated stuff later.</p>
+
+                        <p>The location of the code above should be at the top of the document, just under the body tag. If this is inside any other DIV, the modal will only cover that section.</p>
+                        
+                        <p><span class="ide-yellow">[1]</span> Create a DIV that will house the overlay. This will what is placed on top of everything when the button you assign to opening is clicked.</p>
+
+                        <p><span class="ide-yellow">[2]</span> Create a DIV that will house the modal. In the CSS you will assign the size and the positioning of where it will appear on the screen.</p>
+
+                        <p><span class="ide-yellow">[3]</span> This DIV houses the pink navigation bar with the X close button inside of it. In the example I used an SVG for the X button. You can pretty much use anything you want as long as it fits in the container.</p>
+
+                        <p><span class="ide-yellow">[4]</span> This DIV contains the content for the modal. In my example I used an SVG of an exclamation mark but you can use whatever you would like.</p>
+
+                        <p><span class="ide-yellow">[5]</span> This is the button or whatever you would like to activate the modal. I suggest an actual BUTTON element due to the benefits of accessibility. You can place this wherever you would like on your document.</p>
+
                     </div>
+                
                     <div class="project-css" id="project-css">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum distinctio magni quam dicta non maiores placeat porro ratione libero vitae, velit blanditiis totam, sapiente natus ipsam repellat perspiciatis architecto voluptas? Debitis possimus voluptate sed nulla excepturi doloribus assumenda eligendi fuga id consectetur! Magnam incidunt excepturi necessitatibus similique non? Ipsam quis quaerat quae modi dolores suscipit eum ratione maxime? Consequuntur, laboriosam!</p>
+
+                        <div class="ide-mockup">
+
+                            <p><span class="ide-yellow">[1]</span> .modal-showing {</p>
+                                <p class="double-tab">display: none;</p>
+                                <p class="double-tab">position: fixed;</p>
+                                <p class="double-tab">background-color: rgba(0,0,0,0.6);</p>
+                                <p class="double-tab">height: 100%</p>
+                                <p class="double-tab">width: 100%</p>
+                                <p class="double-tab">z-index: 1;</p>
+                                <p class="single-tab">}</p>
+                                <div class="ide-linebreak"></div>
+    
+                            <p><span class="ide-yellow">[2]</span> .modal-container {</p>
+                                <p class="double-tab">position: absolute;</p>
+                                <p class="double-tab">width: 300px;</p>
+                                <p class="double-tab">top: 20%;</p>
+                                <p class="double-tab">left: calc(50% - 150px);</p>
+                                <p class="double-tab">background-color: black;</p>
+                                <p class="double-tab">color: #EC4899</p>
+                                <p class="double-tab">border: 1px solid #EC4899;</p>
+                                <p class="single-tab">}</p>
+                                <div class="ide-linebreak"></div>      
+                                <p><span class="ide-yellow">[2]</span> .modal-navbar{</p>
+                                <p class="double-tab">background-color: #EC4899;</p>
+                                <p class="double-tab">height: 40px;</p>                            
+                                <p class="single-tab">}</p>
+                            </div>
+
+
+                        <p><span class="ide-yellow">[1]</span> There are a few important things that will need to be set in the .modal-showing class. This is what will be shown when you click the button to activate the modal.</p>
+
+                        <p>The first would be having a display of none showing. This basically tells the browswer that you do not want this show on default. What I do suggest is commenting this out to work on the modal so you can actually see what you are doing. Reactivate it once you are complete with your styling.</p>
+
+                        <p>Next set your position to fixed. This makes it so the element stays in the one place even if the page is scrolled.</p>
+
+                        <p>Set the background color to the to rgba(0,0,0,0.6). This is what creates the opacity of the page so you can still kind of see what is underneath. If you would like you can also make your modal completely solid, it's up to you. Play with the settings and decide what you would like to go with.</p>
+
+                        <p>Set the height and width to 100% to cover the whole page.</p>
+
+                        <p>Now the z-index. The z-index is very important. What is sets is what layer your modal is going to be at. Standard items on a page sit at 0, so you can set this to anything above that. If you will have a page with many elements, try to set a higher number so nothing overwrites it if you add more layers.</p>
+
+                        <p><span class="ide-yellow">[2]</span> The .modal-container class is what will contain the content of your modal. In most cases you want this placed in the middle of the screen.</p>
+
+                        <p>Set your position to absolute so you can move it around wherever you would like inside of the fixed of the element of .modal-showing (in step 1)</p>
+
+                        <p>Next set whatever width you would like it to be. I would suggest something solid so you can calculate center much easier.</p>
+
+                        <p>Set your top to a percentage to set it vertically on the page.</p>
+
+                        <p>The left calculation can be a little tricky. Setting it to 50%, doesn't center your content in the middle of the screen. What you need to do is calculated by setting 50% and then subtracting half of the width measurement. In this case I used -150px because the width of the container is set to 300px.</p>
+
+                        <p>The next 3 steps are purely cosmetic and you can set them to whatever you would like</p>
+
+                        <p><span class="ide-yellow">[3]</span> This class just relates to the pink navigation bar containing my close button. I have set the height to the same height of my button. It is your choice how you would like this to be styled.</p>
+
+                        <p>The position of "absolute" is what is being placed on the position of relative from step 1. The only thing you want to exclude is the width as that will be what is being changed in the JavaScript. Think of the "relative" container being empty, and the width from the "absolute" is what is going to fill it up.</p>
+
+                        <p>What you also want to do here is set a background-color but make sure it is different from what you used for the "static-progress-bar."</p>
+
+                        <p>Keep the height the same as what you used in step 1.</p>
+
                     </div>
                     <div class="project-javascript" id="project-javascript">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, accusantium ducimus magnam aspernatur perspiciatis minima vel sequi facere libero. Cupiditate nesciunt repellat asperiores molestiae eveniet quisquam aliquid, natus aspernatur nam fugiat iste ipsam doloremque dolor modi earum pariatur explicabo voluptatem maxime enim recusandae saepe. Modi ut sequi nulla quia iusto iure, in ipsam omnis animi at cumque earum, dolorem excepturi?
+
+                        <div class="ide-mockup">
+                            <p><span class="ide-yellow">[1]</span> const openModalBtn = document.getElementById('open-modal-button')</p>
+                            <div class="ide-linebreak"></div>
+                            <p><p><span class="ide-yellow">[2]</span> openModalBtn.addEventListener('click', ( ) => {</p>
+                                <p><span class="ide-yellow double-tab">[3]</span> const showModal = document.getElementById('modal-showing')</p>
+                                <p><span class="ide-yellow double-tab">[4]</span> showModal.style.display = 'flex'</p>
+                                <p><span class="ide-yellow double-tab">[5]</span> document.body.style.overflow = 'hidden'</p>
+                        <p class="single-tab">})</p>
+                        
+                                <div class="ide-linebreak"></div>
+                                <p><span class="ide-yellow">[6]</span> const closeBtn = document.getElementById('modal-close-button')</p>
+
+                                <p><span class="ide-yellow">[7]</span> closeBtn.addEventListener('click', ( ) => {</p>
+                                <p><span class="ide-yellow double-tab">[8]</span> const showModal = document.getElementById('modal-showing')</p>
+                                <p><span class="ide-yellow double-tab">[9]</span> showModal.style.display = 'none'</p>
+                                <p><span class="ide-yellow double-tab">[10]</span> document.body.style.overflow = 'scroll'</p>
+                                <p class="single-tab">})</p>
+                        
+                                <div class="ide-linebreak"></div>
+                            <p><span class="ide-yellow">[11]</span> window.addEventListener('click', (e) => {</p>
+                                <p><span class="ide-yellow single-tab">[12]</span> const showModal = document.getElementById('modal-showing')</p>
+                                <p><span class="ide-yellow single-tab">[13]</span> if (e.target === showModal) {</p>
+                                <p><span class="ide-yellow double-tab">[14]</span> showModal.style.display = 'none'</p>
+                                <p><span class="ide-yellow double-tab">[15]</span> document.body.style.overflow = 'scroll'</p>
+                            <p class="double-tab">}</p>
+                        <p class="single-tab">})</p>
+                                </div>
+                        <p><span class="ide-yellow">[1]</span> Assign the button with the id 'open-modal-button' to the variable openModalBtn.</p>
+
+                        <p><span class="ide-yellow">[2]</span> Assign a click eventListener to the openModalBtn variable, pass in an anonymous function.</p>
+
+                        <p><span class="ide-yellow">[3]</span> Assign the div with the id 'modal-showing' to the showModal variable.</p>
+
+                        <p><span class="ide-yellow">[4]</span> This is where the modal will appear when we change the display setting of the .modal-showing class. When you initially load the page, the display setting is set to none. On this line you are removing the 'none' setting and replacing it with 'flex'</p>
+
+                        <p><span class="ide-yellow">[5]</span> This setting is optional but recommended. This will prevent scrolling when the modal is showing.</p>
+
+                        <p>At this point you should be able to open the modal but there not yet a way to close it.</p>
+
+                        <p><span class="ide-yellow">[6]</span> Assign the button with the id of 'modal-close-button' to the variable closeModal.</p>          
+
+                        <p><span class="ide-yellow">[7]</span> Assign a click eventListener to the the closeBtn variable, pass in an anonymouse function.</p>
+
+                        <p><span class="ide-yellow">[8]</span> Assign the div with the id 'modal-showing' to the showModal variable. (This is the same thing you did when you made the modal appear).</p>
+
+                        <p><span class="ide-yellow">[9]</span> This will assign the display setting of 'none' back to the showModal variable.</p>
+
+                        <p><span class="ide-yellow">[10]</span> This will allow the document to scroll again when the modal is removed by setting the overflow back to 'scroll'</p>
+
+                        <p>The following steps are optional but recommended. They will cause the modal to close if you click anywhere on the page that is not part of the modal section with content.</p>
+
+                        <p><span class="ide-yellow">[11]</span> Set a click eventListener to the window of the page. This will listen to a click made anywhere in the browser. Take note, that you need to pass an event into the function, this is the 'e' inside of the brackets.</p>
+
+                        <p><span class="ide-yellow">[12]</span> Assign the div with the id 'modal-showing' to the showModal variable. Are you starting to notice a pattern here? This is an important part of learning JavaScript. You will always find yourself selecting items in order to make changes. How you go about selecting them will change and you will find more efficient ways to accomplish this the more you work with JS</p>
+
+                        <p><span class="ide-yellow">[13]</span> This IF statement will check if the event target (e.target) is part of the showModal or not. If it is, it will run the following 2 lines of code.</p>     
+
+                        <p><span class="ide-yellow">[14]</span> This will remove the modal by assigning the setting of 'none' to the showModal variable (linked to the '.modal-showing' class.</p>     
+
+                        <p><span class="ide-yellow">[15]</span> This will allow scrolling to resume when the modal is removed. This is done by changing the overflow setting back to 'scroll'</p>       
                     </div>
                 </div>
             </div>

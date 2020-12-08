@@ -4,10 +4,6 @@ const main = document.getElementById('main')
 const nav = document.getElementById('nav')
 const showModalBtn = document.getElementById('info-show-modal-button')
 const modalCloseBtn = document.getElementById('modal-close-button')
-// const projectSummary = document.getElementById('project-summary')
-// const projectHtml = document.getElementById('project-html')
-// const projectCss = document.getElementById('project-css')
-// const projectJavaScript = document.getElementById('project-javascript')
 const contentContainer = document.getElementById('content-container')
 
 
@@ -191,8 +187,6 @@ contentContainer.addEventListener('click', (e) => {
 // PROJECTS SECTION
 
 // How to Build a Progress Bar Project
-
-// const activateProgressButton = document.getElementById('activate-progress-button')
 
 contentContainer.addEventListener('click', (e) => {
     if (e.target.id === 'activate-progress-button') {

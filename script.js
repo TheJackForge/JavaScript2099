@@ -6,6 +6,7 @@ const showModalBtn = document.getElementById('info-show-modal-button')
 const modalCloseBtn = document.getElementById('modal-close-button')
 const contentContainer = document.getElementById('content-container')
 const indexProjectGrid = document.getElementById('index-project-grid')
+const modalContentRight = document.getElementById('modal-content-right')
 
 const projectsArray = [
     {
@@ -116,6 +117,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
     } else {
         console.log('DOES NOT EXIST')
+    }
+})
+
+// POPULATE MODEL CONTENT RIGHT WITH TEXT
+
+window.addEventListener('DOMContentLoaded', () => {
+    if (modalContentRight) {
+        modalContentRight.innerHTML = `
+        <p>Hello my name is Jack Forge and welcome to JavaScript/2099</p>
+        <p>I have developed JavaScript/2099 as a way to not only teach others how to code things in JavaScript, but to also use as a sort of technical blog for myself. I would like this to become an ongoing project that I keep working on as I learn new concepts.</p>
+        <p>The early projects are going to be very basic as I find my footing and start building things on my own, but hopefully we can ramp things up and eventually get more complex.</p>
+        <p>I hope you enjoy what I am building here and if you have any suggestions for future projects, email me (<span class="ide-green">TheJackForge at Gmail.com</span>) or send me a quick message on Twitter (<a href="http://www.twitter.com/thejackforge"><span class="ide-green">@TheJackForge</span></a>).</p>
+        <p>Thank you,</p>
+        <p>Jack Forge</p>
+        `
+    } else {
+        console.log('MODAL CONTENT DOES NOT EXIST ON THIS PAGE')
     }
 })
 

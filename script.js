@@ -95,41 +95,43 @@ contentContainer.addEventListener('click', (e) => {
         const projectHtml = document.getElementById('project-html')
         const projectCss = document.getElementById('project-css')
         const projectJavaScript = document.getElementById('project-javascript')
-        const projectSummaryBtn = document.getElementById('project-summary-button')
-        const projectHtmlBtn = document.getElementById('project-html-button')
-        const projectCssBtn = document.getElementById('project-css-button')
-        const projectJavascriptBtn = document.getElementById('project-javascript-button')
-    // BUTTON BORDER BOTTOM REMOVED ON SUMMARY
-    projectSummaryBtn.classList.add('active')
-    projectHtmlBtn.classList.remove('active')
-    projectCssBtn.classList.remove('active')
-    projectJavascriptBtn.classList.remove('active')
+        // const projectSummaryBtn = document.getElementById('project-summary-button')
+        const projectSummaryLi = document.querySelector('.project-li-summary')
+        const projectHtmlLi = document.querySelector('.project-li-html')
+        const projectCssLi = document.querySelector('.project-li-css')
+        const projectJavascriptLi= document.querySelector('.project-li-javascript')
+        // LI BORDER BOTTOM REMOVED ON SUMMARY
+        projectSummaryLi.classList.add('active')
+        projectHtmlLi.classList.remove('active')
+        projectCssLi.classList.remove('active')
+        projectJavascriptLi.classList.remove('active')
 
-    // OPEN SUMMARY SECTION PAGE - CLOSE ALL OTHERS
-    projectSummary.classList.add('active');
-    projectHtml.classList.remove('active');
-    projectCss.classList.remove('active');
-    projectJavaScript.classList.remove('active');
+        // OPEN SUMMARY SECTION PAGE - CLOSE ALL OTHERS
+        projectSummary.classList.add('active');
+        projectHtml.classList.remove('active');
+        projectCss.classList.remove('active');
+        projectJavaScript.classList.remove('active');
     }
 })
 
 contentContainer.addEventListener('click', (e) => {
     if (e.target.id === 'project-html-button') {
+        console.log('WORKING')
         const projectSummary = document.getElementById('project-summary')
         const projectHtml = document.getElementById('project-html')
         const projectCss = document.getElementById('project-css')
         const projectJavaScript = document.getElementById('project-javascript')
-        const projectSummaryBtn = document.getElementById('project-summary-button')
-        const projectHtmlBtn = document.getElementById('project-html-button')
-        const projectCssBtn = document.getElementById('project-css-button')
-        const projectJavascriptBtn = document.getElementById('project-javascript-button')
-        // BUTTON BORDER BOTTOM REMOVED ON HTML
-        projectHtmlBtn.classList.add('active')
-        projectSummaryBtn.classList.remove('active')
-        projectCssBtn.classList.remove('active')
-        projectJavascriptBtn.classList.remove('active')
+        const projectSummaryLi = document.querySelector('.project-li-summary')
+        const projectHtmlLi = document.querySelector('.project-li-html')
+        const projectCssLi = document.querySelector('.project-li-css')
+        const projectJavascriptLi= document.querySelector('.project-li-javascript')
+//         // LI BORDER BOTTOM REMOVED ON HTML
+        projectHtmlLi.classList.add('active')
+        projectSummaryLi.classList.remove('active')
+        projectCssLi.classList.remove('active')
+        projectJavascriptLi.classList.remove('active')
 
-        // OPEN HTML SECTION PAGE - CLOSE ALL OTHERS
+//         // OPEN HTML SECTION PAGE - CLOSE ALL OTHERS
         projectSummary.classList.remove('active');
         projectHtml.classList.add('active');
         projectCss.classList.remove('active');
@@ -139,20 +141,22 @@ contentContainer.addEventListener('click', (e) => {
 
 contentContainer.addEventListener('click', (e) => {
     if (e.target.id === 'project-css-button') {
+        console.log('WORKING')
         const projectSummary = document.getElementById('project-summary')
         const projectHtml = document.getElementById('project-html')
         const projectCss = document.getElementById('project-css')
         const projectJavaScript = document.getElementById('project-javascript')
-        const projectSummaryBtn = document.getElementById('project-summary-button')
-        const projectHtmlBtn = document.getElementById('project-html-button')
-        const projectCssBtn = document.getElementById('project-css-button')
-        const projectJavascriptBtn = document.getElementById('project-javascript-button')
-        // BUTTON BORDER BOTTOM REMOVED ON CSS
-        projectCssBtn.classList.add('active')
-        projectHtmlBtn.classList.remove('active')
-        projectSummaryBtn.classList.remove('active')
-        projectJavascriptBtn.classList.remove('active')
-        // OPEN CSS SECTION PAGE - CLOSE ALL OTHERS
+        const projectSummaryLi = document.querySelector('.project-li-summary')
+        const projectHtmlLi = document.querySelector('.project-li-html')
+        const projectCssLi = document.querySelector('.project-li-css')
+        const projectJavascriptLi= document.querySelector('.project-li-javascript')
+//         // LI BORDER BOTTOM REMOVED ON CSS
+        projectHtmlLi.classList.remove('active')
+        projectSummaryLi.classList.remove('active')
+        projectCssLi.classList.add('active')
+        projectJavascriptLi.classList.remove('active')
+
+//         // OPEN HTML SECTION PAGE - CLOSE ALL OTHERS
         projectSummary.classList.remove('active');
         projectHtml.classList.remove('active');
         projectCss.classList.add('active');
@@ -162,19 +166,21 @@ contentContainer.addEventListener('click', (e) => {
 
 contentContainer.addEventListener('click', (e) => {
     if (e.target.id === 'project-javascript-button') {
+        console.log('WORKING')
         const projectSummary = document.getElementById('project-summary')
         const projectHtml = document.getElementById('project-html')
         const projectCss = document.getElementById('project-css')
         const projectJavaScript = document.getElementById('project-javascript')
-        const projectSummaryBtn = document.getElementById('project-summary-button')
-        const projectHtmlBtn = document.getElementById('project-html-button')
-        const projectCssBtn = document.getElementById('project-css-button')
-        const projectJavascriptBtn = document.getElementById('project-javascript-button')
-        // BUTTON BORDER BOTTOM REMOVED ON JAVASCRIPT
-        projectJavascriptBtn.classList.add('active')
-        projectHtmlBtn.classList.remove('active')
-        projectCssBtn.classList.remove('active')
-        projectSummaryBtn.classList.remove('active')
+        const projectSummaryLi = document.querySelector('.project-li-summary')
+        const projectHtmlLi = document.querySelector('.project-li-html')
+        const projectCssLi = document.querySelector('.project-li-css')
+        const projectJavascriptLi= document.querySelector('.project-li-javascript')
+        // LI BORDER BOTTOM REMOVED ON JAVASCRIPT
+        projectHtmlLi.classList.remove('active')
+        projectSummaryLi.classList.remove('active')
+        projectCssLi.classList.remove('active')
+        projectJavascriptLi.classList.add('active')
+
         // OPEN JAVASCRIPT SECTION PAGE - CLOSE ALL OTHERS
         projectSummary.classList.remove('active');
         projectHtml.classList.remove('active');

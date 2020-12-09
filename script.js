@@ -9,30 +9,30 @@ const indexProjectGrid = document.getElementById('index-project-grid')
 
 const projectsArray = [
     {
-        'title': 'HOW TO BUILD A PROGRESS BAR',
+        'title': 'BUILD A PROGRESS BAR',
         'id': 'progressBar',
         'link': 'pages/buildprogress.html'
     },
     {
-        'title': 'HOW TO BUILD A MODAL',
+        'title': 'BUILD A MODAL',
         'id': 'modal',
         'link': 'pages/buildmodal.html'
     },
-    {
-        'title': 'HOW TO BUILD A TIMER',
-        'id': 'timer',
-        'link': 'pages/buildtimer.html'
-    },
-    {
-        'title': 'HOW TO BUILD A BURGER MENU',
-        'id': 'burgermenu',
-        'link': 'pages/burgermenu.html'
-    },
-    {
-        'title': 'HOW TO BUILD AN IMAGE CAROUSEL',
-        'id': 'imagecarousel',
-        'link': 'pages/imagecarousel.html'
-    }
+    // {
+    //     'title': 'HOW TO BUILD A TIMER',
+    //     'id': 'timer',
+    //     'link': 'pages/buildtimer.html'
+    // },
+    // {
+    //     'title': 'HOW TO BUILD A BURGER MENU',
+    //     'id': 'burgermenu',
+    //     'link': 'pages/burgermenu.html'
+    // },
+    // {
+    //     'title': 'HOW TO BUILD AN IMAGE CAROUSEL',
+    //     'id': 'imagecarousel',
+    //     'link': 'pages/imagecarousel.html'
+    // }
 ];
 
 

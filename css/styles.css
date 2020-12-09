@@ -185,7 +185,6 @@ a {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid #7C3AED; */
     text-align: right;
     margin-bottom: 0.25rem;
 }
@@ -199,10 +198,16 @@ a {
     padding-right: 0.5rem;
     padding-top: 2px;
     padding-bottom: 2px;
-    border: 1px solid #EC4899;
+    border-top: 1px solid #EC4899;
+    border-right: 1px solid #EC4899;
+    border-left: 1px solid #EC4899;
     cursor: pointer;
     transition: padding 0.5s;
     color: #f5f5f5;
+}
+
+.projects-li:last-of-type {
+    border-bottom: 1px solid #EC4899;
 }
 
 .projects-li:hover {
@@ -238,16 +243,19 @@ a {
     height: 4rem;
     border: 1px solid #EC4899;
     cursor: pointer;
+    font-size: 1rem;
 }
 
-.index-project-style:hover {
+.index-project-styling:hover {
     background-color: #EC4899;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
 }
 
-.index-project-styling a {
+/* .index-project-styling a {
     color: #f5f5f5;
     cursor: pointer;
-}
+} */
 
 .number-highlight {
     color: yellow;

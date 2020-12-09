@@ -47,7 +47,7 @@ a {
 
 .nav-header h1 {
     font-size: 1.75rem;
-    margin-right: 1rem;
+    padding-right: 1rem;
     font-weight: lighter;
 }
 
@@ -185,7 +185,7 @@ a {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    border: 1px solid #7C3AED;
+    /* border: 1px solid #7C3AED; */
     text-align: right;
     margin-bottom: 0.25rem;
 }
@@ -199,7 +199,7 @@ a {
     padding-right: 0.5rem;
     padding-top: 2px;
     padding-bottom: 2px;
-    border: 1px solid #7C3AED;
+    border: 1px solid #EC4899;
     cursor: pointer;
     transition: padding 0.5s;
     color: #f5f5f5;
@@ -207,7 +207,7 @@ a {
 
 .projects-li:hover {
     padding-right: 1rem;
-    background-color: #7C3AED;
+    background-color: #EC4899;
 }
 
 .content-container {
@@ -221,12 +221,32 @@ a {
     color: #f5f5f5;
 }
 
-.main-divider {
-    width: 100%;
-    max-width: 500px;
-    background-color: #f5f5f5;
-    height: 0.5px;
-    margin-top: 4px;
+.index-project-grid {
+    height: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: center;
+}
+
+.index-project-styling {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 4rem;
+    border: 1px solid #EC4899;
+    cursor: pointer;
+}
+
+.index-project-style:hover {
+    background-color: #EC4899;
+}
+
+.index-project-styling a {
+    color: #f5f5f5;
+    cursor: pointer;
 }
 
 .number-highlight {
@@ -403,7 +423,7 @@ a {
 
 .ide-mockup {
     background-color: #282a36;
-    padding: 5px;
+    padding: 2rem 1.5rem;
     color: #50fa7b;
     font-size: 0.8em;
 }

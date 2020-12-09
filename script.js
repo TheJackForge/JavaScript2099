@@ -5,18 +5,33 @@ const nav = document.getElementById('nav')
 const showModalBtn = document.getElementById('info-show-modal-button')
 const modalCloseBtn = document.getElementById('modal-close-button')
 const contentContainer = document.getElementById('content-container')
-
+const indexProjectGrid = document.getElementById('index-project-grid')
 
 const projectsArray = [
     {
         'title': 'HOW TO BUILD A PROGRESS BAR',
         'id': 'progressBar',
-        'link': 'pages/progress.html'
+        'link': 'pages/buildprogress.html'
     },
     {
         'title': 'HOW TO BUILD A MODAL',
         'id': 'modal',
         'link': 'pages/buildmodal.html'
+    },
+    {
+        'title': 'HOW TO BUILD A TIMER',
+        'id': 'timer',
+        'link': 'pages/buildtimer.html'
+    },
+    {
+        'title': 'HOW TO BUILD A BURGER MENU',
+        'id': 'burgermenu',
+        'link': 'pages/burgermenu.html'
+    },
+    {
+        'title': 'HOW TO BUILD AN IMAGE CAROUSEL',
+        'id': 'imagecarousel',
+        'link': 'pages/imagecarousel.html'
     }
 ];
 
@@ -82,6 +97,28 @@ projectsUl.addEventListener('click', (e) => {
         // populateDomProjects(index)
     }
 })
+
+// POPULATE INDEX PAGE WITH LINKS FOR GRID 
+
+window.addEventListener('DOMContentLoaded', () => {
+    if (indexProjectGrid) {
+        const indexGrid = document.getElementById('index-project-grid')
+        projectsArray.forEach(project => {
+            const indexProject = document.createElement('div');
+            const a = document.createElement('a');
+            a.setAttribute('href', `${project.link}`)
+            indexProject.classList.add('index-project-styling')
+            // indexProject.setAttribute("href", `${project.link}`)
+            indexProject.innerHTML = `${project.title}`
+            a.appendChild(indexProject)
+            indexGrid.appendChild(a)
+        })
+
+    } else {
+        console.log('DOES NOT EXIST')
+    }
+})
+
 
 // PROJECT NAVIGATION EVENT LISTENERS
 

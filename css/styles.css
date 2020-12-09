@@ -166,7 +166,7 @@ a {
     background-color: inherit;
     margin: 0;
     padding: 2px 0;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.1rem;
     text-align: right;
     padding-right: 0.5rem;
     border: 2px solid #EC4899;
@@ -623,6 +623,14 @@ a {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
+    .nav {
+        width: 30%;
+    }
+
+    .content-container {
+        width: 70%;
+    }
+
     .modal-content {
         width: 30%;
         height: auto;
@@ -660,11 +668,13 @@ a {
     }
 
     .nav {
-        width: 30%;
+        /* /* margin-right: 5rem; */
+        margin-left: 5rem; */
+        width: 20%;
     }
 
     .content-container {
-        width: 70%;
+        width: 80%;
     }
 
     .main {

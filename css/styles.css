@@ -567,32 +567,40 @@ a {
     transform: scale(0.1) 4s ease-in;
 }
 
+/* /* COUNTDOWN TIMER PROJECT */
 
-/* TEMPORARY CLASSES */
-
-.modal-showing {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.6);
-}
-
-.modal-container {
-    position: absolute;
-    width: 300px;
-    top: 20%;
-    left: calc(50% - 150px);
+.build-countdown-timer-container {
+    position: relative;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: url('/img/countdowntimer/countdowntimerbackground.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 15rem;
+    height: 30rem;
+    border: 4px solid black;
+    border-radius: 25px;
     background-color: black;
-    color: #EC4899;
-    border: 1px solid #EC4899;
-    height: auto;
 }
 
-.modal-navbar {
-    background-color: #EC4899;
-    height: 40px;
+/* .build-countdown-timer-home-button {
+    position: absolute;
+    left: calc(50% - 12.5px);
+    bottom: 3%;
+} */
+
+.home-button {
+    position: absolute;
+    left: calc(50% - 12.5px);
+    border: 1px solid rgb(70, 68, 68);
+    bottom: 2.5%;
+    border-radius: 100%;
+    height: 28px;
+    width: 28px;
+    background-color: black;
+    box-shadow: 5px white;
 }
 
 

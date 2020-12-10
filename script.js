@@ -292,3 +292,41 @@ window.addEventListener('click', (e) => {
         document.body.style.overflow = 'scroll'
     }
 })
+
+// How to Build a Timer Countdown Project 
+
+function buildCountdownTimer() {
+    const buildCountdownTimerDiv = document.getElementById('build-countdown-timer')
+    const date = new Date;
+    let dateHours = date.getHours();
+    let dateMinutes = date.getMinutes();
+    let dateSeconds = date.getSeconds();
+
+    if (dateHours < 10)  {
+        dateHours = '0' + dateHours;
+    }
+    if (dateMinutes < 10) {
+        dateMinutes = '0' + dateMinutes;
+    }
+    if (dateSeconds < 10) {
+        dateSeconds = '0' + dateSeconds;
+    }
+
+    buildCountdownTimerDiv.innerHTML = `
+    <p>${dateHours}:${dateMinutes}:${dateSeconds}</p>
+    `
+}
+
+contentContainer.addEventListener('click', (e) => {
+    setInterval(buildCountdownTimer, 1000);
+    if (e.target.id === 'home-button') {
+        const buildCountdownTimer = document.getElementById('build-countdown-timer')
+        if (buildCountdownTimer.classList.contains('clicked')) {
+            buildCountdownTimer.classList.remove('clicked')
+        }else {
+            buildCountdownTimer.classList.add('clicked')
+        }
+    }
+    
+})
+

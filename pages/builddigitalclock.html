@@ -263,65 +263,86 @@
                     <div class="project-javascript" id="project-javascript">
 
                         <div class="ide-mockup">
-                            <p><span class="ide-yellow">[1]</span> const openModalBtn = document.getElementById('open-modal-button')</p>
+                            <img src="/img/digitalclock/buildclockjavascript001.png">
+                            <!-- <p><span class="ide-yellow">[7]</span> function buildDigitalClock() {</p>
+                                <p><span class="ide-yellow single-tab">[8]</span> const buildDigitalClockDiv = document.getElementById('build-digital-clock')</p>
+                                <p><span class="ide-yellow single-tab">[9]</span> const date = new Date;</p>
+                                <p><span class="ide-yellow single-tab">[10]</span> let dateHours = date.getHours();</p>
+                                <p class="single-tab">let dateMinutes = date.getMinutes();</p>
+                                <p class="single-tab">let dateSeconds = date.getSeconds();</p>
+                                <p><span class="ide-yellow single-tab">[11]</span> if (dateHours > 12) {</p>
+                                <p class="double-tab">dateHours -= 12;</p>
+                                <p class="single-tab">} else if (dateHours === 0) {</p>
+                                <p class="double-tab">dateHours = 12;</p>
+                                <p class="single-tab">}</p>
+                                <div class="ide-linebreak"></div>
+                                <p><span class="ide-yellow">[12]</span> if (dateHours &#60; 10)  {</p>
+                                <p class="double-tab">dateHours = '0' + dateHours;</p>
+                                <p class="single-tab">}</p>
+                                <p>if (dateMinutes &#60; 10) {</p>
+                                <p>dateMinutes = '0' + dateMinutes;</p>
+                                <p>}</p>
+                                <p>if (dateSeconds &#60; 10) {</p>
+                                <p>dateSeconds = '0' + dateSeconds;</p>
+                                <p>}</p>
+                                <div class="ide-linebreak"></div>
+                                <p><span class="ide-yellow">[13]</span>buildDigitalClockDiv.innerHTML = `</p>
+                                <p>${dateHours}:${dateMinutes}:${dateSeconds}</p>
+                               <p>`</p>
+                            <p>}</p> -->
                             <div class="ide-linebreak"></div>
-                            <p><p><span class="ide-yellow">[2]</span> openModalBtn.addEventListener('click', ( ) => {</p>
-                                <p><span class="ide-yellow double-tab">[3]</span> const showModal = document.getElementById('modal-showing')</p>
-                                <p><span class="ide-yellow double-tab">[4]</span> showModal.style.display = 'flex'</p>
-                                <p><span class="ide-yellow double-tab">[5]</span> document.body.style.overflow = 'hidden'</p>
-                        <p class="single-tab">})</p>
+                            <p><span class="ide-yellow">[1]</span> const homeButton = document.getElementById('digital-clock-home-button')</p>
+                            <div class="ide-linebreak"></div>
+                            <p><p><span class="ide-yellow">[2]</span> homeButton.addEventListener('click', ( ) => {</p>
+                                <p><span class="ide-yellow double-tab">[14]</span> buildDigitalClock();</p>
+                                <p><span class="ide-yellow double-tab">[3]</span> const buildDigitalClock = document.getElementById('build-digital-clock')</p>
+                                <p><span class="ide-yellow double-tab">[4]</span> if (buildDigitalClock.classList.contains('clicked')) {
+                                    <p><span class="ide-yellow double-tab"></span>buildDigitalClock.classList.remove('clicked')
+                                }else {
+                                    <p><span class="ide-yellow double-tab">[5]</span>buildDigitalClock.classList.add('clicked')
+                                }
+                            }
+                            <p><span class="ide-yellow double-tab">[6]</span>setInterval(buildDigitalClock, 1000);
+                        })
+                        </div>
+
+                        <p>You may be looking at the above code and wondering if I made a mistake by starting with the step <span class="ide-yellow">[1]</span> farther down, and I would like you to know that I did not! I tend to always start by coding my eventListeners to ensure they are working but I like placing them below my functions.</p>
+
+                        <p><span class="ide-yellow">[1]</span> The first thing we want to assign is the home button on the phone to a variable. I used the variable homeButton.</p>
+
+                        <p><span class="ide-yellow">[2]</span> Now assign a click eventListener to the homeButton. This will be what calls out the clock DIV ('build-digital-clock') and runs the clock function (buildDigitalClock( )).</p>
+
+                        <p><span class="ide-yellow">[3]</span> Assign the div with the id 'build-digital-clock' to the buildDigitalClock variable. This tells the browser to look for the ID on the page and recognize it as the buildDigitalClock variable.</p>
+
+                        <p><span class="ide-yellow">[4]</span> This IF statement is going to check if the DIV with the ID of 'build-digital-clock' has the class of "clicked." On the initial click it should not, which will lead to it running the ELSE statement to add it. If it does have it in subsequent clicks, the next line of code will run to remove it.</p>
+
+                        <p><span class="ide-yellow">[5]</span>The ELSE statement should be the first thing that runs when you initially click on the button. Basically this states if the DIV with the ID 'build-digital-clock' (which is assigned to variable buildDigitalClock) does not contain the class of 'clicked' it will add it.</p>
+
+                        <p>At this point, clicking the button should call in the DIV holding the time placeholder. If you remember in the CSS we set it so it would slide in from the right, going from right of -80% to a right of 0%.</p>
+
+                        <p><span class="ide-yellow">[6]</span> This is where we are going to call the buildDigitalClock function, but there is one little thing we need to do here and that is to call it with an Interval. We want the function that builds the clock to update every single second so calling the function at an interval of 1000ms will cause it to refresh rather than just calling it once and sit static on whatever time it was when it was called.</p>          
+
+                        <p><span class="ide-yellow">[7]</span> Now let's scroll above the eventListener section and code out the buildDigtalClock function. Create the function and let's pass in the code we want to run when it is called.</p>
+
+                        <p><span class="ide-yellow">[8]</span> Assign the DIV with the ID of 'build-digital-clock' to the variable of BuildDigitalClockDiv. This is actually the same element you grabbed in the eventListener section but is not accessible in this function. I decided to call it something different because we will be changing the innerHTML of it and it made more sense this way.</p>
+
+                        <p><span class="ide-yellow">[9]</span> JavaScript has a built-in function called Date that will create a new object with the current date and time. To access this function, let's declare a variable (I called it date) and use "new Date;" to access the information.</p>
+
+                        <p><span class="ide-yellow">[10]</span> With the date variable now declared we can extract some information out of it with some more built-in JavaScript functions. The next 3 lines of code will allow you to grab the current hour, minute, and seconds of the JavaScript Date function. There are more things (year, month, day, etc.) we can grab from this built-in function that I will cover in a future lesson. </p>
+
+                        <p><span class="ide-yellow">[11]</span> This IF/ELSE IF statement is what is going to convert the time to a 12 hour clock instead of a 24 hour clock. If you prefer to have a 24 hour clock you can skip. If not I can explain what we are doing here.</p>
+
+                        <p>Basically the first part states that IF dataHours is more than 12, we are going to -12 from the hour variable. So 13 would be 1, 14 would be 2, etc.</p>
+
+                        <p>The second part (ELSE IF) states that if the hour is 12 we would set the hour to 0 (So 24 - 12 = 12). Which would be the hour between midnight and 1 AM. At the point it would show the time as 00:Minutes:Seconds</p>
+
+                        <p><span class="ide-yellow">[12]</span> This step is something you never really think about when assigning times. It's how awkward it can look when a 0 is not put in front of the current number if it's under 10. What these next steps will look for is if the variable is under 10 and if it is, will use concatenation to add a 0 before it. Unless you dig your clocks reading 12:3:1 at 12:03:01, if so, that's weird.</p>
+
+                        <p><span class="ide-yellow">[13]</span> This is where we finally get to see what we have created displayed on the screen. What this will do is set the innerHTML of the buildDigitalClockDiv to dateHours, dateMinutes, and dateSeconds by using template literals. These are achieved by using backticks (`) and dollar sign/curly braces (${ }) around the variable (as seen above). </p>     
+
+                        <p><span class="ide-yellow">[14]</span> Lastly, this was something I found made the clock run a little better. Let's scroll down to the eventListener section and call the function of buildDigitalClock() right after the click. What was happening is when I called the clock it would slide out and then the time would appear. By calling the function here, it seems to buffer it a little so the time is loaded by time it slides out. I'm not sure if this is intended but it seems to be working so I'm going to take credit for it.</p>
                         
-                                <div class="ide-linebreak"></div>
-                                <p><span class="ide-yellow">[6]</span> const closeBtn = document.getElementById('modal-close-button')</p>
-
-                                <p><span class="ide-yellow">[7]</span> closeBtn.addEventListener('click', ( ) => {</p>
-                                <p><span class="ide-yellow double-tab">[8]</span> const showModal = document.getElementById('modal-showing')</p>
-                                <p><span class="ide-yellow double-tab">[9]</span> showModal.style.display = 'none'</p>
-                                <p><span class="ide-yellow double-tab">[10]</span> document.body.style.overflow = 'scroll'</p>
-                                <p class="single-tab">})</p>
-                        
-                                <div class="ide-linebreak"></div>
-                            <p><span class="ide-yellow">[11]</span> window.addEventListener('click', (e) => {</p>
-                                <p><span class="ide-yellow single-tab">[12]</span> const showModal = document.getElementById('modal-showing')</p>
-                                <p><span class="ide-yellow single-tab">[13]</span> if (e.target === showModal) {</p>
-                                <p><span class="ide-yellow double-tab">[14]</span> showModal.style.display = 'none'</p>
-                                <p><span class="ide-yellow double-tab">[15]</span> document.body.style.overflow = 'scroll'</p>
-                            <p class="double-tab">}</p>
-                        <p class="single-tab">})</p>
-                                </div>
-                        <p><span class="ide-yellow">[1]</span> Assign the button with the id 'open-modal-button' to the variable openModalBtn.</p>
-
-                        <p><span class="ide-yellow">[2]</span> Assign a click eventListener to the openModalBtn variable, pass in an anonymous function.</p>
-
-                        <p><span class="ide-yellow">[3]</span> Assign the div with the id 'modal-showing' to the showModal variable.</p>
-
-                        <p><span class="ide-yellow">[4]</span> This is where the modal will appear when we change the display setting of the .modal-showing class. When you initially load the page, the display setting is set to none. On this line you are removing the 'none' setting and replacing it with 'flex'</p>
-
-                        <p><span class="ide-yellow">[5]</span> This setting is optional but recommended. This will prevent scrolling when the modal is showing.</p>
-
-                        <p>At this point you should be able to open the modal but there not yet a way to close it.</p>
-
-                        <p><span class="ide-yellow">[6]</span> Assign the button with the id of 'modal-close-button' to the variable closeModal.</p>          
-
-                        <p><span class="ide-yellow">[7]</span> Assign a click eventListener to the the closeBtn variable, pass in an anonymouse function.</p>
-
-                        <p><span class="ide-yellow">[8]</span> Assign the div with the id 'modal-showing' to the showModal variable. (This is the same thing you did when you made the modal appear).</p>
-
-                        <p><span class="ide-yellow">[9]</span> This will assign the display setting of 'none' back to the showModal variable.</p>
-
-                        <p><span class="ide-yellow">[10]</span> This will allow the document to scroll again when the modal is removed by setting the overflow back to 'scroll'</p>
-
-                        <p>The following steps are optional but recommended. They will cause the modal to close if you click anywhere on the page that is not part of the modal section with content.</p>
-
-                        <p><span class="ide-yellow">[11]</span> Set a click eventListener to the window of the page. This will listen to a click made anywhere in the browser. Take note, that you need to pass an event into the function, this is the 'e' inside of the brackets.</p>
-
-                        <p><span class="ide-yellow">[12]</span> Assign the div with the id 'modal-showing' to the showModal variable. Are you starting to notice a pattern here? This is an important part of learning JavaScript. You will always find yourself selecting items in order to make changes. How you go about selecting them will change and you will find more efficient ways to accomplish this the more you work with JS</p>
-
-                        <p><span class="ide-yellow">[13]</span> This IF statement will check if the event target (e.target) is part of the showModal or not. If it is, it will run the following 2 lines of code.</p>     
-
-                        <p><span class="ide-yellow">[14]</span> This will remove the modal by assigning the setting of 'none' to the showModal variable (linked to the '.modal-showing' class.</p>     
-
-                        <p><span class="ide-yellow">[15]</span> This will allow scrolling to resume when the modal is removed. This is done by changing the overflow setting back to 'scroll'</p>       
+                        <p>So there you have it! I hope you learned something from this project. You can use some of the CSS elements we went over in here to create a slide out menu and some of the clock components to create a countdown timer. These are all projects that will be featured on here soon, so keep checking back!</p>
                     </div>
                 </div>
             </div>

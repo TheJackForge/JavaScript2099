@@ -573,6 +573,7 @@ a {
     position: relative;
     overflow: hidden;
     margin-top: 3rem;
+    margin-bottom: 3rem;
     margin-left: auto;
     margin-right: auto;
     background: url('/img/digitalclock/digitalclockbackground.jpg');
@@ -633,7 +634,9 @@ a {
     padding: 0;
 }
 
-
+.ide-mockup img {
+    width: 100%;
+}
 
 
 /* Extra small devices (phones, 600px and down) */

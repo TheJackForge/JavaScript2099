@@ -295,13 +295,20 @@ window.addEventListener('click', (e) => {
 
 // How to Build a Timer Countdown Project 
 
-function buildCountdownTimer() {
+function buildDigitalClock() {
+
     const buildDigitalClockDiv = document.getElementById('build-digital-clock')
     const date = new Date;
 
     let dateHours = date.getHours();
     let dateMinutes = date.getMinutes();
     let dateSeconds = date.getSeconds();
+
+    if (dateHours > 12) {
+        dateHours -= 12;
+    } else if (dateHours === 0) {
+        dateHours = 12;
+    }
 
     if (dateHours < 10)  {
         dateHours = '0' + dateHours;
@@ -319,15 +326,15 @@ function buildCountdownTimer() {
 }
 
 contentContainer.addEventListener('click', (e) => {
-    buildCountdownTimer();
+    buildDigitalClock();
     if (e.target.id === 'digital-clock-home-button') {
-        const buildCountdownTimer = document.getElementById('build-digital-clock')
-        if (buildCountdownTimer.classList.contains('clicked')) {
-            buildCountdownTimer.classList.remove('clicked')
+        const buildDigitalClock = document.getElementById('build-digital-clock')
+        if (buildDigitalClock.classList.contains('clicked')) {
+            buildDigitalClock.classList.remove('clicked')
         }else {
-            buildCountdownTimer.classList.add('clicked')
+            buildDigitalClock.classList.add('clicked')
         }
     }
-    setInterval(buildCountdownTimer, 1000);
+    setInterval(buildDigitalClock, 1000);
 })
 

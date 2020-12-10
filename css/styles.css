@@ -569,7 +569,7 @@ a {
 
 /* /* COUNTDOWN TIMER PROJECT */
 
-.build-countdown-timer-container {
+.build-digital-clock-container {
     position: relative;
     overflow: hidden;
     margin-top: 3rem;
@@ -607,7 +607,7 @@ a {
     box-shadow: white;
 }
 
-.build-countdown-timer {
+.build-digital-clock {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -624,12 +624,12 @@ a {
     transition: right 0.5s ease-in-out;
 }
 
-.build-countdown-timer.clicked {
+.build-digital-clock.clicked {
     right: -0%;
     transition: right 1s ease-in-out;
 }
 
-.build-countdown-timer p {
+.build-digital-clock p {
     margin: 0;
     padding: 0;
 }

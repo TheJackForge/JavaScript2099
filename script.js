@@ -296,8 +296,9 @@ window.addEventListener('click', (e) => {
 // How to Build a Timer Countdown Project 
 
 function buildCountdownTimer() {
-    const buildCountdownTimerDiv = document.getElementById('build-countdown-timer')
+    const buildDigitalClockDiv = document.getElementById('build-digital-clock')
     const date = new Date;
+
     let dateHours = date.getHours();
     let dateMinutes = date.getMinutes();
     let dateSeconds = date.getSeconds();
@@ -312,21 +313,21 @@ function buildCountdownTimer() {
         dateSeconds = '0' + dateSeconds;
     }
 
-    buildCountdownTimerDiv.innerHTML = `
+    buildDigitalClockDiv.innerHTML = `
     <p>${dateHours}:${dateMinutes}:${dateSeconds}</p>
     `
+    setInterval(buildCountdownTimer, 1000);
 }
 
 contentContainer.addEventListener('click', (e) => {
-    setInterval(buildCountdownTimer, 1000);
+    buildCountdownTimer();
     if (e.target.id === 'home-button') {
-        const buildCountdownTimer = document.getElementById('build-countdown-timer')
+        const buildCountdownTimer = document.getElementById('build-digital-clock')
         if (buildCountdownTimer.classList.contains('clicked')) {
             buildCountdownTimer.classList.remove('clicked')
         }else {
             buildCountdownTimer.classList.add('clicked')
         }
     }
-    
 })
 

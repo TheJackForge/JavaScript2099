@@ -316,12 +316,11 @@ function buildCountdownTimer() {
     buildDigitalClockDiv.innerHTML = `
     <p>${dateHours}:${dateMinutes}:${dateSeconds}</p>
     `
-    setInterval(buildCountdownTimer, 1000);
 }
 
 contentContainer.addEventListener('click', (e) => {
     buildCountdownTimer();
-    if (e.target.id === 'home-button') {
+    if (e.target.id === 'digital-clock-home-button') {
         const buildCountdownTimer = document.getElementById('build-digital-clock')
         if (buildCountdownTimer.classList.contains('clicked')) {
             buildCountdownTimer.classList.remove('clicked')
@@ -329,5 +328,6 @@ contentContainer.addEventListener('click', (e) => {
             buildCountdownTimer.classList.add('clicked')
         }
     }
+    setInterval(buildCountdownTimer, 1000);
 })
 

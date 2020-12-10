@@ -71,16 +71,14 @@
                 <h1>How to Build a Digital Clock</h1> 
             </div>
 
-    <!-- BUILD COUNTDOWN TIMER -->
+    <!-- BUILD DIGITAL CLOCK PROJECT HTML START -->
             <div id="build-digital-clock-container" class="build-digital-clock-container">
                 <div id="build-digital-clock" class="build-digital-clock"></div>              
-                <button id="home-button" class="home-button"></button>
+                <button id="digital-clock-home-button" class="digital-clock-home-button"></button>
             </div>
-     </div>
-</div>
-    <!-- BUILD MODAL EXAMPLE BUTTON END -->
+    <!-- BUILD DIGITAL CLOCK PROJECT HTML END -->
 
-            <!-- <div class="project-main-container" id="project-main-container">
+            <div class="project-main-container" id="project-main-container">
                 <div class="project-navigation">
                         <ul class="project-navbar">
                             <li class="project-li-summary active"><button id="project-summary-button">SUMMARY</button></li>
@@ -88,109 +86,178 @@
                             <li class="project-li-css"><button id="project-css-button">CSS</button></li>
                             <li class="project-li-javascript"><button id="project-javascript-button">JAVASCRIPT</button></li>
                         </ul>
-
+                        
                 </div>
                 <div class="project-inner-container">
                     <div class="project-summary active" id="project-summary">
-                    <p>Modals! You see them every single day on the Internet and you might not even realize it. They're the fancy little overlay that pops up when the website wants you to focus on something specific. They are often used in a way to get you to sign up to a newsletter or something annoying like that, but they can also be used in many useful ways.</p>
-
-                    <p>If you haven't yet, click the "ACTIVATE MODAL" button above to see a quick example then we will get started!</p>
+                    <p>When I was first planning this project, I was going to make a digital timer. As I got further into building it, I realized that before you learn how to walk, you should really learn how to crawl. </p>
+                    <p>Dates and times in JavaScript are not as straight forward as you would believe them to be, so I decided to start at the beginning and create a digital clock. Of course, I decided to have some fun with it and spice it up by employing a few fun CSS tricks.</p>
+                    <p>If you build this project, don't delete it because I plan on using it as the base for more projects in the future. Or delete it if you want, I can't tell you how to live your life.</p>
                     </div>
-                        
+                              
                     <div class="project-html" id="project-html">
                         <div class="ide-mockup">
 
-                            <p><span class="ide-yellow">[1]</span> &#60;div id="modal-showing" class="modal-showing"&#62;</p> 
-                            <p><span class="ide-yellow double-tab">[2]</span>&#60;div id="modal-container" class="modal-container"&#62;
-                                <p><span class="ide-yellow triple-tab">[3]</span>&#60;div class="modal-navbar"&#62;
-                                            <p class="quint-tab">&#60;button id="modal-close-button" class="modal-close-button"&#62;X&#60;/button&#62;</p>
-                                        <p class="quad-tab">&#60;/div&#62;</p>
-                                        <p><span class="ide-yellow triple-tab">[4]</span>&#60;div id="modal-content" class="modal-content">&#62;</p>
-                                        <p class="quint-tab">You can put whatever you want here. I put an SVG of an exclamation mark</p>
-                                <p class="quad-tab">&#60;/div&#62;</p>
-                            <p class="triple-tab">&#60;/div&#62;</p>
-
-                            <p><span class="ide-yellow">[5]</span>&#60;button id="open-modal-button" class="open-modal-button"&#62;&#60;/button&#62;</p>        
+                            <p><span class="ide-yellow">[1]</span> &#60;div id="build-digital-clock-container" class="build-digital-clock-container"&#62;</p> 
+                                <p><span class="ide-yellow double-tab">[2]</span>&#60;div id="build-digital-clock" class="build-digital-clock"&#62;11:11:11&#60;/div&#62;
+                                <p><span class="ide-yellow double-tab">[3]</span>&#60;button id="digital-clock-home-button" class="digital-clock-home-button"&#62;&#60;/button&#62;</p>
+                            <p class="single-tab">&#60;/div&#62;</p>
+                                 
                         </div>
 
-                        <p>The HTML for a modal is pretty straight forward but what matters is where you place it. In this example, I have hardcoded it to the HTML but when you get a little more experienced at JavaScript, you will be able to generate a modal on the fly through the use of appending it to the document. Let's keep it easy for now and we will eventually get to the more complicated stuff later.</p>
+                        <p>What's nice about this project is that there is hardly any HTML. It basically consists of 2 DIVs and a button. The first DIV will be the container for the project, the second DIV will be where we display the time, and the button will be what calls out the digital clock (the second DIV).</p>
+                                  
+                        <p><span class="ide-yellow">[1]</span> Create a DIV that will serve as the container of the project. We are going to style this to look like a smartphone when we get to the CSS.</p>
 
-                        <p>The location of the code above should be at the top of the document, just under the body tag. If this is inside any other DIV, the modal will only cover that section.</p>
-                        
-                        <p><span class="ide-yellow">[1]</span> Create a DIV that will house the overlay. This will what is placed on top of everything when the button you assign to opening is clicked.</p>
+                        <p><span class="ide-yellow">[2]</span> Create a DIV that will house the digital clock. Put in a placeholder time (11:11:11) just so you have an idea of what you are working with.</p>
 
-                        <p><span class="ide-yellow">[2]</span> Create a DIV that will house the modal. In the CSS you will assign the size and the positioning of where it will appear on the screen.</p>
+                        <p><span class="ide-yellow">[3]</span> Lastly, create the button. In many cases people would use another DIV for this but with accessibility becoming such a big focus, it's better to become accustomed to using the correct elements. Note: I still have a lot to learn about writing semantic HTML so it is definitely something that may change as I build more projects.</p>
 
-                        <p><span class="ide-yellow">[3]</span> This DIV houses the pink navigation bar with the X close button inside of it. In the example I used an SVG for the X button. You can pretty much use anything you want as long as it fits in the container.</p>
-
-                        <p><span class="ide-yellow">[4]</span> This DIV contains the content for the modal. In my example I used an SVG of an exclamation mark but you can use whatever you would like.</p>
-
-                        <p><span class="ide-yellow">[5]</span> This is the button or whatever you would like to activate the modal. I suggest an actual BUTTON element due to the benefits of accessibility. You can place this wherever you would like on your document.</p>
-
+                        <p>That's it! Close the container DIV and then we can move onto the CSS!</p>
                     </div>
                 
                     <div class="project-css" id="project-css">
 
                         <div class="ide-mockup">
 
-                            <p><span class="ide-yellow">[1]</span> .modal-showing {</p>
-                                <p class="double-tab">display: none;</p>
-                                <p class="double-tab">position: fixed;</p>
-                                <p class="double-tab">background-color: rgba(0,0,0,0.6);</p>
-                                <p class="double-tab">height: 100%</p>
-                                <p class="double-tab">width: 100%</p>
-                                <p class="double-tab">z-index: 1;</p>
+                            <p><span class="ide-yellow">[1]</span> .build-digital-clock-container {</p>
+                                <p class="double-tab">position: relative;</p>
+                                <p class="double-tab">overflow: hidden;</p>
+                                <p class="double-tab">margin-top: 3rem;</p>
+                                <p class="double-tab">margin-left: auto;</p>
+                                <p class="double-tab">margin-right: auto;</p>
+                                <p class="double-tab">background: url('/img/digitalclock/digitalclocktimer.jpg')</p>
+                                <p class="double-tab">background-repeat: no-repeat;</p>
+                                <p class="double-tab">background-size: contain;</p>
+                                <p class="double-tab">background-position: center center;</p>
+                                <p class="double-tab">width: 15rem;</p>
+                                <p class="double-tab">height: 30rem;</p>
+                                <p class="double-tab">border: 4px solid #000;</p>
+                                <p class="double-tab">background-color: #000;</p>
+                                <p class="double-tab">border-radius: 25px;</p>
                                 <p class="single-tab">}</p>
                                 <div class="ide-linebreak"></div>
     
-                            <p><span class="ide-yellow">[2]</span> .modal-container {</p>
+                            <p><span class="ide-yellow">[2]</span> .digital-clock-home-button {</p>
                                 <p class="double-tab">position: absolute;</p>
-                                <p class="double-tab">width: 300px;</p>
-                                <p class="double-tab">top: 20%;</p>
-                                <p class="double-tab">left: calc(50% - 150px);</p>
-                                <p class="double-tab">background-color: black;</p>
-                                <p class="double-tab">color: #EC4899</p>
-                                <p class="double-tab">border: 1px solid #EC4899;</p>
+                                <p class="double-tab">height: 28px;</p>
+                                <p class="double-tab">width: 28px;</p>
+                                <p class="double-tab">left: calc(50% - 14px);</p>
+                                <p class="double-tab">bottom: 2.5%;</p>
+                                <p class="double-tab">border: 1px solid rgb(70, 68, 68)</p>
+                                <p class="double-tab">background-color: #000;</p>
+                                <p class="double-tab">border-radius: 50%;</p>
+                                <p class="double-tab">outline: none;</p>
+                                <p class="double-tab">cursor: pointer;</p>
                                 <p class="single-tab">}</p>
-                                <div class="ide-linebreak"></div>      
-                                <p><span class="ide-yellow">[2]</span> .modal-navbar{</p>
-                                <p class="double-tab">background-color: #EC4899;</p>
-                                <p class="double-tab">height: 40px;</p>                            
+
+                                <div class="ide-linebreak"></div> 
+
+                                <p><span class="ide-yellow">[3]</span> .digital-clock-home-button:active {</p>
+                                <p class="double-tab">transform: scale(0.95);                           
                                 <p class="single-tab">}</p>
+
+                                <div class="ide-linebreak"></div>
+                                
+                                <p><span class="ide-yellow">[4]</span> .digital-clock-home-button:focus {</p>
+                                <p class="double-tab">box-shadow: 0 0 3pt 2pt #EC4899;                           
+                                <p class="single-tab">}</p>
+
+
+                                <div class="ide-linebreak"></div>
+
+                                <p><span class="ide-yellow">[5]</span> .build-digital-clock {</p>
+                                <p class="double-tab">position: absolute;</p>
+                                <p class="double-tab">right: -80%;</p>
+                                <p class="double-tab">bottom: 20%;</p>
+                                <p class="double-tab">display: flex;</p>
+                                <p class="double-tab">justify-content: center;</p>
+                                <p class="double-tab">align-items: center;</p>
+                                <p class="double-tab">background-color: rgb(0, 0, 0, 0.6);</p>
+                                <p class="double-tab">color: #b4b4b4;</p>
+                                <p class="double-tab">height: 4rem;</p>
+                                <p class="double-tab">width: 10rem;</p>
+                                <p class="double-tab">font-size: 2.3rem;</p>
+                                <p class="double-tab">font-family: 'Open Sans', 'Helvetica Neue', sans-serif;</p>
+                                <p class="double-tab">transition: right 0.5s ease-in-out;</p>
+                                
+                                <div class="ide-linebreak"></div>
+
+                                <p><span class="ide-yellow">[6]</span> .build-digital-clock-clicked {</p>
+                                    <p class="double-tab">right: 0%;                           
+                                    <p class="double-tab">transition: right 1s ease-in-out;                           
+                                    <p class="single-tab">}</p>
+                                
+                                <div class="ide-linebreak"></div>
+
+                                <p><span class="ide-yellow">[7]</span> .build-digital-clock p {</p>
+                                    <p class="double-tab">margin: 0;                           
+                                    <p class="double-tab">padding: 0;                           
+                                    <p class="single-tab">}</p>
                             </div>
+                            
+                            <p>This CSS for this project is definitely more extensive than the JavaScript but with a website/app it's how everything works together to make something nice. Never underestimate the importance of good CSS because it will always be what the user notices before anything else.</p>
 
+                        <p><span class="ide-yellow">[1]</span> This is is the main container for the project that makes it look like a smart phone. It will hold the other DIVs and components yo will be using for the project.</p>
 
-                        <p><span class="ide-yellow">[1]</span> There are a few important things that will need to be set in the .modal-showing class. This is what will be shown when you click the button to activate the modal.</p>
+                        <p>The very first thing you should set is the position of the DIV. The position of relative is like telling the browser that other things are going to be put in here, and it will be used as the footprint of where those things can be situated.</p>
 
-                        <p>The first would be having a display of none showing. This basically tells the browswer that you do not want this show on default. What I do suggest is commenting this out to work on the modal so you can actually see what you are doing. Reactivate it once you are complete with your styling.</p>
+                        <p> Set the overflow to hidden so anything that finds it's way outside of the DIV will not show up in the browser</p>
 
-                        <p>Next set your position to fixed. This makes it so the element stays in the one place even if the page is scrolled.</p>
+                        <p>The next 3 things were for the margin in my project. They basically just give you some space and center the container in the div above this current one.</p>
 
-                        <p>Set the background color to the to rgba(0,0,0,0.6). This is what creates the opacity of the page so you can still kind of see what is underneath. If you would like you can also make your modal completely solid, it's up to you. Play with the settings and decide what you would like to go with.</p>
+                        <p>The background settings are all pretty standard. The background is linked to a URL that will use a photo as a background instead of a color. If you would like to download the exact picture I used, you can grab it <a href="https://unsplash.com/photos/psdV2Rl-GvU" target="blank"><span class="ide-green">HERE</span></a> on Unsplash. You can also use any picture you would like but I suggest using one that has a portrait orientation</p>
 
-                        <p>Set the height and width to 100% to cover the whole page.</p>
+                        <p>The other background settings are used for positioning the background in the DIV. The most significant one is having a background size of "contain." Generally you would like to use "cover" but we would like the full picture showing to get the effect of the smartphone in this project.</p>
 
-                        <p>Now the z-index. The z-index is very important. What is sets is what layer your modal is going to be at. Standard items on a page sit at 0, so you can set this to anything above that. If you will have a page with many elements, try to set a higher number so nothing overwrites it if you add more layers.</p>
+                        <p>I have set the height and width here. I tend to use REM because I have been told that it is better for accessibility over pixels. I do believe it is also more responsive.</p>
 
-                        <p><span class="ide-yellow">[2]</span> The .modal-container class is what will contain the content of your modal. In most cases you want this placed in the middle of the screen.</p>
+                        <p>The rest of the settings are for detailing. If you're not away yet, border-radius is what gives you those nice little rounded edges you see on every button on every single website.</p>
 
-                        <p>Set your position to absolute so you can move it around wherever you would like inside of the fixed of the element of .modal-showing (in step 1)</p>
+                        <p><span class="ide-yellow">[2]</span> The ".digital-clock-home-button" is the round button that exists... well used to exist on every single smartphone. In this project, pushing it will pull out the time bar. Generally it would bring up the home screen but hey, I needed something to work with.</p>
 
-                        <p>Next set whatever width you would like it to be. I would suggest something solid so you can calculate center much easier.</p>
+                        <p>The first thing yu need to do is set the position to "absolute". Think of a position of absolute as unlocking the element to move around wherever you want on the page. By default it will set itself to the top left corner but with a few settings we can put it whererver we would like.</p>
 
-                        <p>Set your top to a percentage to set it vertically on the page.</p>
+                        <p>What I recommend doing first is setting the width and height of the button. This will allow us to calculate the absolute center of the DIV (if you would like to place the button in the center). You can pretty much put it anywhere you want by playing with the percentages in the next steps.</p>
 
-                        <p>The left calculation can be a little tricky. Setting it to 50%, doesn't center your content in the middle of the screen. What you need to do is calculated by setting 50% and then subtracting half of the width measurement. In this case I used -150px because the width of the container is set to 300px.</p>
+                        <p>The left setting is how far we will place the element from the left side of the parent DIV (.build-digital-clock-container). The "calc" measurement is a little hack that allows you to find center since 50% will give center the left-most side of the button and not the center of the it. What this does is takes the 50% measurement and then you want to subtract half of the button element's width. Since you set it at 28px in the last step, you would cut that in half and minus 14px here.</p>
 
-                        <p>The next 3 steps are purely cosmetic and you can set them to whatever you would like</p>
+                        <p>The bottom measurment is how far off of the bottom of the parent DIV your button will sit.</p>
 
-                        <p><span class="ide-yellow">[3]</span> This class just relates to the pink navigation bar containing my close button. I have set the height to the same height of my button. It is your choice how you would like this to be styled.</p>
+                        <p>The rest of the settings are used for styling. You may have noticed that I removed the outline (accessibility folks are fuming at me) but this is something we will look at in an upcoming step. I promise, this will be accessible!</p>
 
-                        <p>The position of "absolute" is what is being placed on the position of relative from step 1. The only thing you want to exclude is the width as that will be what is being changed in the JavaScript. Think of the "relative" container being empty, and the width from the "absolute" is what is going to fill it up.</p>
+                        <p>Cursor pointer makes the little pointy hand appear when you hover over the element. Do not underestimate how much this is needed!</p>
 
-                        <p>What you also want to do here is set a background-color but make sure it is different from what you used for the "static-progress-bar."</p>
+                        <p><span class="ide-yellow">[3]</span> This next little CSS trick I cannot take credit for. I 100% stole it from <a href="https://wesbos.com/"><span class="ide-green">Wes Bos</span></a> (who also has one of the best courses for learning JS called JavaScript30 available for free on his site!). What this trick does is scales the button that you click down just slightly to give it the appearance of being physically clicked.</p>
 
-                        <p>Keep the height the same as what you used in step 1.</p>
+                        <p><span class="ide-yellow">[4]</span> Alright! I told you I was going to make the button accessible. When you have an outline on a round button, it ends up being square and there is no way to adjust the border-radius. Using box-shadow will accomplish the same thing as outline but you can make it round. Add some styling and you got yourself a slick looking (and accessible) button!</p>
+
+                        <p><span class="ide-yellow">[5]</span> Now we would like to build the DIV that is going to house the digital clock. Right now the div should have a placeholder time in it, but when we finish the JS it will be a clock that adjusts based on the current time of the day. Use the placeholder text to help you style it.</p>
+
+                        <p>The first thing, like the button, is to set the position of the div to "absolute" so we can move it wherever we would like.</p>
+
+                        <p>Now you're probably looking at the next setting (right) and wondering "Why does that say -80%? Well, because we would like our time to slide in from off of the screen, this is actually going to position the DIV outside of the DIV on the right-hand side. For styling purposes, leave it set to 0 for now but change it to -80% when you're done.</p>
+
+                        <p>The bottom of 20% will place this DIV 20% up from the bottom of the parent DIV.</p>
+
+                        <p>The next 3 settings are merely used for the positioning of the text. Set the display to flex to make the DIV flex activated. set justify-content to center to center the text horizontally, and align-items to center to center everything vertically. </p>
+
+                        <p>The background color setting is set to black (rgb(0,0,0)) but the final setting (0.6) is what controls the opacity of the div. This is what makes the DIV slightly transparent. Opacity can make everything look cool so get used to using it.</p>
+
+                        <p>Everything else is pretty self explanatory and widely used, with the exception of transition. The transition setting is what is going to make your DIV sliding in from the right look cool and not just appear out of nowhere. This transition will take effect when the "right" setting is changed. It will take 0.5s to run through it's animation and the animation will be ease-in-out.</p>
+
+                        <p>Don't forget to set the "right" setting back to -80% if you haven't done so already!</p>
+
+                        <p><span class="ide-yellow">[6]</span> The .clicked added onto the end of the build.digital.clock class (.build.digital.clocked.clicked) will be a class that is added with the JavaScript. Everything that happens in this section is when this DIV also contains the class of "clicked."</p>
+
+                        <p>This is where that "right" setting from the last section makes some magic happen. If you haven't noticed yet, the "right" setting of the clicked class will change what the "right" setting is in the last step. So instead of being -80% and off the screen, the right side of the div will now sit at 0% and fully visible inside the DIV. This will all happen when the "clicked" class is added in the JavaScript.</p>
+
+                        <p>The transition effect here is what will happen when you call the time in. It will take effect when "right" is changed, it will take 1 second to animate, and the animation will be ease-in-out.</p>
+
+                        <p><span class="ide-yellow">[7]</span> This will simply remove the padding and margin from the paragraph tag that we generate in the JS.</p>
+
+                        <p>That is ALL of the CSS!</p>
+                    
 
                     </div>
                     <div class="project-javascript" id="project-javascript">
@@ -258,7 +325,9 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
+
+        </div>
     </div>
     <script src="../script.js"></script>
 </body>

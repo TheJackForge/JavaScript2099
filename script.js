@@ -10,6 +10,11 @@ const modalContentRight = document.getElementById('modal-content-right')
 
 const projectsArray = [
     {
+        'title': 'BUILD A DIGITAL CLOCK',
+        'id': 'digitalclock',
+        'link': 'pages/builddigitalclock.html'
+    },
+    {
         'title': 'BUILD A PROGRESS BAR',
         'id': 'progressBar',
         'link': 'pages/buildprogress.html'

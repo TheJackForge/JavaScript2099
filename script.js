@@ -331,7 +331,7 @@ contentContainer.addEventListener('click', (e) => {
         const buildDigitalClock = document.getElementById('build-digital-clock')
         if (buildDigitalClock.classList.contains('clicked')) {
             buildDigitalClock.classList.remove('clicked')
-        }else {
+        } else {
             buildDigitalClock.classList.add('clicked')
         }
     }

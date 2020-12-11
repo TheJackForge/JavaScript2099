@@ -420,7 +420,7 @@ a {
 
 .ide-mockup {
     background-color: #282a36;
-    padding: 2rem 1.5rem;
+    /* padding: 1rem 1rem; */
     color: #50fa7b;
     font-size: 0.8em;
 }
@@ -428,6 +428,10 @@ a {
 .ide-mockup p {
     margin-top: 0.4em;
     margin-bottom: 0.4em;
+}
+
+.ide-mockup img {
+    width: 100%;
 }
 
 .ide-linebreak {
@@ -634,9 +638,7 @@ a {
     padding: 0;
 }
 
-.ide-mockup img {
-    width: 100%;
-}
+
 
 
 /* Extra small devices (phones, 600px and down) */

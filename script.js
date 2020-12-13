@@ -325,7 +325,7 @@ function buildDigitalClock() {
 
 contentContainer.addEventListener('click', (e) => {
     buildDigitalClock();
-    if (e.target.id === 'digital-clock-home-button') {
+    if (e.target.id === 'digital-clock-button') {
         const buildDigitalClock = document.getElementById('build-digital-clock')
         if (buildDigitalClock.classList.contains('clicked')) {
             buildDigitalClock.classList.remove('clicked')
@@ -344,11 +344,11 @@ const appItems = [
         'icon': 'far fa-clock fa-2x',
         'class': 'digital-clock-app-button'
     },
-    // {
-    //     'title': 'weather',
-    //     'icon': '<i class="fas fa-cloud-moon-rain fa-2x"></i>',
-    //     'id': 'weather-app-open'
-    // }
+    {
+        'title': 'weather',
+        'icon': 'fas fa-cloud-moon-rain fa-2x',
+        'class': 'weather-app-open'
+    }
 ];
 
 function populateHomeScreen() {
@@ -358,7 +358,7 @@ function populateHomeScreen() {
         const li = document.createElement('li');
         li.setAttribute("class", `${appItem.class}`);
         li.innerHTML = `
-        <div><i class="${appItem.class} far fa-clock fa-2x"></i></div>
+        <div><i class="${appItem.class} ${appItem.icon}"></i></div>
         <div class="app-title"><p class="${appItem.class}"}>${appItem.title}</p></div>
         `
         appList.appendChild(li);
@@ -367,7 +367,7 @@ function populateHomeScreen() {
 }
 
 contentContainer.addEventListener('click', (e) => {
-    if (e.target.id === 'home-screen-home-button') {
+    if (e.target.id === 'smart-phone-home-button') {
         populateHomeScreen();
     }
 })
@@ -385,19 +385,3 @@ contentContainer.addEventListener('click', (e) => {
     setInterval(buildDigitalClock, 1000);
 })
 
-// if (projectsUl.classList.contains('projects-ul-closed')) {
-//     projectsArray.forEach( (project, index) => {
-//     const li = document.createElement('li');
-//     const a = document.createElement('a')
-//     li.className = ('projects-li')
-//     li.id = project.id
-//     li.dataset.index = index
-//     a.setAttribute('href', `../${project.link}`)
-//     li.innerHTML = `
-//         ${project.title}
-//     `
-//     a.appendChild(li)
-//     projectsUl.appendChild(a);
-//     projectsUl.classList.remove('projects-ul-closed')
-//     projectsUl.classList.add('projects-ul')
-//     })

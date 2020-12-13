@@ -120,8 +120,6 @@ window.addEventListener('DOMContentLoaded', () => {
             indexGrid.appendChild(a)
         })
 
-    } else {
-        console.log('DOES NOT EXIST')
     }
 })
 
@@ -137,16 +135,14 @@ window.addEventListener('DOMContentLoaded', () => {
         <p>Thank you,</p>
         <p>Jack Forge</p>
         `
-    } else {
-        console.log('MODAL CONTENT DOES NOT EXIST ON THIS PAGE')
     }
+        
 })
 
 
 // PROJECT NAVIGATION EVENT LISTENERS
 
 contentContainer.addEventListener('click', (e) => {
-    console.log(e.target.id)
 })
 
 contentContainer.addEventListener('click', (e) => {
@@ -176,7 +172,6 @@ contentContainer.addEventListener('click', (e) => {
 
 contentContainer.addEventListener('click', (e) => {
     if (e.target.id === 'project-html-button') {
-        console.log('WORKING')
         const projectSummary = document.getElementById('project-summary')
         const projectHtml = document.getElementById('project-html')
         const projectCss = document.getElementById('project-css')
@@ -201,7 +196,6 @@ contentContainer.addEventListener('click', (e) => {
 
 contentContainer.addEventListener('click', (e) => {
     if (e.target.id === 'project-css-button') {
-        console.log('WORKING')
         const projectSummary = document.getElementById('project-summary')
         const projectHtml = document.getElementById('project-html')
         const projectCss = document.getElementById('project-css')
@@ -226,7 +220,6 @@ contentContainer.addEventListener('click', (e) => {
 
 contentContainer.addEventListener('click', (e) => {
     if (e.target.id === 'project-javascript-button') {
-        console.log('WORKING')
         const projectSummary = document.getElementById('project-summary')
         const projectHtml = document.getElementById('project-html')
         const projectCss = document.getElementById('project-css')
@@ -298,7 +291,7 @@ window.addEventListener('click', (e) => {
     }
 })
 
-// How to Build a Timer Countdown Project 
+// How to Build a Digital Clock Project 
 
 function buildDigitalClock() {
 
@@ -343,3 +336,68 @@ contentContainer.addEventListener('click', (e) => {
     setInterval(buildDigitalClock, 1000);
 })
 
+// Build a Home Screen Project
+
+const appItems = [
+    {
+        'title': 'time',
+        'icon': 'far fa-clock fa-2x',
+        'class': 'digital-clock-app-button'
+    },
+    // {
+    //     'title': 'weather',
+    //     'icon': '<i class="fas fa-cloud-moon-rain fa-2x"></i>',
+    //     'id': 'weather-app-open'
+    // }
+];
+
+function populateHomeScreen() {
+    const appList = document.getElementById('home-screen-app-list');
+    appList.innerHTML = '';
+    appItems.forEach( (appItem, index) => {
+        const li = document.createElement('li');
+        li.setAttribute("class", `${appItem.class}`);
+        li.innerHTML = `
+        <div><i class="${appItem.class} far fa-clock fa-2x"></i></div>
+        <div class="app-title"><p class="${appItem.class}"}>${appItem.title}</p></div>
+        `
+        appList.appendChild(li);
+})
+
+}
+
+contentContainer.addEventListener('click', (e) => {
+    if (e.target.id === 'home-screen-home-button') {
+        populateHomeScreen();
+    }
+})
+
+contentContainer.addEventListener('click', (e) => {
+    console.log(e.target.classList)
+    if (e.target.classList.contains('digital-clock-app-button')) {
+        const buildDigitalClock = document.getElementById('build-digital-clock')
+        if (buildDigitalClock.classList.contains('clicked')) {
+            buildDigitalClock.classList.remove('clicked')
+        } else {
+            buildDigitalClock.classList.add('clicked')
+        }
+    }
+    setInterval(buildDigitalClock, 1000);
+})
+
+// if (projectsUl.classList.contains('projects-ul-closed')) {
+//     projectsArray.forEach( (project, index) => {
+//     const li = document.createElement('li');
+//     const a = document.createElement('a')
+//     li.className = ('projects-li')
+//     li.id = project.id
+//     li.dataset.index = index
+//     a.setAttribute('href', `../${project.link}`)
+//     li.innerHTML = `
+//         ${project.title}
+//     `
+//     a.appendChild(li)
+//     projectsUl.appendChild(a);
+//     projectsUl.classList.remove('projects-ul-closed')
+//     projectsUl.classList.add('projects-ul')
+//     })

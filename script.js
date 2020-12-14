@@ -10,11 +10,11 @@ const modalContentRight = document.getElementById('modal-content-right')
 
 
 const projectsArray = [
-    // {
-    //     'title': 'BUILD A DIGITAL CLOCK',
-    //     'id': 'digitalclock',
-    //     'link': 'pages/builddigitalclock.html'
-    // },
+    {
+        'title': 'SMART PHONE - HOME SCREEN',
+        'id': 'smart-phone-home-screen',
+        'link': 'pages/buildhomescreen.html'
+    },
     {
         'title': 'BUILD A PROGRESS BAR',
         'id': 'progressBar',
@@ -337,42 +337,6 @@ window.addEventListener('click', (e) => {
 //     setInterval(buildDigitalClock, 1000);
 // })
 
-// Build a Home Screen Project
-
-const appItems = [
-    {
-        'title': 'time',
-        'icon': 'far fa-clock fa-2x',
-        'class': 'digital-clock-app-button'
-    },
-    {
-        'title': 'weather',
-        'icon': 'fas fa-cloud-moon-rain fa-2x',
-        'class': 'weather-app-open'
-    }
-];
-
-function populateHomeScreen() {
-    const appList = document.getElementById('home-screen-app-list');
-    appList.innerHTML = '';
-    appItems.forEach( (appItem, index) => {
-        const li = document.createElement('li');
-        li.setAttribute("class", `${appItem.class}`);
-        li.innerHTML = `
-        <i class="${appItem.class} ${appItem.icon}"></i>
-        <p class="${appItem.class}"}>${appItem.title}</p>
-        `
-        appList.appendChild(li);
-})
-}
-
-const homeBtn = document.getElementById('smart-phone-home-button')
-
-homeBtn.addEventListener('click', (e) => {
-    if (e.target.id === 'smart-phone-home-button') {
-        populateHomeScreen();
-    }
-})
 
 // contentContainer.addEventListener('click', (e) => {
 //     console.log(e.target.classList)

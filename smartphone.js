@@ -11,7 +11,7 @@ const modalContentRight = document.getElementById('modal-content-right')
 
 const projectsArray = [
     {
-        'title': 'SMART PHONE PROJECT CHAPTER 1',
+        'title': 'SMART PHONE - HOME SCREEN',
         'id': 'smart-phone-home-screen',
         'link': 'pages/buildhomescreen.html'
     },
@@ -291,18 +291,11 @@ contentContainer.addEventListener('click', (e) => {
 
 // Build a Home Screen Project
 
-const smartPhoneContainer = document.getElementById('smart-phone-container')
-
 const appItems = [
     {
         'title': 'time',
         'icon': 'far fa-clock fa-2x',
         'class': 'digital-clock-app'
-    },
-    {
-        'title': 'weather',
-        'icon': 'fas fa-cloud-moon-rain fa-2x',
-        'class': 'weather-app'
     },
 ];
 
@@ -310,7 +303,7 @@ function populateHomeScreen() {
     const appList = document.getElementById('home-screen-app-list');
     appList.classList.remove('faded-out')
     appList.innerHTML = '';
-    appItems.forEach( (appItem, index) => {
+    appItems.forEach( (appItem) => {
         const appBtn = document.createElement('button')
         const li = document.createElement('li');
         appBtn.setAttribute('class', `${appItem.class}`) 
@@ -320,21 +313,17 @@ function populateHomeScreen() {
         `
         li.appendChild(appBtn)
         appList.appendChild(li);
-})
-
+    })
 }
-
-smartPhoneContainer.addEventListener('click', (e) => {
-    console.log(e.target)
-})
 
 const smartPhoneHomeBtn = document.getElementById('smart-phone-home-button')
 
 smartPhoneHomeBtn.addEventListener('click', () => {
-        // const appSlider = document.getElementById('app-slider')
-        // appSlider.classList.toggle('opened')
         populateHomeScreen();
 })
+
+        // const appSlider = document.getElementById('app-slider')
+        // appSlider.classList.toggle('opened')
 
 // smartPhoneContainer.addEventListener('click', (e) => {
 //     console.log(e.target.classList)

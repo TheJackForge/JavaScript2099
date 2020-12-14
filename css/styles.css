@@ -575,7 +575,7 @@ a {
     transform: scale(0.1) 4s ease-in;
 }
 
-/* COUNTDOWN TIMER PROJECT */
+/* SMART PHONE PROJECT */
 
 .smart-phone-container {
     position: relative;
@@ -629,12 +629,12 @@ a {
     margin: 0;
     padding: 0;
     transition: opacity 2000ms;
-    will-change: opacity;
 }
 
 .home-screen-app-list.faded-out {
     opacity: 0;
 }
+
 .home-screen-app-list li {
     display: flex;
     flex-direction: column;

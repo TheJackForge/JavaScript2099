@@ -243,7 +243,7 @@ a {
     height: 4rem;
     border: 1px solid #EC4899;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 .index-project-styling:hover {
@@ -600,24 +600,24 @@ a {
     border-radius: 25px;
 }
 
-.smart-phone-home-button {
+.smart-phone-home-button-a {
     position: absolute;
     left: calc(50% - 14px);
     bottom: 2.5%;
     border: 1px solid rgb(70, 68, 68);
     height: 28px;
     width: 28px;
-    background-color: #000;; 
+    background-color: #000; 
     border-radius: 50%;
     outline: none;
     cursor: pointer;
 }
 
-.smart-phone-home-button:active {
+.smart-phone-home-button-a:active {
     transform: scale(0.95);
 }
 
-.smart-phone-home-button:focus {
+.smart-phone-home-button-a:focus {
     box-shadow: 0 0 3pt 2pt #EC4899;
 }
 
@@ -746,7 +746,7 @@ a {
     z-index: 5;
 }
 
-.smart-phone-home-button {
+.smart-phone-home-button-b {
     position: absolute;
     left: calc(50% - 14px);
     bottom: 2.5%;
@@ -758,6 +758,14 @@ a {
     outline: none;
     cursor: pointer; 
     z-index: 7;
+}
+
+.smart-phone-home-button-b:active {
+    transform: scale(0.95);
+}
+
+.smart-phone-home-button-b:focus {
+    box-shadow: 0 0 3pt 2pt #EC4899;
 }
 
 .app-slider {
@@ -785,7 +793,7 @@ a {
     justify-content: center;
     align-items: center;
     color: #EC4899;
-    z-index: 5;
+    z-index: 3;
 }
 
 

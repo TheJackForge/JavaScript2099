@@ -11,7 +11,7 @@ const modalContentRight = document.getElementById('modal-content-right')
 
 const projectsArray = [
     {
-        'title': 'SMART PHONE - HOME SCREEN',
+        'title': 'SMART PHONE (PART 1) - HOME SCREEN',
         'id': 'smart-phone-home-screen',
         'link': 'pages/buildhomescreen.html'
     },

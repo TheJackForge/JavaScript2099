@@ -76,6 +76,10 @@
 
     <div id="smart-phone-container" class="smart-phone-container">
         <div class="top-bezel-smartphone"></div>
+        <div class="digital-clock-app-container" id="digital-clock-app-container">
+            <div class="current-time-clock" id="current-time-clock"></div>
+            <div class="current-date-clock" id="current-date-clock"></div>
+        </div>    
         <div id="app-slider" class="app-slider">
             <div class="app-slider-content"><i class="fas fa-globe fa-4x"></i></div>
         </div>
@@ -105,168 +109,32 @@
                         <p>When I was first planning this project, I was going to make a digital timer. As I got further into building it, I realized that before you learn how to walk, you should really learn how to crawl. </p>
                         <p>Dates and times in JavaScript are not as straight forward as you would believe them to be, so I decided to start at the beginning and create a digital clock. Of course, I decided to have some fun with it and spice it up by employing a few fun CSS tricks.</p>
                         <p>If you build this project, don't delete it because I plan on using it as the base for more projects in the future.</p>
-                    </div>
-                              
+                    </div>       
                     <div class="project-html" id="project-html">
                         <div class="ide-mockup">
-                            <img src="/img/digitalclock/digital-clock-html.png">
-
-                                 
+                            <img src="/img/digitalclock/digital-clock-html-001.png">
                         </div>
-
-                        <p>What's nice about this project is that there is hardly any HTML. It basically consists of 2 DIVs and a button. The first DIV will be the container for the project, the second DIV will be where we display the time, and the button will be what calls out the digital clock (the second DIV).</p>
-                                  
-                        <p><span class="ide-purple">[id/class = smart-phone-container] ||</span> Create a div that will serve as the container of the project. We are going to style this to look like a smartphone when we get to the CSS.</p>
-
-                        <p><span class="ide-purple">[id/class = build-digital-clock] ||</span> Create a div that will house the digital clock. Put in a placeholder time (11:11:11) just so you have an idea of what you are working with.</p>
-
-                        <p><span class="ide-purple">[id/class = smart-phone-home-button] ||</span> Lastly, create the button. In many cases people would use another div for this but with accessibility becoming such a big focus, it's better to become accustomed to using the correct elements. Note: I still have a lot to learn about writing semantic HTML so it is definitely something that may change as I build more projects.</p>
-
-                        <p>That's it! Close the container DIV and then we can move onto the CSS!</p>
                     </div>
-                
                     <div class="project-css" id="project-css">
-
-                        <p>This CSS for this project is definitely more extensive than the JavaScript but with a website/app it's how everything works together to make something nice. Never underestimate the importance of good CSS because it will always be what the user notices before anything else.</p>
-
                         <div class="ide-mockup">
-                            <img src="/img/digitalclock/smart-phone-container-001.png">
-                        </div>
-                            
-                        <p><span class="ide-yellow"></span> This is is the main container for the project that makes it look like a smart phone. It will hold the other divs and components you will be using for the project.</p>
-
-                        <p>The very first thing you should set is the position of the div. The position of relative is like telling the browser that other things are going to be put in here, and it will be used as the footprint of where those things can be situated.</p>
-
-                        <p> Set the overflow to hidden so anything that finds it's way outside of the div will not show up in the browser</p>
-
-                        <p>The next 3 things were for the margin in my project. They basically just give you some space and center the container in the div above this current one.</p>
-
-                        <p>The background settings are all pretty standard. The background is linked to a URL that will use a photo as a background instead of a color. If you would like to download the exact picture I used, you can grab it <a href="https://unsplash.com/photos/psdV2Rl-GvU" target="blank"><span class="ide-green">here</span></a> on Unsplash. You can also use any picture you would like but I suggest using one that has a portrait orientation</p>
-
-                        <p>The other background settings are used for positioning the background in the div. The most significant one is having a background size of "contain." Generally you would like to use "cover" but we would like the full picture showing to get the effect of the smartphone in this project.</p>
-
-                        <p>I have set the height and width here. I tend to use REM because I have been told that it is better for accessibility over pixels. I do believe it is also more responsive.</p>
-
-                        <p>The rest of the settings are for detailing. If you're not away yet, border-radius is what gives you those nice little rounded edges you see on every button on every single website.</p>
-
-                        <div class="ide-mockup">
-                            <img src="/img/digitalclock/smart-phone-home-button-001.png">
+                            <img src="/img/digitalclock/digital-clock-css-001.png">
                         </div>
 
-                        <p><span class="ide-yellow"></span> The ".smart-phone-home-button" is the round button that exists... well used to exist on every single smartphone. In this project, pushing it will pull out the time bar. Generally it would bring up the home screen but hey, I needed something to work with.</p>
-
-                        <p>The first thing you need to do is set the position to "absolute". Think of a position of absolute as unlocking the element to move around wherever you want on the page. By default it will set itself to the top left corner but with a few settings we can put it wherever we would like.</p>
-
-                        <p>What I recommend doing first is setting the width and height of the button. This will allow us to calculate the absolute center of the div (if you would like to place the button in the center). You can pretty much put it anywhere you want by playing with the percentages in the next steps.</p>
-
-                        <p>The left setting is how far we will place the element from the left side of the parent div (.digital-clock-container). The "calc" measurement is a little hack that allows you to find center since 50% will give center the left-most side of the button and not the center of the it. What this does is takes the 50% measurement and then you want to subtract half of the button element's width. Since you set it at 28px in the last step, you would cut that in half and minus 14px here.</p>
-
-                        <p>The bottom measurement is how far off of the bottom of the parent div your button will sit.</p>
-
-                        <p>The rest of the settings are used for styling. You may have noticed that I removed the outline (accessibility folks are fuming at me) but this is something we will look at in an upcoming step. I promise, this will be accessible!</p>
-
-                        <p>Cursor pointer makes the little pointy hand appear when you hover over the element. Do not underestimate how much this is needed!</p>
-
                         <div class="ide-mockup">
-                            <img src="/img/digitalclock/smart-phone-home-button-002.png">
+                            <img src="/img/digitalclock/digital-clock-css-002.png">
                         </div>
 
-                        <p><span class="ide-purple">[.smart-phone-home-button:active] ||</span> This next little CSS trick I cannot take credit for. I 100% stole it from <a href="https://wesbos.com/"><span class="ide-green">Wes Bos</span></a> (who also has one of the best courses for learning JS called JavaScript30 available for free on his site!). What this trick does is scale the button that you click down just slightly to give it the appearance of being physically clicked.</p>
-
-                        <p><span class="ide-purple">[.smart-phone-home-button:focus] ||</span> Alright! I told you I was going to make the button accessible. When you have an outline on a round button, it ends up being square and there is no way to adjust the border-radius. Using box-shadow will accomplish the same thing as outline but you can make it round. Add some styling and you got yourself a slick looking (and accessible) button!</p>
-
                         <div class="ide-mockup">
-                            <img src="/img/digitalclock/build-digital-clock-001.png">
+                            <img src="/img/digitalclock/digital-clock-css-003.png">
                         </div>
-
-                        <p><span class="ide-yellow"></span> Now we would like to build the div that is going to house the digital clock. Right now the div should have a placeholder time in it, but when we finish the JS it will be a clock that adjusts based on the current time of the day. Use the placeholder text to help you style it.</p>
-
-                        <p>The first thing, like the button, is to set the position of the div to "absolute" so we can move it wherever we would like.</p>
-
-                        <p>Now you're probably looking at the next setting (right) and wondering "Why does that say -80%? Well, because we would like our time to slide in from off of the screen, this is actually going to position the div outside of the div on the right-hand side. For styling purposes, leave it set to 0 for now but change it to -80% when you're done.</p>
-
-                        <p>The bottom of 20% will place this div 20% up from the bottom of the parent div.</p>
-
-                        <p>The next 3 settings are merely used for the positioning of the text. Set the display to flex to make the div flex activated. set justify-content to center to center the text horizontally, and align-items to center to center everything vertically. </p>
-
-                        <p>The background color setting is set to black (rgb(0,0,0)) but the final setting (0.6) is what controls the opacity of the div. This is what makes the div slightly transparent.</p>
-
-                        <p>Everything else is pretty self explanatory and widely used, with the exception of transition. The transition setting is what is going to make your div sliding in from the right look cool and not just appear out of nowhere. This transition will take effect when the "right" setting is changed. It will take 0.5s to run through it's animation and the animation will be ease-in-out.</p>
-
-                        <p>Don't forget to set the "right" setting back to -80% if you haven't done so already!</p>
-
-                        <div class="ide-mockup">
-                            <img src="/img/digitalclock/build-digital-clock-002.png">
-                        </div>
-
-                        <p><span class="ide-purple">[.build-digital-clock.clicked] ||</span> The .clicked added onto the end of the build.digital.clock class (.build.digital.clocked.clicked) will be a class that is added with the JavaScript. Everything that happens in this section is when this div also contains the class of "clicked."</p>
-
-                        <p>This is where that "right" setting from the last section makes some magic happen. If you haven't noticed yet, the "right" setting of the clicked class will change what the "right" setting is in the last step. So instead of being -80% and off the screen, the right side of the div will now sit at 0% and fully visible inside the div. This will all happen when the "clicked" class is added in the JavaScript.</p>
-
-                        <p>The transition effect here is what will happen when you call the time in. It will take effect when "right" is changed, it will take 1 second to animate, and the animation will be ease-in-out.</p>
-
-                        <p><span class="ide-purple">[.build-digital-clock p] ||</span> This will simply remove the padding and margin from the paragraph tag that we generate in the JS.</p>
-
-                        <p>That is ALL of the CSS!</p>
-                    
-
                     </div>
                     <div class="project-javascript" id="project-javascript">
-
                         <div class="ide-mockup">
                             <img src="/img/digitalclock/digital-clock-javascript-001.png">
                         </div>
-                            <p>Note: I am going to start with the eventListeners for step 1 but after you complete this sub-section, scroll above it in your IDE and continue with creating the functions. I personally like starting with the eventListeners because you can then check if they are functioning with as you work.</p>
-
-                            <p><span class="ide-yellow">1//</span> The first thing we want to assign is the home button on the phone to a variable. I used the variable homeButton.</p>
-    
-                            <p><span class="ide-yellow">2//</span> Now assign a click eventListener to the homeButton. This will be what calls out the clock div ('build-digital-clock') and runs the clock function (buildDigitalClock( )).</p>
-
-                            <p><span class="ide-yellow">3//</span>Type this but comment it out for now. We will uncomment it once we build this function.</p>
-    
-                            <p><span class="ide-yellow">4//</span> Assign the div with the id 'build-digital-clock' to the buildDigitalClock variable. This tells the browser to look for the ID on the page and recognize it as the buildDigitalClock variable.</p>
-    
-                            <p><span class="ide-yellow">5//</span> This IF statement is going to check if the div with the ID of 'build-digital-clock' has the class of "clicked." On the initial click it should not, which will lead to it running the ELSE statement to add it. If it does have it in subsequent clicks, the next line of code will run to remove it.</p>
-    
-                            <p><span class="ide-yellow">6//</span>The ELSE statement should be the first thing that runs when you initially click on the button. Basically this states if the div with the ID 'build-digital-clock' (which is assigned to variable buildDigitalClock) does not contain the class of 'clicked' it will add it.</p>
-    
-                            <p>At this point, clicking the button should call in the div holding the time placeholder. If you remember in the CSS we set it so it would slide in from the right, going from right of -80% to a right of 0%.</p>
-    
-                            <p><span class="ide-yellow">7//</span> This is where we are going to call the buildDigitalClock function, but there is one little thing we need to do here and that is to call it with an Interval. We want the function that builds the clock to update every single second so calling the function at an interval of 1000ms will cause it to refresh rather than just calling it once and sit static on whatever time it was when it was called.</p> 
-                        
-                        <div class="ide-mockup">    
+                        <div class="ide-mockup">
                             <img src="/img/digitalclock/digital-clock-javascript-002.png">
                         </div>
-
-                            <p><span class="ide-yellow">8//</span> Now let's scroll above the eventListener section and code out the buildDigtalClock function. Create the function and let's pass in the code we want to run when it is called.</p>
-
-                            <p><span class="ide-yellow">9//</span> Assign the div with the ID of 'build-digital-clock' to the variable of BuildDigitalClockDiv. This is actually the same element you grabbed in the eventListener section but is not accessible in this function. I decided to call it something different because we will be changing the innerHTML of it and it made more sense this way.</p>
-
-                            <p><span class="ide-yellow">10//</span> JavaScript has a built-in function called Date that will create a new object with the current date and time. To access this function, let's declare a variable (I called it date) and use "new Date;" to access the information.</p>
-
-                            <p><span class="ide-yellow">11//</span> With the date variable now declared we can extract some information out of it with some more built-in JavaScript functions. The next 3 lines of code will allow you to grab the current hour, minute, and seconds of the JavaScript Date function. There are more things (year, month, day, etc.) we can grab from this built-in function that I will cover in a future lesson. </p>
-
-                            <p><span class="ide-yellow">12//</span> This IF/ELSE IF statement is what is going to convert the time to a 12 hour clock instead of a 24 hour clock. If you prefer to have a 24 hour clock you can skip. If not I can explain what we are doing here.</p>
-
-                            <p>Basically the first part states that IF dataHours is more than 12, we are going to -12 from the hour variable. So 13 would be 1, 14 would be 2, etc.</p>
-
-                            <p>The second part (ELSE IF) states that if the hour being given by the "new Date" funciton is 0 we would set the hour to 12. Which would be the hour between midnight and 1 AM. At this point it would show the time as 12:Minutes:Seconds instead of 00:Minutes:Seconds.</p>
-
-                            <p><span class="ide-yellow">13//</span> This step is something you never really think about when assigning times. It's how awkward it can look when a 0 is not put in front of the current number if it's under 10. What these next steps will look for is if the variable is under 10 and if it is, will use concatenation to add a 0 before it.</p>
-
-                            <p><span class="ide-yellow">14//</span> This is where we finally get to see what we have created displayed on the screen. What this will do is set the innerHTML of the buildDigitalClockDiv to dateHours, dateMinutes, and dateSeconds by using template literals. These are achieved by using backticks (`) and dollar sign/curly braces (${ }) around the variable (as seen above). At this step it is best to delete the placeholder time that you added when we created the HTML, so it does not remain visible when the function is first called.</p>   
-                            
-                            <div class="ide-mockup">    
-                                <img src="/img/digitalclock/digital-clock-javascript-003.png">
-                            </div>
-
-                            <p><span class="ide-yellow">15//</span> Lastly, this was something I found made the clock run a little better. Let's scroll down to the eventListener section and call the function of buildDigitalClock() right after the click. What was happening is when I called the clock it would slide out and then the time would appear. By calling the function here, it seems to buffer it a little so the time is loaded by time it slides out. I'm not sure if this is intended but it seems to be working so I'm going to take credit for it.</p>
-                            
-                            <p>So there you have it! I hope you learned something from this project. You can use some of the CSS elements we went over in here to create a slide out menu and some of the clock components to create a countdown timer. These are all projects that will be featured on here soon, so keep checking back!</p>
-                            
-                           
-                        </div>
-
          
 
                         
@@ -277,6 +145,7 @@
 
         </div>
     </div>
-    <script src="../smartphone.js"></script>
+    <script src="../javascript/navdb.js"></script>
+    <script src="../javascript/smartphone3.js"></script>
 </body>
 </html>

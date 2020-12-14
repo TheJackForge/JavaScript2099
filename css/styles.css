@@ -577,24 +577,6 @@ a {
 
 /* COUNTDOWN TIMER PROJECT */
 
-/* .build-digital-clock-container {
-    position: relative;
-    overflow: hidden;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    margin-left: auto;
-    margin-right: auto;
-    background: url('/img/digitalclock/digitalclockbackground.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    width: 15rem;
-    height: 30rem;
-    border: 4px solid #000;
-    background-color: #000;
-    border-radius: 25px;
-} */
-
 .smart-phone-container {
     position: relative;
     overflow: hidden;
@@ -612,6 +594,87 @@ a {
     background-color: #000;
     border-radius: 25px;
 }
+
+.smart-phone-home-button {
+    position: absolute;
+    left: calc(50% - 14px);
+    bottom: 2.5%;
+    border: 1px solid rgb(70, 68, 68);
+    height: 28px;
+    width: 28px;
+    background-color: #000;; 
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer; 
+}
+
+.smart-phone-home-button:active {
+    transform: scale(0.95);
+}
+
+.smart-phone-home-button:focus {
+    box-shadow: 0 0 3pt 2pt #EC4899;
+}
+
+.home-screen-app-container {
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+}
+
+.home-screen-app-list {
+    display: flex;
+    flex-direction: start;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    transition: opacity 2000ms;
+    will-change: opacity;
+}
+
+.home-screen-app-list.faded-out {
+    opacity: 0;
+}
+.home-screen-app-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+    list-style-type: none;
+    width: 30%;
+    height: 4em;
+    cursor: pointer;
+    background: rgb(0,0,0,0.6);
+}
+
+.home-screen-app-list p {
+    margin: 0;
+    padding-top: 0.4em;
+    font-size: .8em;
+    border-bottom: 1px solid #EC4899;
+}
+
+.home-screen-app-list button {
+    border: none;
+    background: none;
+    color: #b4b4b4;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+}
+
+.home-screen-app-list button:focus {
+    box-shadow:0 0 3pt 2pt #fff;
+}
+
+.home-screen-app-list button:active {
+    background-color: rgb(255,255,255,0.3);
+    transform: scale(0.98)
+}
+
+/* DIGITAL CLOCK PROJECT  */
 
 .digital-clock-button {
     position: absolute;
@@ -660,113 +723,33 @@ a {
     padding: 0;
 }
 
-/* BUILD PHONE APP SCREEN PROJECT */
-
-.smart-phone-container {
-    position: relative;
-    overflow: hidden;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    margin-left: auto;
-    margin-right: auto;
-    background: url('/img/digitalclock/digitalclockbackground.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    width: 15rem;
-    height: 30rem;
-    border: 4px solid #000;
-    background-color: #000;
-    border-radius: 25px;
-}
-
-.smart-phone-home-button {
+/* .app-slider {
     position: absolute;
-    left: calc(50% - 14px);
-    bottom: 2.5%;
-    border: 1px solid rgb(70, 68, 68);
-    height: 28px;
-    width: 28px;
-    background-color: #000;; 
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer; 
-}
-
-.smart-phone-home-button:active {
-    transform: scale(0.95);
-}
-
-.smart-phone-home-button:focus {
-    box-shadow: 0 0 3pt 2pt #EC4899;
-}
-
-.build-digital-clock {
-    position: absolute;
-    right: -80%;
-    bottom: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(0,0,0,0.6);
-    color: #b4b4b4;
-    height: 4rem;
-    width: 10rem;
-    font-size: 2.3rem;
-    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #fff;
+    bottom: 3.25em;
+    right: 0%;
+    height: 23em;
+    width: 100%;
+    z-index: 10;
+    opacity: 1;
     transition: right 0.5s ease-in-out;
 }
 
-.build-digital-clock.clicked {
-    right: 0%;
-    transition: right 1s ease-in-out;
+.app-slider.opened {
+    right: -100%;
 }
 
-.build-digital-clock p {
-    margin: 0;
-    padding: 0;
-}
-
-.home-screen-app-container {
-    position: absolute;
-    top: 5rem;
-    width: 100%;
-}
-
-.home-screen-app-list {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-}
-
-.home-screen-app-list li {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    list-style-type: none;
-    width: 33.3%;
-    height: 4em;
-    cursor: pointer;
-    background: rgb(0,0,0,0.6);
-    color: #b4b4b4;
-}
-
-.home-screen-app-list li .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.app-title p {
-    margin: 0;
-    padding: 0;
-    font-size: .8em;
+.app-slider-content {
+    border-top: 1px solid #EC4899;
     border-bottom: 1px solid #EC4899;
-}
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EC4899;
+} */
 
 
 

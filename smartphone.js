@@ -10,11 +10,11 @@ const modalContentRight = document.getElementById('modal-content-right')
 
 
 const projectsArray = [
-    // {
-    //     'title': 'BUILD A DIGITAL CLOCK',
-    //     'id': 'digitalclock',
-    //     'link': 'pages/builddigitalclock.html'
-    // },
+    {
+        'title': 'SMART PHONE PROJECT CHAPTER 1',
+        'id': 'smart-phone-home-screen',
+        'link': 'pages/buildhomescreen.html'
+    },
     {
         'title': 'BUILD A PROGRESS BAR',
         'id': 'progressBar',
@@ -246,55 +246,9 @@ contentContainer.addEventListener('click', (e) => {
 
 // PROJECTS SECTION
 
-// How to Build a Progress Bar Project
-
-contentContainer.addEventListener('click', (e) => {
-    if (e.target.id === 'activate-progress-button') {
-        const movingProgressBar = document.getElementById('moving-progress-bar')
-        let width = 0;
-        const progress = setInterval(percentage, 20)
-        function percentage() {
-            if (width >= 100) {
-                clearInterval(progress)
-            } else {
-                width++;
-                movingProgressBar.style.width = width + '%';
-            }
-        }
-    }
-})
-
-// How to Build a Modal Project
-
-contentContainer.addEventListener('click', (e) => {
-    const showModal = document.getElementById('build-modal-show');
-    if (e.target.id === 'build-modal-button') {
-        showModal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'
-        showModalExample()  
-    }
-})
-
-function showModalExample() {
-    const showModal = document.getElementById('build-modal-show');
-    const closeButton = document.getElementById('build-modal-close-button');
-        closeButton.addEventListener('click', () => {
-            showModal.style.display = 'none'
-            document.body.style.overflow = 'scroll'
-    })
-}
-
-window.addEventListener('click', (e) => {
-    const showModal = document.getElementById('build-modal-show');
-    if (e.target === showModal) {
-        showModal.style.display = 'none'
-        document.body.style.overflow = 'scroll'
-    }
-})
-
 // How to Build a Digital Clock Project 
 
-// function buildDigitalClock() {
+// function DigitalClock() {
 
 //     const buildDigitalClockDiv = document.getElementById('build-digital-clock')
 //     const date = new Date;
@@ -324,57 +278,65 @@ window.addEventListener('click', (e) => {
 //     `
 // }
 
-// smartPhoneContainer.addEventListener('click', (e) => {
-//     buildDigitalClock();
-//     if (e.target.id === 'smart-phone-home-button') {
+// smartPhoneHomeBtn.addEventListener('click', () => {
+//     DigitalClock();
 //         const buildDigitalClock = document.getElementById('build-digital-clock')
 //         if (buildDigitalClock.classList.contains('clicked')) {
 //             buildDigitalClock.classList.remove('clicked')
 //         } else {
 //             buildDigitalClock.classList.add('clicked')
 //         }
-//     }
-//     setInterval(buildDigitalClock, 1000);
+//     setInterval(DigitalClock, 1000);
 // })
 
 // Build a Home Screen Project
+
+const smartPhoneContainer = document.getElementById('smart-phone-container')
 
 const appItems = [
     {
         'title': 'time',
         'icon': 'far fa-clock fa-2x',
-        'class': 'digital-clock-app-button'
+        'class': 'digital-clock-app'
     },
     {
         'title': 'weather',
         'icon': 'fas fa-cloud-moon-rain fa-2x',
-        'class': 'weather-app-open'
-    }
+        'class': 'weather-app'
+    },
 ];
 
 function populateHomeScreen() {
     const appList = document.getElementById('home-screen-app-list');
+    appList.classList.remove('faded-out')
     appList.innerHTML = '';
     appItems.forEach( (appItem, index) => {
+        const appBtn = document.createElement('button')
         const li = document.createElement('li');
-        li.setAttribute("class", `${appItem.class}`);
-        li.innerHTML = `
+        appBtn.setAttribute('class', `${appItem.class}`) 
+        appBtn.innerHTML = `
         <i class="${appItem.class} ${appItem.icon}"></i>
-        <p class="${appItem.class}"}>${appItem.title}</p>
+        <p class="${appItem.class}">${appItem.title}</p>
         `
+        li.appendChild(appBtn)
         appList.appendChild(li);
 })
+
 }
 
-const homeBtn = document.getElementById('smart-phone-home-button')
-
-homeBtn.addEventListener('click', (e) => {
-    if (e.target.id === 'smart-phone-home-button') {
-        populateHomeScreen();
-    }
+smartPhoneContainer.addEventListener('click', (e) => {
+    console.log(e.target)
 })
 
-// contentContainer.addEventListener('click', (e) => {
+const smartPhoneHomeBtn = document.getElementById('smart-phone-home-button')
+
+smartPhoneHomeBtn.addEventListener('click', () => {
+        // const appSlider = document.getElementById('app-slider')
+        // appSlider.classList.toggle('opened')
+        populateHomeScreen();
+})
+
+// smartPhoneContainer.addEventListener('click', (e) => {
 //     console.log(e.target.classList)
 //     if (e.target.classList.contains('digital-clock-app-button')) {
 //         const buildDigitalClock = document.getElementById('build-digital-clock')
@@ -384,6 +346,5 @@ homeBtn.addEventListener('click', (e) => {
 //             buildDigitalClock.classList.add('clicked')
 //         }
 //     }
-//     setInterval(buildDigitalClock, 1000);
+//     setInterval(DigitalClock, 1000);
 // })
-

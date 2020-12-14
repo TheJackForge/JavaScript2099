@@ -107,7 +107,7 @@ a {
     position: fixed;
     /* display: flex; */
     justify-content: center;
-    z-index: 10;
+    z-index: 100;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.6)
@@ -527,7 +527,7 @@ a {
     /* display: flex; */
     display: none;
     position: fixed;
-    z-index: 10;
+    z-index: 100;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.6);
@@ -610,7 +610,7 @@ a {
     background-color: #000;; 
     border-radius: 50%;
     outline: none;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .smart-phone-home-button:active {
@@ -728,16 +728,49 @@ a {
     padding: 0;
 }
 
-/* .app-slider {
+.top-bezel-smartphone {
+    position: absolute;
+    top: 0;
+    background-color: rgb(7, 7, 7);
+    height: 55px;
+    width: 100%;
+    z-index: 5;
+}
+
+.bottom-bezel-smartphone {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(7, 7, 7);
+    height: 55px;
+    width: 100%;
+    z-index: 5;
+}
+
+.smart-phone-home-button {
+    position: absolute;
+    left: calc(50% - 14px);
+    bottom: 2.5%;
+    border: 1px solid rgb(70, 68, 68);
+    height: 28px;
+    width: 28px;
+    background-color: rgb(7, 7, 7); 
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer; 
+    z-index: 7;
+}
+
+.app-slider {
     position: absolute;
     background-color: #fff;
     bottom: 3.25em;
     right: 0%;
-    height: 23em;
+    height: 24em;
     width: 100%;
     z-index: 10;
     opacity: 1;
     transition: right 0.5s ease-in-out;
+    z-index: 3;
 }
 
 .app-slider.opened {
@@ -745,8 +778,6 @@ a {
 }
 
 .app-slider-content {
-    border-top: 1px solid #EC4899;
-    border-bottom: 1px solid #EC4899;
     background-color: #000;
     width: 100%;
     height: 100%;
@@ -754,7 +785,8 @@ a {
     justify-content: center;
     align-items: center;
     color: #EC4899;
-} */
+    z-index: 5;
+}
 
 
 

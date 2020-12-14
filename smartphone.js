@@ -290,6 +290,9 @@ contentContainer.addEventListener('click', (e) => {
 // })
 
 // Build a Home Screen Project
+const smartPhoneHomeBtn = document.getElementById('smart-phone-home-button')
+// const smartPhoneContainer = document.getElementById('smart-phone-container')
+
 
 const appItems = [
     {
@@ -316,14 +319,15 @@ function populateHomeScreen() {
     })
 }
 
-const smartPhoneHomeBtn = document.getElementById('smart-phone-home-button')
+
 
 smartPhoneHomeBtn.addEventListener('click', () => {
         populateHomeScreen();
+        const appSlider = document.getElementById('app-slider')
+        appSlider.classList.add('opened')
 })
 
-        // const appSlider = document.getElementById('app-slider')
-        // appSlider.classList.toggle('opened')
+
 
 // smartPhoneContainer.addEventListener('click', (e) => {
 //     console.log(e.target.classList)

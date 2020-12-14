@@ -420,9 +420,14 @@ a {
 
 .ide-mockup {
     background-color: #282a36;
-    /* padding: 1rem 1rem; */
     color: #50fa7b;
     font-size: 0.8em;
+    margin-top: 8em;
+    margin-bottom: 2em;
+}
+
+.ide-mockup:nth-child(1) {
+    margin-top: 2em;
 }
 
 .ide-mockup p {

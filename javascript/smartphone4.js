@@ -282,8 +282,7 @@ function digitalClockApp() {
 
 
 smartPhoneHomeBtn.addEventListener('click', () => {
-    if (appOpen === false) {
-        
+    if (appOpen === false) {     
         populateHomeScreen();
         const appSlider = document.getElementById('app-slider')
         appSlider.classList.add('opened')

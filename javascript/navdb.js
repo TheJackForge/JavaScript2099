@@ -1,5 +1,10 @@
 const projectsArray = [
     {
+        'title': 'SMART PHONE (PART 4) - REPOPULATE DOM',
+        'id': 'smart-phone-repopulate-dom',
+        'link': 'pages/buildrepopulatedom.html'
+    },
+    {
         'title': 'SMART PHONE (PART 3) - DIGITAL CLOCK',
         'id': 'smart-phone-digital-clock',
         'link': 'pages/builddigitalclock.html'

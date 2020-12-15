@@ -140,6 +140,7 @@ a {
     width: 100%;
     padding: 1rem;
     font-size: 0.75em;
+    height: auto;
 }
 
 .modal-close-button {
@@ -840,7 +841,7 @@ a {
     }
 
     .modal-content-right {
-        height: 300px;
+        height: auto;
     }
     
     .modal-close-button:focus {

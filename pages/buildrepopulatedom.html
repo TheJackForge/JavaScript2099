@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <title>JavaScript/2099 - Learn how to build a countdown timer in JavaScript</title>
+    <title>JavaScript/2099 - Learn how to repopulate the DOM</title>
 </head>
 <body>
 
@@ -111,30 +111,48 @@
                         <p>If you build this project, don't delete it because I plan on using it as the base for more projects in the future.</p>
                     </div>       
                     <div class="project-html" id="project-html">
-                        <div class="ide-mockup">
-                            <img src="/img/digitalclock/digital-clock-html-001.png">
-                        </div>
+                        <ul>
+                            <li>No new HTML for this section</li>
+                        </ul>
                     </div>
                     <div class="project-css" id="project-css">
+                      
                         <div class="ide-mockup">
-                            <img src="/img/digitalclock/digital-clock-css-001.png">
+                            <img src="/img/repopulatedom/repopulate-dom-css-001.png">
                         </div>
+                    <ul>
+                        <li>Create the class 'digital-clock-app-container.slide-right' class and add the settings.</li>
+                    </ul>
 
-                        <div class="ide-mockup">
-                            <img src="/img/digitalclock/digital-clock-css-002.png">
-                        </div>
-
-                        <div class="ide-mockup">
-                            <img src="/img/digitalclock/digital-clock-css-003.png">
-                        </div>
+                      
                     </div>
                     <div class="project-javascript" id="project-javascript">
-                        <div class="ide-mockup">
-                            <img src="/img/digitalclock/digital-clock-javascript-001.png">
-                        </div>
-                        <div class="ide-mockup">
-                            <img src="/img/digitalclock/digital-clock-javascript-002.png">
-                        </div>
+                     <div class="ide-mockup">
+                         <img src="/img/repopulatedom/repopulate-dom-javascript-001.png">
+                     </div>
+                     <ul>
+                         <li>Create global appOpen variable and set the default to false.</li>
+                     </ul>
+                     <div class="ide-mockup">
+                         <img src="/img/repopulatedom/repopulate-dom-javascript-002.png">
+                     </div>
+                     <ul>
+                         <li>Add an appOpen of 'true' when the digitalClockApp is open and running.</li>
+                     </ul>
+                     <div class="ide-mockup">
+                         <img src="/img/repopulatedom/repopulate-dom-javascript-003.png">
+                     </div>
+                     <ul>
+                         <li>Add IF/ELSE IF to the smartPhoneHomeButtonEventListener</li>
+                         <li>IF appOpen is equal to false, meaning no app is open, we will continue with the current commands we had in here to open an app.</li>
+                         <li>If an app is open (appOpen === true), we want pushing the home button to clear the screen and repopulate the DOM with our icons </li>
+                         <li>Set appOpen to false to let the script know that the app is closed</li>
+                         <li>Run the populateHomeScreen( ) function to start rebuilding the DOM.</li>
+                         <li>Create variables for digitalClockAppDiv, topBezel, and bottomBezel</li>
+                         <li>Add the class of 'slide-right' to digitalClockAppDiv. This will slide the div to the right 100%.</li>
+                         <li>Remove the class of 'app-open' from topBezel and bottomBezel. This will remove the borders from the bezels.</li>
+                         <li>Create a setTimeout function to remove the classes of 'open' and 'slide-right' from the digitalClockAppDiv. This will return it to it's default location. The reason you want to use a setTimeout here is so they don't disappear automatically when they are removed and the animation has time to play.</li>
+                     </ul>
          
 
                         

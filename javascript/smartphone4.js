@@ -8,46 +8,6 @@ const contentContainer = document.getElementById('content-container')
 const indexProjectGrid = document.getElementById('index-project-grid')
 const modalContentRight = document.getElementById('modal-content-right')
 
-
-const projectsArray = [
-    {
-        'title': 'SMART PHONE (PART 2) - SLIDING OVERLAY',
-        'id': 'smart-phone-sliding-overlay',
-        'link': 'pages/buildslidingoverlay.html'
-    },
-    {
-        'title': 'SMART PHONE (PART 1) - HOME SCREEN',
-        'id': 'smart-phone-home-screen',
-        'link': 'pages/buildhomescreen.html'
-    },
-    {
-        'title': 'BUILD A PROGRESS BAR',
-        'id': 'progressBar',
-        'link': 'pages/buildprogress.html'
-    },
-    {
-        'title': 'BUILD A MODAL',
-        'id': 'modal',
-        'link': 'pages/buildmodal.html'
-    },
-    // {
-    //     'title': 'HOW TO BUILD A TIMER',
-    //     'id': 'timer',
-    //     'link': 'pages/buildtimer.html'
-    // },
-    // {
-    //     'title': 'HOW TO BUILD A BURGER MENU',
-    //     'id': 'burgermenu',
-    //     'link': 'pages/burgermenu.html'
-    // },
-    // {
-    //     'title': 'HOW TO BUILD AN IMAGE CAROUSEL',
-    //     'id': 'imagecarousel',
-    //     'link': 'pages/imagecarousel.html'
-    // }
-];
-
-
 function projectsOpen() {
     projectsList();
 }
@@ -251,53 +211,13 @@ contentContainer.addEventListener('click', (e) => {
 
 // PROJECTS SECTION
 
-// How to Build a Digital Clock Project 
-
-// function DigitalClock() {
-
-//     const buildDigitalClockDiv = document.getElementById('build-digital-clock')
-//     const date = new Date;
-
-//     let dateHours = date.getHours();
-//     let dateMinutes = date.getMinutes();
-//     let dateSeconds = date.getSeconds();
-
-//     if (dateHours > 12) {
-//         dateHours -= 12;
-//     } else if (dateHours === 0) {
-//         dateHours = 12;
-//     }
-
-//     if (dateHours < 10)  {
-//         dateHours = '0' + dateHours;
-//     }
-//     if (dateMinutes < 10) {
-//         dateMinutes = '0' + dateMinutes;
-//     }
-//     if (dateSeconds < 10) {
-//         dateSeconds = '0' + dateSeconds;
-//     }
-
-//     buildDigitalClockDiv.innerHTML = `
-//     <p>${dateHours}:${dateMinutes}:${dateSeconds}</p>
-//     `
-// }
-
-// smartPhoneHomeBtn.addEventListener('click', () => {
-//     DigitalClock();
-//         const buildDigitalClock = document.getElementById('build-digital-clock')
-//         if (buildDigitalClock.classList.contains('clicked')) {
-//             buildDigitalClock.classList.remove('clicked')
-//         } else {
-//             buildDigitalClock.classList.add('clicked')
-//         }
-//     setInterval(DigitalClock, 1000);
-// })
 
 // Build a Home Screen Project
-const smartPhoneHomeBtn = document.getElementById('smart-phone-home-button')
-// const smartPhoneContainer = document.getElementById('smart-phone-container')
 
+const smartPhoneHomeBtn = document.getElementById('smart-phone-home-button')
+const smartPhoneContainer = document.getElementById('smart-phone-container')
+
+let appOpen = false;
 
 const appItems = [
     {
@@ -306,8 +226,6 @@ const appItems = [
         'class': 'digital-clock-app'
     },
 ];
-
-let appOpen = false;
 
 function populateHomeScreen() {
     const appList = document.getElementById('home-screen-app-list');
@@ -327,14 +245,9 @@ function populateHomeScreen() {
 }
 
 function digitalClockApp() {
-    const digitalClockApp = document.getElementById('digital-clock-app-container');
-    const topBezel = document.querySelector('.top-bezel-smartphone');
-    const bottomBezel = document.querySelector('.bottom-bezel-smartphone');
+    appOpen = true;
     const currentTime = document.getElementById('current-time-clock');
     const currentDate = document.getElementById('current-date-clock');
-    topBezel.classList.add('app-open')
-    bottomBezel.classList.add('app-open')
-    digitalClockApp.classList.add('open')
     
     const date = new Date;
     let dateHours = date.getHours();
@@ -360,7 +273,7 @@ function digitalClockApp() {
     }
 
     currentTime.innerHTML = `
-    <p>${dateHours}:${dateMinutes}:${dateSeconds}</p>
+    ${dateHours}:${dateMinutes}:${dateSeconds}
     `
     currentDate.innerHTML = `
     ${dateMonth} // ${dateDay} // ${dateYear}
@@ -370,43 +283,39 @@ function digitalClockApp() {
 
 smartPhoneHomeBtn.addEventListener('click', () => {
     if (appOpen === false) {
+        
         populateHomeScreen();
         const appSlider = document.getElementById('app-slider')
         appSlider.classList.add('opened')
     } else if (appOpen === true) {
-        const digitalClockApp = document.getElementById('digital-clock-app-container');
-        digitalClockApp.classList.remove('open')
-        const topBezel = document.querySelector('.top-bezel-smartphone');
-        const bottomBezel = document.querySelector('.bottom-bezel-smartphone');
-        topBezel.classList.remove('app-open')
-        bottomBezel.classList.remove('app-open')
-    }
-})
-
-const smartPhoneContainer = document.getElementById('smart-phone-container')
-
-smartPhoneContainer.addEventListener('click', (e) => {
-    if (e.target.classList.contains('digital-clock-app')) {
+        appOpen = false;
+        populateHomeScreen();
         const digitalClockAppDiv = document.getElementById('digital-clock-app-container');
         const topBezel = document.querySelector('.top-bezel-smartphone');
         const bottomBezel = document.querySelector('.bottom-bezel-smartphone');
-        topBezel.classList.add('app-open')
-        bottomBezel.classList.add('app-open')
-        digitalClockAppDiv.classList.add('open')
-        digitalClockApp();
-        setInterval(digitalClockApp, 1000)
+        digitalClockAppDiv.classList.add('slide-right');
+        topBezel.classList.remove('app-open');
+        bottomBezel.classList.remove('app-open');
+        setTimeout( () => {
+            digitalClockAppDiv.classList.remove('open');
+            digitalClockAppDiv.classList.remove('slide-right')
+        }, 1000);
+        
     }
 })
 
 smartPhoneContainer.addEventListener('click', (e) => {
-    console.log(e.target.classList)
-    if (e.target.classList.contains('digital-clock-app-button')) {
-        const buildDigitalClock = document.getElementById('build-digital-clock')
-        if (buildDigitalClock.classList.contains('clicked')) {
-            buildDigitalClock.classList.remove('clicked')
-        } else {
-            buildDigitalClock.classList.add('clicked')
-        }
+    if (e.target.classList.contains('digital-clock-app')) {
+        digitalClockApp();
+        const appList = document.getElementById('home-screen-app-list');
+        const digitalClockAppDiv = document.getElementById('digital-clock-app-container');
+        const topBezel = document.querySelector('.top-bezel-smartphone');
+        const bottomBezel = document.querySelector('.bottom-bezel-smartphone');
+        appList.classList.add('faded-out');
+        topBezel.classList.add('app-open');
+        bottomBezel.classList.add('app-open');
+        digitalClockAppDiv.classList.add('open');
+        setInterval(digitalClockApp, 1000)
     }
-    setInterval(DigitalClock, 1000);
+    
 })

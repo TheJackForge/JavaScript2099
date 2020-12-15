@@ -776,12 +776,22 @@ a {
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
     z-index: -5;
+    bottom: -100%;
 }
 
 .digital-clock-app-container.open {
+    right: 0%;
+    bottom: 0%;
     z-index: 3;
     opacity: 1;
+    transition: bottom 1.5s ease-in-out;
 }
+
+.digital-clock-app-container.slide-right {
+    right: -100%;
+    transition: right 1s ease-in-out;
+}
+
 
 .current-time-clock {
     margin-top: 6rem;

@@ -114,29 +114,75 @@
                         <div class="ide-mockup">
                             <img src="/img/digitalclock/digital-clock-html-001.png">
                         </div>
+
+                        <ul>
+                            <li>Create digital-clock-app-container div.</li>
+                            <li>Create current-time-clock div inside of digital-clock-app-container.</li>
+                            <li>Create current-date-clock div inside of digital-clock-app-container.</li>
+                        </ul>
                     </div>
                     <div class="project-css" id="project-css">
                         <div class="ide-mockup">
                             <img src="/img/digitalclock/digital-clock-css-001.png">
                         </div>
 
+                        <ul>
+                            <li>Create top-bezel-smartphone.app-open class and settings.</li>
+                            <li>Create bottom-bezel-smartphone.app-open class and settings.</li>
+                        </ul>
+
                         <div class="ide-mockup">
                             <img src="/img/digitalclock/digital-clock-css-002.png">
                         </div>
 
+                        <ul>
+                            <li>Create digital-clock-app-container class and settings</li>
+                            <li>Create digital-clock-app-container.open class and settings</li>
+                        </ul>
+
                         <div class="ide-mockup">
                             <img src="/img/digitalclock/digital-clock-css-003.png">
                         </div>
+
+                        <ul>
+                            <li>Create current-time-clock class and settings.</li>
+                            <li>Create current-date-clock class and settings.</li>
+                        </ul>
                     </div>
                     <div class="project-javascript" id="project-javascript">
                         <div class="ide-mockup">
                             <img src="/img/digitalclock/digital-clock-javascript-001.png">
                         </div>
+
+                        <ul>
+                            <li>Create variable called smartPhoneContainer by using getElementById on the id smart-phone-container.</li>
+                            <li>Create a click eventListener on smartPhoneContainer.</li>
+                            <li>Pass in an event (e)</li>
+                            <li>IF statement. If the e.target class list contains 'digital-clock-app,' run the following.</li>
+                            <li>Run digitalClockApp( ) function. Will be created in next step.</li>
+                            <li>Create variables for digitalClockAppDiv, topBezel, and bottomBezel.</li>
+                            <li>Add the class of 'app-open' to topBezel and bottomBezel.</li>
+                            <li>Add the class of 'open' to digitalClockAppDiv</li>
+                            <li>setInterval on the digitalClockApp function to make it run once every second.</li>
+                        </ul>
                         <div class="ide-mockup">
                             <img src="/img/digitalclock/digital-clock-javascript-002.png">
                         </div>
          
-
+                        <ul>
+                            <li>Create the digitalClockApp( ) function.</li>
+                            <li>Create variable for currentTime by using getElementById on the id of 'current-time-clock.'</li>
+                            <li>Create variable for currentDate by using getElementById on the id of 'current-date-clock.'</li>
+                            <li>Create a variable called date that is linked to the JavaScript 'new Date;' function.</li>
+                            <li>Create variables for hours, minutes, seconds, year, month, and date. Use the date variable (JavaScript function) we created in the last step for each one.</li>
+                            <li>Add a +1 to month because month is zero indexed (eg. January is 0, February is 1, etc)</li>
+                            <li>Create an IF/ELSE IF statement to convert from a 24 hour clock to a 12 hour clock.</li>
+                            <li>IF hours are over 12, subtract 12 from the variable.</li>
+                            <li>ELSE IF hours are equal to 0 (midnight to 1 AM), set hours to 12</li>
+                            <li>The next 3 IF statements will add 0 before the variable if they are less than 10.</li>
+                            <li>Use template literals to set the currentTime.innerHTML</li>
+                            <li>Use template literals to set the currentDate.innerHTML</li>
+                        </ul>
                         
                     </div>
                 </div>

@@ -773,8 +773,6 @@ a {
     height: 100%;
     color: #c0c0c0;
     background-color: rgb(15, 15, 15);
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
     z-index: -5;
     bottom: -100%;
 }
@@ -783,7 +781,6 @@ a {
     right: 0%;
     bottom: 0%;
     z-index: 3;
-    opacity: 1;
     transition: bottom 1.5s ease-in-out;
 }
 

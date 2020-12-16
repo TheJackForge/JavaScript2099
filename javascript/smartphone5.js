@@ -221,12 +221,12 @@ let appOpen = false;
 
 const appItems = [
     {
-        'title': 'time',
+        'title': 'Time',
         'icon': 'far fa-clock fa-2x',
         'class': 'digital-clock-app'
     },
     {
-        'title': 'OnlyJobs',
+        'title': 'OpenSource',
         'icon': 'fas fa-user-slash fa-2x',
         'class': 'target-app'
     }

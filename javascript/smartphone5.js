@@ -302,16 +302,44 @@ smartPhoneHomeBtn.addEventListener('click', () => {
         appOpen = false;
         populateHomeScreen();
         const digitalClockAppDiv = document.getElementById('digital-clock-app-container');
+        const targetAppDiv = document.getElementById('target-app-container');
         const topBezel = document.querySelector('.top-bezel-smartphone');
         const bottomBezel = document.querySelector('.bottom-bezel-smartphone');
+        targetAppDiv.classList.add('slide-right');
         digitalClockAppDiv.classList.add('slide-right');
         topBezel.classList.remove('app-open');
         bottomBezel.classList.remove('app-open');
         setTimeout( () => {
+            targetAppDiv.classList.remove('open')
+            targetAppDiv.classList.remove('slide-right')
             digitalClockAppDiv.classList.remove('open');
             digitalClockAppDiv.classList.remove('slide-right')
-        }, 1000);
-        
+        }, 1000); 
+    }
+})
+
+smartPhoneHomeBtn.addEventListener('click', () => {
+    if (appOpen === false) {     
+        populateHomeScreen();
+        const appSlider = document.getElementById('app-slider')
+        appSlider.classList.add('opened')
+    } else if (appOpen === true) {
+        appOpen = false;
+        populateHomeScreen();
+        const digitalClockAppDiv = document.getElementById('digital-clock-app-container');
+        const targetAppDiv = document.getElementById('target-app-container');
+        const topBezel = document.querySelector('.top-bezel-smartphone');
+        const bottomBezel = document.querySelector('.bottom-bezel-smartphone');
+        targetAppDiv.classList.add('slide-right');
+        digitalClockAppDiv.classList.add('slide-right');
+        topBezel.classList.remove('app-open');
+        bottomBezel.classList.remove('app-open');
+        setTimeout( () => {
+            targetAppDiv.classList.remove('open')
+            targetAppDiv.classList.remove('slide-right')
+            digitalClockAppDiv.classList.remove('open');
+            digitalClockAppDiv.classList.remove('slide-right')
+        }, 1000); 
     }
 })
 
@@ -332,6 +360,7 @@ smartPhoneContainer.addEventListener('click', (e) => {
 
 smartPhoneContainer.addEventListener('click', (e) => {
     if (e.target.classList.contains('target-app')) {
+        appOpen = true;
         const appList = document.getElementById('home-screen-app-list');
         const targetAppDiv = document.getElementById('target-app-container');
         const topBezel = document.querySelector('.top-bezel-smartphone');

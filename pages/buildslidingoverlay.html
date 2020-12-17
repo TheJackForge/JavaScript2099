@@ -114,63 +114,50 @@
                         <div class="ide-mockup">
                             <img src="/img/slidingoverlay/sliding-overlay-html-001.png">
                         </div>
-                        <ul>
-                            <li>Add top-bezel-smartphone div</li>
-                            <li>Add app-slider div</li>
-                            <li>Add app-slider-content div inside app-slider div.</li>
-                            <li>Add content to the app-slider-content div. Choose any icon, svg, or photo you would like.</li>
-                            <li>Add bottom-bezel-smartphone</li>
-                        </ul>
-
+                        <p>The first thing we will create is the <span class="ide-purple">top-bezel-smartphone</span> div. This will be the top part of the phone that doesn't serve a purpose with the screen but will be used to sandwich the <span class="ide-purple">app slider</span> with the <span class="ide-purple">smart-phone-container</span> div.</p>
+                        <p>Now we will create the <span class="ide-purple">app-slider</span> div. This will be the section of the screen that will move when you unlock the phone by pushing the home button.</p>
+                        <p>Inside the <span class="ide-purple">app-slider</span> div, we will create a div for our <span class="ide-purple">app-content</span>. This div will be what appears on the lock screen. In my example I used a font-awesome icon of a globe but you can put anything you want here.</p>
+                        <p>The final thing we need to add in the HTML is the <span class="ide-purple">bottom-bezel</span> div. Like the <span class="ide-purple">top-bezel</span>, this will sandwich the <span class="ide-purple">app-slider</span> with the <span class="ide-purple">smart-phone-container</span> to create a better screen-like effect.</p>
+                        bottom-bezel-smartphone</li>                       
                     </div>
                     <div class="project-css" id="project-css">
 
                         <div class="ide-mockup">
                             <img src="/img/slidingoverlay/sliding-overlay-css-001.png">
                         </div>
-
-                        <ul>
-                            <li>Change background of .smart-phone-home-button to rgb(7,7,7)</li>
-                            <li>Add z-index of 7</li>
-                        </ul>
+                        <p>In the <span class="ide-purple">.smart-phone-home-button</span> class, we are going to make a few changes from what we had initially.</p>
+                        <p>The first change will be to change the background-color of the button to match the slightly more gray color we used on the top and bottom bezel.</p>
+                        <p>Next we will set the z-index of the button to 7, so that it always on top. As a physical component on the phone, nothing should ever really layer over top of it.</p>                       
 
                         <div class="ide-mockup">
                             <img src="/img/slidingoverlay/sliding-overlay-css-002.png">
                         </div>
-                            
-                        <ul>
-                            <li>Add class and settings for .top-bezel-smartphone</li>
-                            <li>Add class and settings for .bottom-bezel-smartphone</li>
-                        </ul>
-
+                        <p>Now we will style the top and bottom bezel classes. Most of it involves styling except for the z-index. We will set that to 5 so it sits below the button but over top of everything that appears on the screen.</p>
+                        <p>As long as nothing on our screen is set to a z-index of more than 5, we should not have anything layer over top of the bezels.</p>                      
                         <div class="ide-mockup">
                             <img src="/img/slidingoverlay/sliding-overlay-css-003.png">
                         </div>
-
-                        <ul>
-                            <li>Add class and settings for .app-slider</li>
-                            <li>Add class and settings for .app-slider.opened</li>
-                        </ul>
-
+                        <p>For the <span class="ide-purple">.app-slider</span> class we will have to add a few key things to make it functional. First set the the position to absolute so we can freely place the div where we would like.</p>
+                        <p>The right setting is what we need to set to make the div slide when we add the class of <span class="ide-purple">.opened</span> in the next class setting. This div will sit at a right position of 0% which is as far right as it can, and then when we add the <span class="ide-purple">.opened</span> class it will slide to the right by -100%. Meaning it will slide out of view.</p>
+                        <p>The transition setting is what will set how the changing of the right value will appear. If we didn't add the transition it would just instantly go to the -100% right position. With this setting, it will slide to the position over the span of 0.5 seconds.</p>
+                        <p>The z-index setting for the <span class="ide-purple">.app-slider</span> is 3, which will place it between <span class="ide-purple">.smart-phone-container</span> (z-index of 0) and the <span class="ide-purple">top/bottom bezels</span> (z-index of 5).</p>
+                        <p>The <span class="ide-purple">.app-slider.opened</span> class will be what happens when the class of <span class="ide-purple">.opened</span> is added to the <span class="ide-purple">.app-slider</span> class. This is right position that the div will slide to when it is added.</p>                     
                         <div class="ide-mockup">
                             <img src="/img/slidingoverlay/sliding-overlay-css-004.png">
                         </div>
-
-                        <ul>
-                            <li>Add class and settings for .app-slider-content</li>
-                        </ul>
-   
+                        <p>The <span class="ide-purple">.app-slider-content</span> will be what styles are applied to the content of the sliding div. Everything is pretty much used for styling and alignment with exception of the z-index. We will set this to the same z-index as the <span class="ide-purple">.app-slider</span> div (3).</p>                         
                     </div>
                     <div class="project-javascript" id="project-javascript">
 
                         <div class="ide-mockup">
                             <img src="/img/slidingoverlay/sliding-overlay-javascript-001.png">
                         </div>
-                        <ul>
-                            <li>Create the .app-slider variable by using getElementById on 'app-slider'</li>
-                            <li>Add the class of 'opened' to the appSlider variable.</li>
-                        </ul>
-                                                  
+                        <p>The JavaScript for this section is very simple and only requires us to add the class of <span class="ide-purple">opened</span> to the <span class="ide-purple">app-slider</span> element.</p>
+                        <p>We will be adding the code for this to the 'click' eventListener we created on the <span class="ide-purple">smartPhoneHomeBtn</span> variable in the previous section.</p>
+                        <p>The first thing we will do is create a variable called appSlider, that we will obtain by using getElementById on 'app-slider.' This is the same element that we styled under the <span class="ide-purple">.app-slider</span> class, but since we assigned an ID to it in the HTML, we can use that for the variable.</p>
+                        <p>Now we will add the class of <span class="ide-purple">.opened</span> to the <span class="ide-purple">appSlider</span> variable.</p>
+                        <p>Now when you click the button, the <span class="ide-purple">appSlider</span> div should slide to the right by -100% of the width of the div. On a regular smartphone, pressing the button again will not lock the screen, so this will be set as the only function for the time being.</p>
+                                                                        
                     </div>
                 </div>
             </div>

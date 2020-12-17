@@ -288,9 +288,66 @@ function digitalClockApp() {
 async function targetApp() {
     fetch('https://randomuser.me/api/')
     .then(response => response.json())
-    .then(json => console.log(json))
+    .then(json => targetAppResults(json))
 }
 
+function targetAppResults(target) {
+    const targetFoundDiv = document.getElementById('target-found-container')
+    const targetInfo = target.results[0]
+    console.log(targetInfo)
+    const firstName = targetInfo.name.first;
+    const lastName = targetInfo.name.last;
+    const photo = targetInfo.picture.large;
+    const addressNumber = targetInfo.location.street.number;
+    const streetNumber = targetInfo.location.street.name;
+    let age = targetInfo.dob.age;
+    if (age > 50) {
+        age -= 10;
+    } else if (age > 70) {
+        age -= 20;
+    }
+    const btcReward = (Math.random()) * 1;
+    console.log(btcReward.toFixed(4));
+    targetFoundDiv.classList.add('active');
+    targetFoundDiv.innerHTML = `
+    <img src="${photo}">
+    <p>NAME: ${firstName} ${lastName}</p>
+    <p>AGE: ${age}</p>
+    <p>PINGED: ${addressNumber} ${streetNumber}</p>
+    <p>PAYOUT: ${btcReward.toFixed(4)} <i class="fab fa-btc"></i></p>
+    ` 
+}
+
+function targetAppRefresh() {
+    const targetAppDiv = document.getElementById('target-app-container');
+    targetAppDiv.innerHTML = `
+        <div class="target-app-inner-container">
+            <div id="target-landing-page" class="target-landing-page">
+                <div class="target-landing-page-title">
+                <p>OpenSource</p>
+            </div>
+            <div class="target-landing-page-logo">
+                <i class="fas fa-user-alt-slash fa-7x"></i>
+                <ul>
+                    <li>No personal information stored on file.</li>
+                    <li>Payments exclusively made in BTC.</li>
+                    <li>OpenSource is not responsible or liable if you are criminally charged.</li>
+                </ul>
+            </div>              
+        </div>
+        <div id="target-spinner-container" class="target-spinner-container">
+            <div class="target-spinner">
+                <i class="fas fa-sync fa-6x"></i>
+            </div>
+            <p id="target-spinner-text" class="target-spinner-text"></p>
+        </div>
+        <div id="target-found-container" class="target-found-container"></div>
+        </div>
+        <div class="target-btn-container">
+        <button class="find-new-target-btn" id="find-new-target-btn">FIND TARGETS IN AREA</button>
+        </div> 
+    `
+}
 
 smartPhoneHomeBtn.addEventListener('click', () => {
     if (appOpen === false) {     
@@ -311,6 +368,7 @@ smartPhoneHomeBtn.addEventListener('click', () => {
         setTimeout( () => {
             targetAppDiv.classList.remove('open')
             targetAppDiv.classList.remove('slide-right')
+            targetAppRefresh();
             digitalClockAppDiv.classList.remove('open');
             digitalClockAppDiv.classList.remove('slide-right')
         }, 1000); 
@@ -347,10 +405,12 @@ smartPhoneContainer.addEventListener('click', (e) => {
 })
 
 smartPhoneContainer.addEventListener('click', (e) => {
-    if (e.target.id === 'find-new-target-btn') {
+    if (e.target.id === 'find-new-target-btn') {        
+        const targetFoundDiv = document.getElementById('target-found-container')
         const targetSpinnerDiv = document.getElementById('target-spinner-container');
         const targetLandingPageDiv = document.getElementById('target-landing-page');
         const targetSpinnerText = document.getElementById('target-spinner-text');
+        targetFoundDiv.classList.remove('active')
         targetSpinnerText.innerHTML = `
         SEARCHING...
         `
@@ -366,10 +426,10 @@ smartPhoneContainer.addEventListener('click', (e) => {
             `
             setTimeout( () => {
                 targetSpinnerDiv.classList.remove('active')
+                targetApp();
             }, 1000)
         }, searchTime)
-        targetApp();
-    }
-    
+    } 
 })
+
 

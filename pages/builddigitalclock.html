@@ -140,37 +140,30 @@
                         <div class="ide-mockup">
                             <img src="/img/digitalclock/digital-clock-javascript-001.png">
                         </div>
-
-                        <ul>
-                            <li>Create variable called smartPhoneContainer by using getElementById on the id smart-phone-container.</li>
-                            <li>Create a click eventListener on smartPhoneContainer.</li>
-                            <li>Pass in an event (e)</li>
-                            <li>IF statement. If the e.target class list contains 'digital-clock-app,' run the following.</li>
-                            <li>Run digitalClockApp( ) function. Will be created in next step.</li>
-                            <li>Create variables for digitalClockAppDiv, topBezel, and bottomBezel.</li>
-                            <li>Add the class of 'app-open' to topBezel and bottomBezel.</li>
-                            <li>Add the class of 'open' to digitalClockAppDiv</li>
-                            <li>setInterval on the digitalClockApp function to make it run once every second.</li>
-                        </ul>
+                        <p>The first thing we will do is create a variable called <span class="ide-purple">smartPhoneContainer</span> by using getElementById on the <span class="ide-purple">smart-phone-container</span> ID.</p>
+                        <p>Now we will create a click eventListener on the <span class="ide-purple">smartPhoneContainer</span>. Generally you would link an eventListener to a direct element but in JavaScript things tend to be pretty fluid. Elements will need to be clicked that didn't exist when the page was loaded and will generally be inaccessible unless you use a parent element to find it. That's what we will do with the <span class="ide-purple">smartPhoneContainer</span>. The important thing you need to do here is to pass in an event instead of an anonymous function. This is shown as the (e) in the brackets after the 'click' listener.</p>
+                        <p>If you have never used an event on a click eventListener, add <span class="ide-purple">console.log(e.target)</span> and open the console to see everything that you are clicking on. I have found this to be one of the handiest tools I have at my disposal as I have been learning JavaScript. It has saved me a ton of time, revealing exactly what I was clicking on at any given time.</p>
+                        <p>Moving on, we will start the function with an IF statement that will take the event and look for something that matches what we are looking for. In this case we are looking for an element that has the class of <span class="ide-purple">digital-clock-app</span>. The only thing within the <span class="ide-purple">smartPhoneContainer</span> that will have this class will be our icon for the digital clock which has the class appended to it when it is created from the array (This was something we did back in the <a href="buildhomescreen.html"><span class="ide-green">"Build a Home Screen"</span></a> section). When you click on the icon, it will run the rest of the code from the IF statement.</p>
+                        <p>The first thing this will do is call the digitalClockApp( ) function. We have not created this function yet, so what you may want to do is comment it out until we have created it so you don't throw up any errors which could prevent the rest of the code from running.</p>
+                        <p>Now we will create 3 variables for the digitalClockAppDiv, the topBezel and the bottomBezel. We will be adding classes to these in the next steps.</p>
+                        <p>The next 2 steps will add the class of <span class="ide-purple">.app-open</span> to the topBezel and bottomBezel variables. This will create the pink bars on the bezels when an app is opened.</p>
+                        <p>The next step will add the class of <span class="ide-purple">open</span> to the <span class="ide-purple">digitalClockAppDiv</span> div. This will cause the div to slide up from a bottom setting of -100% to 0%, making it visible.</p>
+                        <p>Now we will run a setInterval on the digitalClockApp( ) function. The 1000 represents 1000 milliseconds which means that the function will be ran once every second. This is what is going to make the seconds on our digital clock update every single second.</p>                     
                         <div class="ide-mockup">
                             <img src="/img/digitalclock/digital-clock-javascript-002.png">
                         </div>
-         
-                        <ul>
-                            <li>Create the digitalClockApp( ) function.</li>
-                            <li>Create variable for currentTime by using getElementById on the id of 'current-time-clock.'</li>
-                            <li>Create variable for currentDate by using getElementById on the id of 'current-date-clock.'</li>
-                            <li>Create a variable called date that is linked to the JavaScript 'new Date;' function.</li>
-                            <li>Create variables for hours, minutes, seconds, year, month, and date. Use the date variable (JavaScript function) we created in the last step for each one.</li>
-                            <li>Add a +1 to month because month is zero indexed (eg. January is 0, February is 1, etc)</li>
-                            <li>Create an IF/ELSE IF statement to convert from a 24 hour clock to a 12 hour clock.</li>
-                            <li>IF hours are over 12, subtract 12 from the variable.</li>
-                            <li>ELSE IF hours are equal to 0 (midnight to 1 AM), set hours to 12</li>
-                            <li>The next 3 IF statements will add 0 before the variable if they are less than 10.</li>
-                            <li>Use template literals to set the currentTime.innerHTML</li>
-                            <li>Use template literals to set the currentDate.innerHTML</li>
-                        </ul>
                         
+                        <p>Now we will move onto creating the function that will run when we call <span class="ide-purple">digitalClockApp( ).</span></p>
+                        <p>First create the digitalClockApp function.</p>
+                        <p>Now create 2 variables, one for <span class="ide-purple">currenTime</span> and one for <span class="ide-purple">currentDate</span>. These will be the locations where we fill in the date by changing their innerHTML.</p>
+                        <p>Now the most important part of the digital clock, we are going to create a variable that will connect to JavaScript's built-in Date function. This will allow us to pull certain attributes out and apply them to our project.</p>
+                        <p>Declare 6 variables that will allow you to get the hours, minutes, seconds, year, month and day. Ensure you declare these with <span class="ide-purple">let</span> because they will need the ability to change and update as the function runs.</p>
+                        <p>Of the variables that you declared, add a +1 to the month variable because it is zero-indexed. Meaning that January is 0, February is 1, etc.</p>
+                        <p>The first IF statement is going to be what converts our 24 hour clock to a standard 12 hour clock. The first part of the IF statement states, that for any number over 12, we will deduct 12. So 13, would be 1, 14 would be 2, and so on. The ELSE IF part of the statement declares that if hours equals 0, we will convert it to 12. This would apply at the time between midnight and 1 AM.</p>
+                        <p>The second IF statement is going to add a zero to any number that is less than 10. For the hours variable it is purely aesthetic but for minutes and seconds it is needed. Without it, you would have your clock showing times like 12:5:5 when it is actually 12:05:05. Use concatenation to achieve this in a nice painless way.</p>
+                        <p>Now we will be able to write what we have come up with to the DOM by using template literals. Start with <span class="ide-purple">currentTime.innerHTML</span> and use the variables of dateHours, dateMinutes, and dateSeconds.</p> After that, do the same to <span class="ide-purple">currentDate.innerHTML</span> with the dateMonths, dateDay, and dateYear variable.</p>
+                        <p>Now if you refresh the page and push the icon button, you should see the digital clock app slide up from the bottom.</p>
+                        <p>In the next section we will work on closing the application and repopulating our home screen by pushing the home button.</p>                                          
                     </div>
                 </div>
             </div>

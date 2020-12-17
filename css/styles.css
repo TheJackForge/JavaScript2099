@@ -963,6 +963,36 @@ a {
     }
 }
 
+.target-found-container {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    top: 20%;
+    z-index: -5;
+    opacity: 0;
+    transition: opacity 1500ms ease-in-out;
+}
+
+.target-found-container.active {
+    z-index: 3;
+    opacity: 1;
+}
+
+.target-found-container img {
+    margin-bottom: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.target-found-container p {
+    margin: 0 .5rem;
+    padding: 0;
+    font-size: .6rem;
+    line-height: 2;
+    text-align: left;
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

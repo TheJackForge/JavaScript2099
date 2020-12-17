@@ -69,38 +69,49 @@
             
         <div id="main" class="main-content">
             <div id="main-content-header" class="main-content-header">
-                <h1>How to Use an API (Part 1)</h1> 
+                <h1>API Usage (Part 2)</h1> 
             </div>
 
     <!-- BUILD TARGET OPEN SOURCE APP PROJECT HTML START -->
 
     <div id="smart-phone-container" class="smart-phone-container">
         <div class="top-bezel-smartphone"></div>
+        <!-- DIGITAL CLOCK APP START -->
         <div class="digital-clock-app-container" id="digital-clock-app-container">
             <div class="current-time-clock" id="current-time-clock"></div>
             <div class="current-date-clock" id="current-date-clock"></div>
         </div>
+        <!-- DIGITAL CLOCK APP END -->
+        <!-- TARGET OPEN SOURCE APP START -->
         <div class="target-app-container" id="target-app-container">
             <div class="target-app-inner-container">
-                <div class="target-landing-page">
+                <div id="target-landing-page" class="target-landing-page">
                     <div class="target-landing-page-title">
                         <p>OpenSource</p>
                     </div>
                     <div class="target-landing-page-logo">
-                        <i class="fas fa-user-alt-slash fa-6x"></i>
+                        <i class="fas fa-user-alt-slash fa-7x"></i>
                         <ul>
                             <li>No personal information stored on file.</li>
-                            <li>Exclusive payments in BTC.</li>
-                            <li>OpenSource is not responsible or liable if you are charged criminally.</li>
+                            <li>Payments exclusively made in BTC.</li>
+                            <li>OpenSource is not responsible or liable if you are criminally charged.</li>
                         </ul>
                     </div>              
                 </div>
+                <!-- SPINNER CODE START -->
+                <div id="target-spinner-container" class="target-spinner-container">
+                    <div class="target-spinner">
+                        <i class="fas fa-sync fa-6x"></i>
+                    </div>
+                    <p id="target-spinner-text" class="target-spinner-text"></p>
+                </div>
+                <!-- SPINNER CODE END -->
             </div>
             <div class="target-btn-container">
-                <button class="find-new-target-btn" id="find-new-target-btn"><i class="fas fa-bullseye fa-2x"></i></button>
-                <p>FIND TARGETS IN AREA</p>
-            </div>
-        </div>      
+                <button class="find-new-target-btn" id="find-new-target-btn">FIND TARGETS IN AREA</button>
+            </div>       
+        </div>  
+        <!-- TARGET OPEN SOURCE APP END     -->
         <div id="app-slider" class="app-slider">
             <div class="app-slider-content"><i class="fas fa-globe fa-4x"></i></div>
         </div>
@@ -129,82 +140,33 @@
                 </div>
                 <div class="project-inner-container">
                     <div class="project-summary active" id="project-summary">
-                        <p>When I was first planning this project, I was going to make a digital timer. As I got further into building it, I realized that before you learn how to walk, you should really learn how to crawl. </p>
-                        <p>Dates and times in JavaScript are not as straight forward as you would believe them to be, so I decided to start at the beginning and create a digital clock. Of course, I decided to have some fun with it and spice it up by employing a few fun CSS tricks.</p>
-                        <p>If you build this project, don't delete it because I plan on using it as the base for more projects in the future.</p>
+                        <p>Random Person API - Part 1</p>
                     </div>       
                     <div class="project-html" id="project-html">
                         <div class="ide-mockup">
-                            <img src="/img/targetapppart1/weather-app-html-001.png">
-                        </div>
-                    <ul>
-                        <li>Create the weather-app-container div.</li>
-                    </ul>
+                            <img src="/img/targetapppart2/target-app-html-001.png">
+                        </div>             
 
-                    <div class="ide-mockup">
-                        <img src="/img/targetapppart1/weather-app-html-002.png">
-                    </div>
-                    <ul>
-                        <li>Steps</li>
-                    </ul>
-
-                    <div class="ide-mockup">
-                        <img src="/img/targetapppart1/weather-app-html-003.png">
-                    </div>
-                    <ul>
-                        <li>Steps</li>
-                    </ul>
 
                     </div>
                     <div class="project-css" id="project-css">
                       
                         <div class="ide-mockup">
-                            <img src="/img/weatherapppart1/weather-app-css-001.png">
+                            <img src="/img/targetapppart2/target-app-css-001.png">
                         </div>
-                    <ul>
-                        <li>Create the weather-app-container class</li>
-                        <li>Create the weather-app-container.open class</li>
-                        <li>Create the weather-app-container.slide-right class</li>
-                    </ul>
-
+                        <div class="ide-mockup">
+                            <img src="/img/targetapppart2/target-app-css-002.png">
+                        </div>
+                        <div class="ide-mockup">
+                            <img src="/img/targetapppart2/target-app-css-003.png">
+                        </div>
+           
                       
                     </div>
                     <div class="project-javascript" id="project-javascript">
                      <div class="ide-mockup">
-                         <img src="/img/weatherapppart1/weather-app-javascript-001.png">
+                         <img src="/img/targetapppart2/target-app-javascript-001.png">
                      </div>
-                     <ul>
-                         <li>Add weather object to appItems array</li>
-                     </ul>
-                     <div class="ide-mockup">
-                        <img src="/img/weatherapppart1/weather-app-javascript-002.png">
-                    </div>
-                    <ul>
-                        <li>smartPhoneContainer variable will already be made from the digitalClockApp project.</li>
-                        <li>Create a click eventListener on smartPhoneContainer.</li>
-                        <li>Pass in an event (e)</li>
-                        <li>IF statement. If the e.target class list contains 'weatherApp,' run the following.</li>
-                        <li>Run weatherApp( ) function. Since it will throw an error when we push the app icon, comment it out for now until we create the function.</li>
-                        <li>Create variables for weatherAppDiv, topBezel, and bottomBezel.</li>
-                        <li>Add the class of 'app-open' to topBezel and bottomBezel.</li>
-                        <li>Add the class of 'open' to weatherAppDiv</li>
-                    </ul>
-                     <div class="ide-mockup">
-                         <img src="/img/repopulatedom/repopulate-dom-javascript-003.png">
-                     </div>
-                     <ul>
-                         <li>Add IF/ELSE IF to the smartPhoneHomeButtonEventListener</li>
-                         <li>IF appOpen is equal to false, meaning no app is open, we will continue with the current commands we had in here to open an app.</li>
-                         <li>If an app is open (appOpen === true), we want pushing the home button to clear the screen and repopulate the DOM with our icons </li>
-                         <li>Set appOpen to false to let the script know that the app is closed</li>
-                         <li>Run the populateHomeScreen( ) function to start rebuilding the DOM.</li>
-                         <li>Create variables for digitalClockAppDiv, topBezel, and bottomBezel</li>
-                         <li>Add the class of 'slide-right' to digitalClockAppDiv. This will slide the div to the right 100%.</li>
-                         <li>Remove the class of 'app-open' from topBezel and bottomBezel. This will remove the borders from the bezels.</li>
-                         <li>Create a setTimeout function to remove the classes of 'open' and 'slide-right' from the digitalClockAppDiv. This will return it to it's default location. The reason you want to use a setTimeout here is so they don't disappear automatically when they are removed and the animation has time to play.</li>
-                     </ul>
-         
-
                         
                     </div>
                 </div>
@@ -214,6 +176,6 @@
         </div>
     </div>
     <script src="../javascript/navdb.js"></script>
-    <script src="../javascript/smartphone5.js"></script>
+    <script src="../javascript/smartphone7.js"></script>
 </body>
 </html>

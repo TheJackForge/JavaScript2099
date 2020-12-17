@@ -346,4 +346,30 @@ smartPhoneContainer.addEventListener('click', (e) => {
     }
 })
 
+smartPhoneContainer.addEventListener('click', (e) => {
+    if (e.target.id === 'find-new-target-btn') {
+        const targetSpinnerDiv = document.getElementById('target-spinner-container');
+        const targetLandingPageDiv = document.getElementById('target-landing-page');
+        const targetSpinnerText = document.getElementById('target-spinner-text');
+        targetSpinnerText.innerHTML = `
+        SEARCHING...
+        `
+        targetSpinnerText.classList.add('searching');
+        const searchTime = Math.round((Math.random() + 1) * 3000);
+        console.log(searchTime)
+        targetLandingPageDiv.classList.add('closed')
+        targetSpinnerDiv.classList.add('active')
+        setTimeout( () => {
+            targetSpinnerText.classList.remove('searching');
+            targetSpinnerText.innerHTML = `
+            TARGET FOUND!
+            `
+            setTimeout( () => {
+                targetSpinnerDiv.classList.remove('active')
+            }, 1000)
+        }, searchTime)
+        targetApp();
+    }
+    
+})
 

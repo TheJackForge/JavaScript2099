@@ -37,6 +37,7 @@ a {
     flex-direction: column;
     height: auto;
     width: 90%;
+    margin-bottom: 2rem;
 }
 
 .nav-header {
@@ -234,6 +235,7 @@ a {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     justify-items: center;
+    margin-bottom: 2rem;
 }
 
 .index-project-styling {
@@ -269,8 +271,9 @@ a {
     border-bottom: 1px solid #EC4899;
     border-left: 4px solid #EC4899;
     padding-left: 0.2em;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: lighter;
+    margin-bottom: 3rem;
 }
 
 .main-content {

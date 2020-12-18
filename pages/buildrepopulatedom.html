@@ -69,7 +69,7 @@
             
         <div id="main" class="main-content">
             <div id="main-content-header" class="main-content-header">
-                <h1>How to Clear and Repopulate DOM</h1> 
+                <h1>Close App and Repopulate Home Screen</h1> 
             </div>
 
     <!-- BUILD DIGITAL CLOCK PROJECT HTML START -->
@@ -106,56 +106,45 @@
                 </div>
                 <div class="project-inner-container">
                     <div class="project-summary active" id="project-summary">
-                        <p>When I was first planning this project, I was going to make a digital timer. As I got further into building it, I realized that before you learn how to walk, you should really learn how to crawl. </p>
-                        <p>Dates and times in JavaScript are not as straight forward as you would believe them to be, so I decided to start at the beginning and create a digital clock. Of course, I decided to have some fun with it and spice it up by employing a few fun CSS tricks.</p>
-                        <p>If you build this project, don't delete it because I plan on using it as the base for more projects in the future.</p>
+                        <p>This section of the project will actually be fairly JavaScript heavy. There is no new HTML and only 1 CSS class that we need to add.</p>
+                        <p>The main of this section will be clearing the application with a transition and repopulating our home screen with the icons from the array. We will not actually be clearing the app but minimizing it for the time being. In a future project we will focus on what we need to do to totally reset the application so it will run again when it is open.</p>
                     </div>       
                     <div class="project-html" id="project-html">
-                        <ul>
-                            <li>No new HTML for this section</li>
-                        </ul>
+                        <div class="ide-mockup">
+                            <img src="/img/repopulatedom/repopulate-dom-html-001.png">
+                        </div>
+                       <p>There is no new HTML in this section.</p>
                     </div>
-                    <div class="project-css" id="project-css">
-                      
+                    <div class="project-css" id="project-css">                     
                         <div class="ide-mockup">
                             <img src="/img/repopulatedom/repopulate-dom-css-001.png">
                         </div>
-                    <ul>
-                        <li>Create the class 'digital-clock-app-container.slide-right' class and add the settings.</li>
-                    </ul>
-
-                      
+                        <p>Create the class of <span class="ide-purple">.digital-clock-app-container.slide-right</span>. This will take effect whenever the <span class="ide-purple">.slide-right</span> class is added in the same element of <span class="ide-purple">.digital-clock-app-container</span>.</p>
+                        <p>What this class and its attributes will do is slide the container to the right by -100%. In the past section we set the <span class="ide-purple">right</span> attribute to 0%, this class will alter that setting and add a transition animation to the change.</p>                      
                     </div>
                     <div class="project-javascript" id="project-javascript">
                      <div class="ide-mockup">
                          <img src="/img/repopulatedom/repopulate-dom-javascript-001.png">
-                     </div>
-                     <ul>
-                         <li>Create global appOpen variable and set the default to false.</li>
-                     </ul>
-                     <div class="ide-mockup">
-                         <img src="/img/repopulatedom/repopulate-dom-javascript-002.png">
-                     </div>
-                     <ul>
-                         <li>Add an appOpen of 'true' when the digitalClockApp is open and running.</li>
-                     </ul>
-                     <div class="ide-mockup">
-                         <img src="/img/repopulatedom/repopulate-dom-javascript-003.png">
-                     </div>
-                     <ul>
-                         <li>Add IF/ELSE IF to the smartPhoneHomeButtonEventListener</li>
-                         <li>IF appOpen is equal to false, meaning no app is open, we will continue with the current commands we had in here to open an app.</li>
-                         <li>If an app is open (appOpen === true), we want pushing the home button to clear the screen and repopulate the DOM with our icons </li>
-                         <li>Set appOpen to false to let the script know that the app is closed</li>
-                         <li>Run the populateHomeScreen( ) function to start rebuilding the DOM.</li>
-                         <li>Create variables for digitalClockAppDiv, topBezel, and bottomBezel</li>
-                         <li>Add the class of 'slide-right' to digitalClockAppDiv. This will slide the div to the right 100%.</li>
-                         <li>Remove the class of 'app-open' from topBezel and bottomBezel. This will remove the borders from the bezels.</li>
-                         <li>Create a setTimeout function to remove the classes of 'open' and 'slide-right' from the digitalClockAppDiv. This will return it to it's default location. The reason you want to use a setTimeout here is so they don't disappear automatically when they are removed and the animation has time to play.</li>
-                     </ul>
-         
-
-                        
+                    </div>
+                    <p>The very first thing we need to do is create a variable that will signify if any app is open and functioning as the active application on the phone screen. We will need to set this as a <span class="ide-purple">let</span> variable because we will be making changes to it when apps are opened and closed. Make the default setting of it <span class="ide-purple">false</span>.</p>                  
+                    <div class="ide-mockup">
+                        <img src="/img/repopulatedom/repopulate-dom-javascript-002.png">
+                    </div>
+                    <p>Now we will add a change of the <span class="ide-purple">appOpen</span> variable when the <span class="ide-purple">digitalClockApp( )</span> function is ran. All we need to do for this, is to change the variable to <span class="ide-purple">true</span> as soon as the function is ran.</p>                  
+                    <div class="ide-mockup">
+                        <img src="/img/repopulatedom/repopulate-dom-javascript-003.png">
+                    </div>
+                    <p>All of the changes we make here will be made when we push the home button. Previously, all the home button did was unlock the phone from its default state. This will make it so if you push the home button, it will clear the app and repopulate the home screen.</p>
+                    <p>The first step is creating an IF/ELSE IF statement after the eventListener on the <span class="ide-purple">smartHomePhoneBtn</span>. This is going to check the state of the global <span class="ide-purple">appOpen</span> variable and proceed based on if it is <span class="ide-purple">true</span> or <span class="ide-purple">false</span>.</p>
+                    <p>If an app is open (appOpen === true), we want a click of the home button to clear the screen and repopulate the home screen with our icons. Since the default state of the phone will not have any apps open (appOpen === false), move the existing code we had in the function into the IF section of the statement. This will function just as it did before.</p>
+                    <p>In the ELSE IF section of the statement, we will be working on if an app is currently open and we would like to close it. This would mean that appOpen would be set to true. In the first step let's set that back to false.</p>
+                    <p>Now run the <span class="ide-purple">populateHomeScreen( )</span> function. This will start the function that loops through the array and begins rebuilding the home screen. The benefit of calling this now is that it will start rebuilding itself behind the scenes and not just appear once the following lines are ran.</p>
+                    <p>Create 3 variables for <span class="ide-purple">digitalClockAppDiv</span>, <span class="ide-purple">topBezel,</span> and <span class="ide-purple">bottomBezel</span>. You may remember that these were the 3 elements we grabbed when we first opened the digitalClockApp to add styling and positioning elements to them. These next few steps will remove or change those attributes.</p>
+                    <p>Add the class of <span class="ide-purple">.slide-right</span> to the digitalClockAppDiv. This will slide the element from a <span class="ide-purple">right</span> setting of 0% to -100%.</p>
+                    <p>Remove the class of <span class="ide-purple">.app-open</span> from the <span class="ide-purple">topBezel</span> and <span class="ide-purple">bottomBezel</span> variables. This will remove the pink styling border on the bezels when an app is open.</p>
+                    <p>The next step in this function is probably the most important to ensure everything continues to function probably. What we want to do is remove the classes of <span class="ide-purple">.open</span> and <span class="ide-purple">.slide-right</span> from the <span class="ide-purple">digitalClockAppDiv</span> to return it back to it's default/starting location underneath the phone. The only tricky thing about this, is if we just remove them, they will cause the <span class="ide-purple">digitalClockAppDiv</span> to  completely disappear as it is sliding out. What you need to do for this is to use a setTimeout method that will allow these to be removed after a set amount of time. This set amount of time will remove the classes after the sliding transition plays out and nothing is visible to the user.</p>
+                    <p>If you look at the setTimeout we have created, we removed the classes and then set the timing to 1000ms (1 second). That means after 1 second, whatever is in the setTimeout will run, which in this case is removing all positioning from the <span class="ide-purple">digitalClockAppDiv</span> and returning it to it's default location.</p>
+                    <p>So there you have it! That is the first application for the smartphone complete! The next one I plan to build is using an API and should actually be pretty interesting with a lot of neat little tricks!</p>                      
                     </div>
                 </div>
             </div>

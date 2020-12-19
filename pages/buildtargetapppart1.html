@@ -88,17 +88,17 @@
                         <p>OpenSource</p>
                     </div>
                     <div class="target-landing-page-logo">
-                        <i class="fas fa-user-alt-slash fa-6x"></i>
+                        <i class="fas fa-people-arrows fa-6x"></i>
                         <ul>
                             <li>No personal information stored on file.</li>
-                            <li>Exclusive payments in BTC.</li>
+                            <li>Payments made exclusively in BTC.</li>
                             <li>OpenSource is not responsible or liable if you are charged criminally.</li>
                         </ul>
                     </div>              
                 </div>
             </div>
             <div class="target-btn-container">
-                <button class="find-new-target-btn" id="find-new-target-btn">FIND TARGETS IN AREA</button>
+                <button class="find-new-target-btn" id="find-new-target-btn">FIND A DEVELOPER</button>
             </div>
         </div>  
         <!-- OPENSOURCE API TARGET APP ENDS HERE -->
@@ -133,27 +133,33 @@
                 </div>
                 <div class="project-inner-container">
                     <div class="project-summary active" id="project-summary">
-                        <p>How to use the Random Person API - Part 1</p>
+                        <p>In this section of the smartphone project, we are going to set up and use the Random User API from <a href="https://randomuser.me/" target="blank_"><span class="ide-green">RandomUser.me</span></a>. It is a very easy to use API that does not require any authentication, api keys, or headers which makes it perfect for a nice little project like this one</p>
+                            
+                        <p>As a note, you may notice throughout the project that I used the term "Target" instead of Developer. Initially this was supposed to look like a "Job" or "Hit" app that you would find in a video game but I found it to look a little problematic. The code "under the hood" will appear as I had it, but the actual viewable text will be changed to accomodate these changes.</p>
                     </div>       
                     <div class="project-html" id="project-html">
                         <div class="ide-mockup">
                             <img src="/img/targetapppart1/target-app-html-001.png">
-                        </div>             
+                        </div> 
+                        <p>There will be several blocks of HTML that we will have to code for this API app. One that serves as a type of "Landing Page" for the app, one that will appear when the search is being ran, and one that will load when a developer in the area is found. These 3 will all be housed in a div that will be completely cleared and rebuilt when the user clicks the home button.</p>
 
-                    <div class="ide-mockup">
-                        <img src="/img/targetapppart1/target-app-html-002.png">
-                    </div>
-                    <ul>
-                        <li>Steps</li>
-                    </ul>
+                        <p>I have marked the location in the HTML where we would like to place this code.</p>
+
+                        <div class="ide-mockup">
+                            <img src="/img/targetapppart1/target-app-html-002.png">
+                        </div>
+                        <p>The first thing we will create is the div that we will call the <span class="ide-purple">target-app-container</span>. This will have both a class and an id of <span class="ide-purple">target-app-container</span>, and will house all of the elements of this project. Inside this div we will have 2 other smaller containers that will contain the 2 main areas of the app.</p>
+                        <p>The first area of the app will be the <span class="ide-purple">target-app-inner-container</span>. This will be the mini-container within the app that will change as we interact the various sections. It will initially contain the "landing page" and change as we initiate a search.</p>
+                        <p>The second div will be the <span class="ide-purple">target-btn-container</span>. This container will contain the button to initiate the search and will stay static throughout the apps usage.</p>
+                        <p>Inside the <span class="ide-purple">target-app-inner-container</span> div we will have a div called <span class="ide-purple">target-landing-page</span> and will be the first thing the user initially sees when they call up the app.</p> 
+                        <p>Inside the <span class="ide-purple">target-landing-page</span> we will have 2 divs nested inside. The first will have the title of the app that can be called anything you would like. The second will contain a logo for the app, I used an icon from Font-Awesome, and an unordered list that contains a disclaimer about the apps usage. These can also be changed to anything you would like.</p>
+
 
                     <div class="ide-mockup">
                         <img src="/img/targetapppart1/target-app-html-003.png">
                     </div>
-                    <ul>
-                        <li>Steps</li>
-                    </ul>
-
+                    <p>Above is how the code should appear when it is added to the existing HTML.</p>
+                    <p>This will be all of the HTML that you will need when the app is initially loaded. More sections will be added in the inner container in the following sections.</p>
                     </div>
                     <div class="project-css" id="project-css">
                       

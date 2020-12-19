@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -483,521 +484,154 @@ a {
     padding-left: 5em;
 }
 
-/* PROGRESS BAR PROJECT */
+/* BURGER MENU PROJECT */
 
-.progress-bar-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 15em;
-}
-
-.activate-progress-button {
-    background: inherit;
-    cursor: pointer;
-    border: none;
-    color: white;
-    width: auto;
-    font-size: 1em;
-    border: 1px solid #EC4899;
-    display: inline-block;
-    margin-right: 40px;
-    height: 40px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-.activate-progress-button:active {
-    transform: scale(0.98);
-}
-
-.static-progress-bar {
+.container {
+    font-family: 'Titillium Web', sans-serif;
     position: relative;
-    background-color: #000;;
-    height: 40px;
-    width: 180px;
-}
-
-.moving-progress-bar {
-    position: absolute;
-    background-color: #EC4899;
-    height: 40px;
-}
-
-/* BUILD MODAL PROJECT */
-
-.build-modal-show {
-    /* display: flex; */
-    display: none;
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.6);
-    transition: display 4s ease-in-out;
-}
-
-.build-modal-example-navbar {
-    background-color: #EC4899;
-    height: 40px;
-}
-
-.build-modal-close-button {
-    color: #1F2937;
-    position: absolute;
-    cursor: pointer;
-    border: none;
-    background: none;
-    height: 40px;
-    width: 40px;
-    top: 0%;
-    right: 0%;
-}
-
-.build-modal-example-content{
-    position: absolute;
-    width: 300px;
-    top: 20%;
-    left: calc(50% - 150px);
-    background-color: #1F2937;
-    color: #EC4899;
-}
-
-.build-modal-button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15em;
+    margin: 3rem auto;
+    height: 30rem;
+    width: 80%;
+    background-color: inherit;
+    
 }
 
-.build-modal-button {
-    color: #f5f5f5;
-    cursor: pointer;
-    border: 1px solid#EC4899;
-    background: none;
-    height: 100px;
-    width: 150px;
-}
-
-.build-modal-button:focus {
-    transform: scale(0.1) 4s ease-in;
-}
-
-/* SMART PHONE PROJECT */
-
-.smart-phone-container {
+.browser-container {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     position: relative;
     overflow: hidden;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    margin-left: auto;
-    margin-right: auto;
-    background: url('/img/homescreen/homescreenbackground.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    width: 15rem;
-    height: 30rem;
-    border: 4px solid #000;
-    background-color: #000;
-    border-radius: 25px;
-}
-
-.smart-phone-home-button-a {
-    position: absolute;
-    left: calc(50% - 14px);
-    bottom: 2.5%;
-    border: 1px solid rgb(70, 68, 68);
-    height: 28px;
-    width: 28px;
-    background-color: #000; 
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer;
-}
-
-.smart-phone-home-button-a:active {
-    transform: scale(0.95);
-}
-
-.smart-phone-home-button-a:focus {
-    box-shadow: 0 0 3pt 2pt #EC4899;
-}
-
-.home-screen-app-container {
-    position: absolute;
-    top: 5rem;
+    height: 100%;
     width: 100%;
+    background-color: #121212;
 }
 
-.home-screen-app-list {
+.nav-container {
+    position: absolute;
+    transform: translateY(0%);
+    z-index: 1;
     display: flex;
-    flex-direction: start;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    transition: opacity 2000ms;
-}
-
-.home-screen-app-list.faded-out {
-    opacity: 0;
-}
-
-.home-screen-app-list li {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 3px;
-    list-style-type: none;
-    width: 30%;
-    height: 4em;
-    cursor: pointer;
-    background: rgb(0,0,0,0.6);
+    height: 100%;
+    width: 100%;
+    background-color: #EC4899;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: transform 0.5s ease-in-out;
 }
 
-.home-screen-app-list p {
+.nav-container.opened {
+    transform: translateY(-100%);
+}
+
+.nav-links {
     margin: 0;
-    padding-top: 0.4em;
-    font-size: .8em;
-    border-bottom: 1px solid #EC4899;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    list-style-type: none;
+    font-size: 1.2rem;
+    border-left: 3px solid #1b1c1d;
+    border-top: 1px solid #1b1c1d;
 }
 
-.home-screen-app-list button {
+.nav-links a {
+    color: #282a36;
+    font-weight: 500;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 1px solid #EC4899;
+    background-color:#121212;
+}
+
+.nav-bar p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    color: #f5f5f5;
+    margin-left: 2rem;
+    font-weight: 100;
+}
+
+.burger-btn-open {
     border: none;
     background: none;
-    color: #c0c0c0;
-    height: 100%;
-    width: 100%;
-    outline: none;
-    cursor: pointer;
-}
-
-.home-screen-app-list button:focus {
-    box-shadow:0 0 3pt 2pt #fff;
-}
-
-.home-screen-app-list button:active {
-    background-color: rgb(255,255,255,0.3);
-    transform: scale(0.98)
-}
-
-/* APP SLIDER SECTION  */
-
-
-.top-bezel-smartphone {
-    position: absolute;
-    top: 0;
-    background-color: rgb(7, 7, 7);
-    height: 55px;
-    width: 100%;
-    z-index: 5;
-    border-bottom: rgb(7, 7, 7);
-}
-
-.top-bezel-smartphone.app-open {
-    border-bottom: 1px solid #EC4899;
-    transition: border 1.5s ease-in-out;
-}
-
-.bottom-bezel-smartphone {
-    position: absolute;
-    bottom: 0;
-    background-color: rgb(7, 7, 7);
-    height: 55px;
-    width: 100%;
-    z-index: 5;
-    border-top: rgb(70, 68, 68);
-}
-
-.bottom-bezel-smartphone.app-open {
-    border-top: 1px solid #EC4899;
-    transition: border 1.5s ease-in-out;
-}
-
-.smart-phone-home-button-b {
-    position: absolute;
-    left: calc(50% - 14px);
-    bottom: 2.5%;
-    border: 1px solid rgb(70, 68, 68);
-    height: 28px;
-    width: 28px;
-    background-color: rgb(7, 7, 7); 
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer; 
-    z-index: 7;
-}
-
-.smart-phone-home-button-b:active {
-    transform: scale(0.95);
-}
-
-.smart-phone-home-button-b:focus {
-    box-shadow: 0 0 3pt 2pt #EC4899;
-}
-
-.app-slider {
-    position: absolute;
-    right: 0%;
-    bottom: 3.25em;
-    background-color: #000;
-    height: 24em;
-    width: 100%;
-    transition: right 0.5s ease-in-out;
-    z-index: 3;
-}
-
-.app-slider.opened {
-    right: -100%;
-}
-
-.app-slider-content {
-    background-color:  rgb(15, 15, 15);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #EC4899;
-    z-index: 3;
-}
-
-/* DIGITAL CLOCK SECTION */
-
-.digital-clock-app-container {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    bottom: -100%;
-    width: 100%;
-    height: 100%;
-    color: #c0c0c0;
-    background-color: rgb(15, 15, 15);
-    padding: 3.6rem 1rem 0 1rem;
-}
-
-.digital-clock-app-container.open {
-    right: 0%;
-    bottom: 0%;
-    z-index: 3;
-    transition: bottom 1.5s ease-in-out;
-}
-
-.digital-clock-app-container.slide-right {
-    right: -100%;
-    transition: right 1s ease-in-out;
-}
-
-.current-time-clock {
-    margin-top: 6rem;
-    padding: 0;
-    font-size: 3.2rem;
-    line-height: 1;
-    padding-left: 0.3rem;
-    border-left: 1px solid #EC4899;
-    border-bottom: 1px solid #EC4899;
-}
-
-.current-date-clock {
-    text-align: right;
-    font-size: 1rem;
-    padding-right: 0.3rem;
-    border-right: 1px solid #EC4899; 
-}
-
-/* OPENSOURCE APP SECTION */
-
-.target-app-container {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 3.6rem 1rem 0 1rem;
-    width: 100%;
-    height: 100%;
-    color: #c0c0c0;
-    background-color: rgb(15, 15, 15);
-    bottom: -100%;
-}
-
-.target-app-container.open {
-    right: 0%;
-    bottom: 0%;
-    z-index: 3;
-    transition: bottom 1.5s ease-in-out;
-}
-
-.target-app-container.slide-right {
-    right: -100%;
-    transition: right 1s ease-in-out;
-}
-
-.target-app-inner-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.2rem;
-    width: 100%;
-}
-
-.target-btn-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 20rem;
-    margin-bottom: 4.2rem;
-}
-
-.find-new-target-btn {
-    position: absolute;
-    font-size: 0.6rem;
-    color: #c0c0c0;
-    border: 1px solid #EC4899;
-    background: none;
-    padding: 0.5rem 0;
-    width: 8rem;
-    cursor: pointer;
-    outline: none;
-    bottom: 20%;
-    z-index: 3;
-}
-
-.find-new-target-btn:active {
-    transform: scale(0.95);
-}
-
-.target-landing-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 3;
-    height: 100%;
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
-}
-
-.target-landing-page.closed {
-    opacity: 0;
-    z-index: -5;
-}
-
-.target-landing-page-title p {
-    color: #c0c0c0;;
-    border-left: none;
-    margin: 0;
-    padding: 0;
-    font-size: 2.4rem;
-    z-index: 0;
-}
-
-.target-landing-page-logo {
-    margin: 1rem;
-    color: #EC4899;
-    text-align: center;
-}
-
-.target-landing-page-logo ul {
-    width: 80%;
-    font-size: 0.5rem;
-    margin: 1rem 1rem 0rem 1.3rem;
-    padding: 0;
-    color: #c0c0c0;
-    text-align: center;
-}
-
-.target-landing-page-logo li {
-    text-align: left;
-    margin-bottom: 0.2rem;
-    list-style-type: none;
-}
-
-.target-spinner-container {
-    position: absolute;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    top: 20%;
-    z-index: -5;
-    opacity: 0;
-    transition: opacity 1500ms ease-in-out;
-}
-
-.target-spinner-container.active {
-    z-index: 3;
-    opacity: 1;
-}
-
-.target-spinner {
-    color: #EC4899;
-    animation: rotation 2s infinite linear;
-}
-
-@keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
-
-.target-spinner-text {
     color: #f5f5f5;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.burger-btn-close {
+    right: 17px;
+    top: 32px;
+    position: absolute;
+    border: none;
+    background: none;
+    color: #121212;
+    cursor: pointer;
+}
+
+.browser-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 80%;
+    border-bottom: 1px solid #EC4899;
+    border-right: 1px solid #EC4899;
+    border-left: 1px solid #EC4899;
+    background: linear-gradient(rgba(236,72,153,0.3), rgba(0,0,0,1)),
+        url(/img/burgermenu/headline-photo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.headline-text {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    background-color: #121212;
+    border: 1px solid #EC4899;
+}
+
+.headline-text h4 {
+    background-color: #EC4899;
+    color: #121212;
+    text-align: center;
+    margin-bottom: 1.1rem;
+    font-weight: 700;
+}
+
+.headline-text p {
     font-size: 0.8rem;
     margin: 0;
-    padding-top: 2rem;
-}
-
-.target-spinner-text.searching {
-    animation: searching 2s infinite;
-}
-
-@keyframes searching {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-}
-
-.target-found-container {
-    position: absolute;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    top: 20%;
-    z-index: -5;
-    opacity: 0;
-    transition: opacity 1500ms ease-in-out;
-}
-
-.target-found-container.active {
-    z-index: 3;
-    opacity: 1;
-}
-
-.target-found-container img {
-    margin-bottom: 1rem;
+    width: 90%;
+    padding-top: 0.3rem;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 1.1rem;
 }
 
-.target-found-container p {
-    margin: 0 .5rem;
-    padding: 0;
-    font-size: .6rem;
-    line-height: 2;
-    text-align: left;
+.headline-text p:nth-of-type(2) {
+    text-align: right;
+    padding-right: 1rem;
 }
 
+.headline-text a {
+    color: #121212;
+    background-color: #EC4899;
+    padding: 0 0.5rem;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -1047,6 +681,44 @@ a {
 
     .ide-mockup {
         font-size: 0.8em;
+    }
+
+    .browser-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 80%;
+        border-bottom: 1px solid #EC4899;
+        border-right: 1px solid #EC4899;
+        border-left: 1px solid #EC4899;
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url(/img/burgermenu/headline-photo.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    .headline-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 60%;
+        width: 50%;
+        background-color: #121212;
+        border: 1px solid #EC4899;
+        border-top: none;
+        border-bottom-left-radius: 20px;
+    }
+
+    .headline {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .headline-text h4 {
+        margin: none;
+        padding: none;
+        font-size: 1.6rem;
     }
 
 }

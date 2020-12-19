@@ -211,49 +211,16 @@ contentContainer.addEventListener('click', (e) => {
 
 // PROJECTS SECTION
 
-// How to Build a Progress Bar Project
+const burgerBtnOpen = document.querySelector('.burger-btn-open');
+const burgerBtnClose = document.querySelector('.burger-btn-close');
+const navContainer = document.getElementById('nav-container');
 
-contentContainer.addEventListener('click', (e) => {
-    if (e.target.id === 'activate-progress-button') {
-        const movingProgressBar = document.getElementById('moving-progress-bar')
-        let width = 0;
-        const progress = setInterval(percentage, 20)
-        function percentage() {
-            if (width >= 100) {
-                clearInterval(progress)
-            } else {
-                width++;
-                movingProgressBar.style.width = width + '%';
-            }
-        }
-    }
+burgerBtnOpen.addEventListener('click', () => {
+    navContainer.classList.add('opened')
 })
 
-// How to Build a Modal Project
-
-contentContainer.addEventListener('click', (e) => {
-    const showModal = document.getElementById('build-modal-show');
-    if (e.target.id === 'build-modal-button') {
-        showModal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'
-        showModalExample()  
-    }
+burgerBtnClose.addEventListener('click', () => {
+    navContainer.classList.remove('opened')
 })
 
-function showModalExample() {
-    const showModal = document.getElementById('build-modal-show');
-    const closeButton = document.getElementById('build-modal-close-button');
-        closeButton.addEventListener('click', () => {
-            showModal.style.display = 'none'
-            document.body.style.overflow = 'scroll'
-    })
-}
-
-window.addEventListener('click', (e) => {
-    const showModal = document.getElementById('build-modal-show');
-    if (e.target === showModal) {
-        showModal.style.display = 'none'
-        document.body.style.overflow = 'scroll'
-    }
-})
 

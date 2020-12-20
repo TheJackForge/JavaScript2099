@@ -216,11 +216,13 @@ const burgerBtnClose = document.querySelector('.burger-btn-close');
 const navContainer = document.getElementById('nav-container');
 
 burgerBtnOpen.addEventListener('click', () => {
-    navContainer.classList.add('opened')
+    navContainer.classList.add('opened');
+    burgerBtnOpen.style.display = 'none';
 })
 
 burgerBtnClose.addEventListener('click', () => {
     navContainer.classList.remove('opened')
+    burgerBtnOpen.style.display = 'block';
 })
 
 

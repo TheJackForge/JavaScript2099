@@ -162,26 +162,39 @@
                     <p>This will be all of the HTML that you will need when the app is initially loaded. More sections will be added in the inner container in the following sections.</p>
                     </div>
                     <div class="project-css" id="project-css">
+                        <p>This is a very CSS heavy project, with many elements to style. In this part of the tutorial, we will style the containers and landing page. The search and results page will be covered in the next two sections.</p>
                       
                         <div class="ide-mockup">
                             <img src="/img/targetapppart1/target-app-css-001.png">
                         </div>
+                        <p>The <span class="ide-purple">.target-app-container</span> class will be the first element we style. It will be holding all of the data for the app and will also be the container that will be moved when the app is opened and closed.</p>
+                        <p>We will start our styling with the standard <span class="ide-purple">.target-app-container</span> class. Most of the settings are for how the other information will be positioned within the div. The 2 most important attributes for this class would be the setting of <span class="ide-purple">position</span> to <span class="ide-purple">absolute</span>, and <span class="ide-purple">bottom</span> to <span class="ide-purple">-100%</span>. These settings will allow us to unlock the elements and position them below the smartphone on the X-axis. There is another setting we can use to achieve this (translateY()) but we will cover that in a future tutorial.</p>
+
+                        <p>The next class will take effect when we add a class of <span class="ide-purple">.open</span> to the <span class="ide-purple">.target-app-container</span> class. When this class is added, it means that the app has been opened and the container will slide from it's location of <span class="ide-purple">bottom: -100%</span> to <span class="ide-purple">bottom: 0%</span>. We will also set the <span class="ide-purple">z-index</span> attribute so we layer this over all of the elements on the screen. In this class we will also set the <span class="ide-purple">right</span> attribute to 0%. This will be changed when the next class is added.</p>
+
+                        <p>The <span class="ide-purple">.slide-right</span> class will take effect when it is added to the <span class="ide-purple">.target-app-container</span> element. It will change the <span class="ide-purple">right</span> attribute to <span class="ide-purple">-100%</span> and slide it out of the display.</p>
 
                         <div class="ide-mockup">
                             <img src="/img/targetapppart1/target-app-css-002.png">
                         </div>
+                        <p>The <span class="ide-purple">.target-app-inner-container</span> class will be what styles the part of the app that will change as searches are made. These settings are all used for styling and positioning.</p>
 
                         <div class="ide-mockup">
                             <img src="/img/targetapppart1/target-app-css-003.png">
                         </div>
+                        <p>The <span class="ide-purple">.target-btn-container</span> is what will be holding our button. We want this div to stay static and not grow and shrink if content is added to outside elements. The best way to accomplish this when nested inside a div with a <span class="ide-purple">flex-direction</span> of <span class="ide-purple">column</span> is to set a height. This will allow it to stay static at it's current size and not move to accomodate anything else.</p>
+                        <p><span class="ide-purple">.target-btn-container p</span> will style the paragraph element inside of the <span class="ide-purple">.target-btn-container</span>.</p>
 
                         <div class="ide-mockup">
                             <img src="/img/targetapppart1/target-app-css-004.png">
                         </div>
+                        <p>Now we will style the actual button that will be clicked to initiate searches within the application. Regular buttons by default, can be pretty ugly. The first thing you want to do is strip away the default styling elements and replace them with your own. Where this will become apparent in our settings is how we set the <span class="ide-purple">background</span> attribute of the <span class="ide-purple">.find-new-target-btn</span> class to none. If we did not do this we would still be given the default style of the button.</p>
+                        <p>The class of <span class="ide-purple">.find-new-target-btn:active</span> will cause a change in the split second that the element is clicked. The <span class="ide-purple">transform</span> setting will cause the element to shrink slightly to mimic the physical motion of a button being clicked.</p>
 
                         <div class="ide-mockup">
                             <img src="/img/targetapppart1/target-app-css-005.png">
                         </div>
+
 
                         <div class="ide-mockup">
                             <img src="/img/targetapppart1/target-app-css-006.png">

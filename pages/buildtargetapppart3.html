@@ -149,36 +149,46 @@
                         <div class="ide-mockup">
                             <img src="/img/targetapppart3/target-app-part-3-html-001.png">
                         </div>             
-
+                        <p>There is only 1 thing we need to add to the HTML and that is a div with the id and class of <span class="ide-purple">target-found-container</span>. It can be placed right after the <span class="ide-purple">target-spinner-container</span> in the HTML.</p>
+                        <p>This div will appear when the <span class="ide-purple">target-spinner-container</span> is removed.</p>
 
                     </div>
                     <div class="project-css" id="project-css">
                       
                         <div class="ide-mockup">
-                            <img src="/img/targetapppart2/target-app-css-001.png">
+                            <img src="/img/targetapppart3/target-app-part-3-css-001.png">
                         </div>
+                        <p>The CSS for this part of the project is very similar to what we did in the spinner section. The class of <span class="ide-purple">.target-found-container</span> will be used for positioning and placing the div before it is called. The main attributes being the z-index and opacity. The transition for opacity is what will cause the fade in effect to play out over 1.5 seconds.</p>
+                        <p>When <span class="ide-purple">.active</span> is added to the <span class="ide-purple">.target-found-container</span> class, it will change the z-index and opacity causing it to appear.</p>
                         <div class="ide-mockup">
-                            <img src="/img/targetapppart2/target-app-css-002.png">
+                            <img src="/img/targetapppart3/target-app-part-3-css-002.png">
                         </div>
-                        <div class="ide-mockup">
-                            <img src="/img/targetapppart2/target-app-css-003.png">
-                        </div>
-           
-                      
+                        <p>These 2 settings are basically used for how the image will appear on the screen and how the paragraph elements look when they are filled out with the API information.</p>                      
                     </div>
                     <div class="project-javascript" id="project-javascript">
                      <div class="ide-mockup">
                          <img src="/img/targetapppart3/target-app-part-3-javascript-001.png">
                      </div>
+                    <p>To make the API call to the Random User app we are going to use the async/await method. I feel it is probably the most effective way to do this without adding on any external libraries. As you get more comfortable with APIs, you will find many different methods to make calls and in most cases, you will have to use different ways (headers) to get to the information.</p>
+                    <p>With this being a very simple API to work with, I do recommend checking out the actual <a href="https://randomuser.me/documentation"><span class="ide-green">documentation</span></a> to get more comfortable with it.</p>
                      <div class="ide-mockup">
                          <img src="/img/targetapppart3/target-app-part-3-javascript-002.png">
                      </div>
+                     <p>After getting the initial call set up, try to play around with the API a little bit. Use the above settings with console.log and see what returns. These are all of the things you have access to, and as you become more used to using APIs, you will find many more ways to use this information. For this project, I am only adding the first result [0] but you can make calls for multiple users, specific users, etc.</p>
                      <div class="ide-mockup">
                          <img src="/img/targetapppart3/target-app-part-3-javascript-003.png">
                      </div>
+                     <p>Now that we have the API call set up, let's move the location of the <span class="ide-purple">targetApp( )</span> call inside of the second setTimeout method. This will allow the search to play out before the call is made, preventing any overlap of the divs.</p>
                      <div class="ide-mockup">
                          <img src="/img/targetapppart3/target-app-part-3-javascript-004.png">
                      </div>
+                     <p>This is where we will create the main function of the whole project, using the results returned from the API and using that information to fill out our results page in our app.</p>
+                     <p>The first line is the creation of the function and you may notice that we are passing a parameter into it <span class="ide-purple">(target)</span>. If you look at the last line of the API call function (first part of this JS section), you will notice that <span class="ide-purple">targetAppResults</span> has a <span class="ide-purple">data</span> parameter passed in. That's exactly what (target) is, just under a different name. We are basically taking the information we got from the <span class="ide-purple">data</span> and bringing it with us into the <span class="ide-purple">targetAppResults</span> function.</p>
+                     <p>Now we will create a variable for the <span class="ide-purple">target-found-container</span> called <span class="ide-purple">targetFoundDiv</span>. This is div where the information will be populated.</p>
+                     <p>The next line can be a little tricky to understand, but when it clicks it makes perfect sense. All this <span class="ide-purple">targetInfo</span> variable is, is basically a shortcut to get to the information we need. Instead of typing out <span class="ide-purple">target.results[0].name.first</span> to get the persons first name, we are merely assigning the first part of the call to <span class="ide-purple">targetInfo</span>. So now we would only have to type in <span class="ide-purple">targetInfo.name.first</span>. They would both work the same but this ends up looking nicer and a little more organized.</p>
+                     <p>For the next 5 variables we are going to pull out information from the data that the API returned on the call. This will give us the random person's firstName, lastName, photo, addressNumber, streetNumber, and age.</p>
+                     <p>This following IF statement is me making an adjustment to what the API was returning. The API has people's ages set really high in some cases when the person's photo looks much younger. All I did here was -10 years if the person was aged over 50, and 20 years if the person was over 70. It definitely can still be tweaked but I just wanted to show you that you can still change this data if you would like.</p>
+                     <p>The next variable is the hiring cost in BitCoin of the developer that you searched. This is not returned from the API and as you can see, I just used a Math.random function to get a random number. I console.log'd what that number would be to fixed decimal place of 4 to bring it in line with actual BitCoin values.</p>
                      <div class="ide-mockup">
                          <img src="/img/targetapppart3/target-app-part-3-javascript-005.png">
                      </div>

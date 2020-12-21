@@ -286,9 +286,9 @@ function digitalClockApp() {
 }
 
 async function targetApp() {
-    fetch('https://randomuser.me/api/')
-    .then(response => response.json())
-    .then(json => targetAppResults(json))
+    const res = await fetch('https://randomuser.me/api/')
+    const data = await res.json()
+    targetAppResults(data);
 }
 
 function targetAppResults(target) {

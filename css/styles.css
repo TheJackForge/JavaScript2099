@@ -235,7 +235,7 @@ a {
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     justify-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 45rem;
 }
 
 .index-project-styling {
@@ -1049,6 +1049,7 @@ a {
         font-size: 0.8em;
     }
 
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -1065,6 +1066,10 @@ a {
 
     .content-container {
         width: 75%;
+    }
+
+    .index-project-grid {
+        margin-bottom: 0;
     }
 
     .main {

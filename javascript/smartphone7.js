@@ -327,7 +327,7 @@ function targetAppRefresh() {
                 <p>OpenSource</p>
             </div>
             <div class="target-landing-page-logo">
-                <i class="fas fa-user-alt-slash fa-7x"></i>
+                <i class="fas fa-people-arrows fa-6x"></i>
                 <ul>
                     <li>No personal information stored on file.</li>
                     <li>Payments exclusively made in BTC.</li>

@@ -195,15 +195,18 @@
                             <img src="/img/targetapppart1/target-app-css-005.png">
                         </div>
                         <p>The <span class="ide-purple">.target-landing-page</span> class will style the first page in the <span class="ide-purple">.target-app-inner-container</span> when the app is opened. It will contain a section for the app title, a section for the logo, and an unordered list with some of the apps fine print.</p>
+                        <p><span class="ide-purple">.target-landing-page:active</span> will only be used to change the opacity of the element when it is added. In the screenshot I kept some positional elements in there but you only really need the <span class="ide-purple">opacity</span> attribute.</p>
 
                         <div class="ide-mockup">
                             <img src="/img/targetapppart1/target-app-css-006.png">
                         </div>
+                        <p>The <span class="ide-purple">.target-landing-page-title p</span> will be used to style the paragraph element contained within the class div. It is used for styling and sizing of the title element.</p>
 
                         <div class="ide-mockup">
                             <img src="/img/targetapppart1/target-app-css-007.png">
                         </div>
-
+                        <p>These classes are what will be styling the sections that contain the logo and the unordered list on the landing page. The logo is actually a font-awesome icon so the sizing is controlled through the inline-styling in the HTML code. </p>
+                        <p>All of the settings in these 3 classes are used for positioning and styling and can be changed however you would like. The one I would consider the most important and the one to remember, would probably be setting <span class="ide-purple">list-style-type</span>to <span class="ide-purple">none</span>. This will remove the bullet points from your list items.</p> 
                         
                     
 
@@ -212,20 +215,27 @@
                     <div class="project-javascript" id="project-javascript">
                      <div class="ide-mockup">
                          <img src="/img/targetapppart1/target-app-javascript-001.png">
-                     </div>
+                    </div>
+                    <p>The first thing we want to do is add a new object to our <span class="ide-purple">appItems</span> array for the new app/icon that we will be adding. Fill in the necessary information, but most importantly make sure the class matches because that's what we will be using to open the application when it is clicked. </p>
 
-                     <div class="ide-mockup">
-                         <img src="/img/targetapppart1/target-app-javascript-002.png">
-                     </div>
-
+                    <div class="ide-mockup">
+                        <img src="/img/targetapppart1/target-app-javascript-002.png">
+                    </div>
+                    <p>To access the app we are going to use an eventListener that is very similar to what we used to open the <a href="builddigitalclock.html"><span class="ide-green">Digital Clock</span></a> app.</p>
+                    <p>On the first line we will listen on the <span class="ide-purple">smartPhoneContainer</span> that we made a variable for in the Digital Clock section. Make sure you pass an event into the function (e) so we can use it on the next line.</p>
+                    <p>Now we want to use an IF statement to determine that whatever we click on contains the class of <span class="ide-purple">'target-app'</span>, by using the <span class="ide-purple">e.target.classList.contains('target-app')</span> method. If the new icon on the homescreen does (which it should if you went through the digital clock app section of the smartphone project), it will run the following lines of code.</p>
+                    <p>The first line will change the <span class="ide-purple">appOpen</span> variable to <span class="ide-purple">true</span> to let the script know that an application is currently open.</p>
+                    <p>Perhaps the most important of the next settings is adding the class of <span class="ide-purple">open</span> to the <span class="ide-purple">targetAppDiv</span> variable. This will cause the element to activate and slide up on the Y-axis into the screen.</p>
+                    <p>The remaining lines are exactly how we had them set in the digital clock app section. We will be creating variables and adding classes when an app is open.</p>
+                    <p><span class="ide-purple">appList</span> will cause the icons from the homescreen to fade out, <span class="ide-purple">top and bottomBezel</span> will cause the pink borders to appear on the bezels.</p>
+                    
                      <div class="ide-mockup">
                          <img src="/img/targetapppart1/target-app-javascript-003.png">
                      </div>
-                     
-
-         
-
-                        
+                    <p>Now we will add the code that closes the app by pushing the home button. We have already coded most of this thanks to our Digital Clock app, all we need to do is add in our variables for our new application.</p>
+                    <p>In the ELSE IF section, we first need to declare a variable for the <span class="ide-purple">'target-app-container'</span> by using getElementById. Once this is completed, we can add and remove the classes to the element to remove it from the screen.</p>
+                    <p>Add all of the lines that are related to <span class="ide-purple">targetAppDiv</span>. Changing these will result in the element sliding out to the right and then being returned to its default position on the Y-axis under the smartphone.</p>
+                       
                     </div>
                 </div>
             </div>

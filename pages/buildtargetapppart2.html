@@ -90,11 +90,11 @@
                         <p>OpenSource</p>
                     </div>
                     <div class="target-landing-page-logo">
-                        <i class="fas fa-user-alt-slash fa-7x"></i>
+                        <i class="fas fa-people-arrows fa-6x"></i>
                         <ul>
                             <li>No personal information stored on file.</li>
-                            <li>Payments exclusively made in BTC.</li>
-                            <li>OpenSource is not responsible or liable if you are criminally charged.</li>
+                            <li>Payments made exclusively in BTC.</li>
+                            <li>OpenSource is not responsible or liable if you are charged criminally.</li>
                         </ul>
                     </div>              
                 </div>
@@ -108,7 +108,7 @@
                 <!-- SPINNER CODE END -->
             </div>
             <div class="target-btn-container">
-                <button class="find-new-target-btn" id="find-new-target-btn">FIND TARGETS IN AREA</button>
+                <button class="find-new-target-btn" id="find-new-target-btn">FIND A DEVELOPER</button>
             </div>       
         </div>  
         <!-- TARGET OPEN SOURCE APP END     -->
@@ -140,34 +140,54 @@
                 </div>
                 <div class="project-inner-container">
                     <div class="project-summary active" id="project-summary">
-                        <p>Random Person API - Part 1</p>
+                        <p>In this part of the project we are going to work on what happens when the user clicks the search button. It is basically an API call that goes through instantly, but we are going to make it look like it is reaching out and searching for developers in the area.</p>
+                        <p>The HTML and CSS will change the landing page to a searching page with a rotating icon inside of it. We will add a few effects, like random time to search, to mimic what a real-life GPS search would feel like.</p>
+                        <p>The JavaScript will add some changing text to the search and implement a few random Math methods to give implement some random timing.</p>
                     </div>       
                     <div class="project-html" id="project-html">
                         <div class="ide-mockup">
                             <img src="/img/targetapppart2/target-app-html-001.png">
+                        </div>      
+                        <p>The above code is what we will be adding to the existing HTML code. If you look at the code snippet below this section, the area marked with the comment <span class="ide-purple">SPINNER CODE START</span> is where you want to start writing the above HTML code.</p>  
+                        <p>The <span class="ide-purple">.target-spinner-container</span> will be what houses the spinner content. It is basically functioning how the landing page was in the first section of this tutorial. This is what will be replacing the landing page when the user clicks the search button.</p>     
+                        <p>Inside the <span class="ide-purple">.target-spinner-container</span> div, we will have two separate sections. One will contain the spinning icon for the search and the second will contain the text that will change as the search takes place.</p>
+                        <p>The spinner I used from font-awesome can also be replaced with any loading spinner you would like. In this tutorial it will be spinning clockwise.</p>
+                        <div class="ide-mockup">
+                            <img src="/img/targetapppart2/target-app-html-002.png">
                         </div>             
-
+                        </p>
 
                     </div>
                     <div class="project-css" id="project-css">
-                      
                         <div class="ide-mockup">
                             <img src="/img/targetapppart2/target-app-css-001.png">
                         </div>
+                        <p>First we will style the <span class="ide-purple">.target-spinner-container</span>. We are going to make this div fade in when it is called, so instead of sliding in from another position, we will have it sitting below the screen on the z-axis. Many of the settings on here will relate to how the <span class="ide-purple">.target-spinner-container</span> appears on the screen but the <span class="ide-purple">z-index</span> setting and the <span class="ide-purple">opacity</span> setting will stop it from appearing when it is not needed. The transition effect on the opacity will control how the div appears and in this case it will fade in by gradually bringing the opacity from 0 to 1.</p>
+                        <p><span class="ide-purple">.target-spinner-container.active</span> settings will come into effect when the <span class="ide-purple">.active</span> class is added. This will cause the div to fade in and appear. The <span class="ide-purple">z-index setting of 3</span> will allow the div to rise above everything else and appear on the screen.</p>
                         <div class="ide-mockup">
                             <img src="/img/targetapppart2/target-app-css-002.png">
                         </div>
+                        <p><span class="ide-purple">.target-spinner</span> is the div that will be holding the icon that relates to the search. The animation setting sets what we will be doing and that will be set in the next section when we set the keyframes. Keyframes allow us to tweak certain things about animations and in this case we will be making the <span class="ide-purple">rotation</span> animation rotate from 0 degrees to 359 degrees in a clockwise motion.</p>
+                        <p>The <span class="ide-purple">.target-spinner-text</span> class is just used for styling the words that appear below the spinning icon.</p>
                         <div class="ide-mockup">
                             <img src="/img/targetapppart2/target-app-css-003.png">
                         </div>
+                        <p>To add a neat loading trick to the words below the icon, we will set it to fade in and out as it conducts its search. Like the rotation, we will accomplish this in much the same way. When the class of <span class="ide-purple">.searching</span> is added to <span class="ide-purple">.target-spinner-text</span> it will activate the searching animation that will cause the words to start at an opacity of 1 and fade out to 0 over 2 seconds. This will continue to repeat until our search concludes.</p>
            
                       
                     </div>
                     <div class="project-javascript" id="project-javascript">
-                     <div class="ide-mockup">
-                         <img src="/img/targetapppart2/target-app-javascript-001.png">
-                     </div>
-                        
+                        <div class="ide-mockup">
+                            <img src="/img/targetapppart2/target-app-javascript-001.png">
+                        </div>
+                        <p>Now we are going to build out the functionality for the <span class="ide-purple">.find-new-target-btn</span>. Clicking this button will cause the search to start and make an API call to get a random person. We are not going to deal with API quite yet but we will set everything up to appear like gears are turning as this call is made. It's similar to an optical illusion and is something that is used all over the modern web. A loading animation is used just in case the data takes a little while longer to fetch.</p>
+                        <p>The very first thing we will add is an eventListener on the smartPhoneContainer. We will pass a click event into the function (e) that will call an IF statement that will look for an element that has the target ID of <span class="ide-purple">find-new-target-button</span>. When that element is clicked on it will lead into 3 variables being created - <span class="ide-purple">targetSpinnerDiv, targetLandingPageDiv, and targetSpinnerText.</span></p>
+                        <p>The first variable we will change will be the <span class="ide-purple">innerHTML</span> of the <span class="ide-purple">targetSpinnerText</span> variable. We will add the text of <span class="ide-purple">SEARCHING</span> to the innerHTML and right after that the class of <span class="ide-purple">searching</span> to the element. If you remember in the CSS, this will cause the element to fade in and out to simulate that something is being searched.</p>
+                        <p>Now we are going to create a little bit of an optical illusion. Generally an API call will be instant and it would never be necessary to fake the illusion of a search. Honestly though, that kind of takes the fun out of things. What we will do here is create a random variable, as signified by the variable <span class="ide-purple">searchTime</span>. This searchTime variable is going to give us a random number between 1000 and 6000 milliseconds. I have added a console.log(searchTime) so you can see it for yourself.</p>
+                        <p>The next two lines are actually what will make the landing page disappear and the <span class="ide-purple">targetSpinnerDiv</span> appear. What you will find yourself doing a lot of the time with Vanilla JavaScript is finding ways to buffer in your function calls that doesn't interfere with how things appear. This means making calls at the right time so they can function before divs can change state and move around. It all happens in milliseconds and the outcome is still the same but it can make a difference with how things appear.</p>
+                        <p>Now we are going to use a setTimeout that will utilize our <span class="ide-purple">searchTime</span> variable, which you can see at the very bottom of the code block in the position that a time in milliseconds would generally be used.</p>
+                        <p>We will be using two setTimeout methods here, the second will go into effect when the first one completes. The first one will end when the <span class="ide-purple">searchTime</span> variable in milliseconds runs through. When that completes, the innerHTML that showed SEARCHING will now show DEVELOPER FOUND and the fading out pulse will stop.</p>
+                        <p>There are 2 things left that will run in this function. The first will be removing the class of <span class="ide-purple">.active</span> from the <span class="ide-purple">targetSpinnerDiv</span> causing it to fade out, and the second will be calling the <span class="ide-purple">targetApp( )</span> function.</p> In our next section we will create the function that makes the API call and fills out the DOM with info from it.</p>
                     </div>
                 </div>
             </div>

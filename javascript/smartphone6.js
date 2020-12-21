@@ -362,14 +362,13 @@ smartPhoneContainer.addEventListener('click', (e) => {
         setTimeout( () => {
             targetSpinnerText.classList.remove('searching');
             targetSpinnerText.innerHTML = `
-            TARGET FOUND!
+            DEVELOPER FOUND!
             `
             setTimeout( () => {
                 targetSpinnerDiv.classList.remove('active')
             }, 1000)
         }, searchTime)
         targetApp();
-    }
-    
+    }   
 })
 

@@ -143,7 +143,9 @@
                 </div>
                 <div class="project-inner-container">
                     <div class="project-summary active" id="project-summary">
-                        <p>Random Person API - Part 3</p>
+                        <p>This is the final section of this project and we are finally at the point where we will make our API call and use all of the data returned from it!</p>
+                        <p>While there are several different ways to make API calls, I opted to use the async/await method which I feel is one of the better ones to use without using any external libraries.</p>
+                        <p>If you're new to APIs, it still may a little over your head, but I highly suggest checking out the tool called <a href="https://www.postman.com/"><span class="ide-purple">Postman</span></a>. It makes working with APIs much easier and enjoyable.</p>
                     </div>       
                     <div class="project-html" id="project-html">
                         <div class="ide-mockup">
@@ -189,13 +191,18 @@
                      <p>For the next 5 variables we are going to pull out information from the data that the API returned on the call. This will give us the random person's firstName, lastName, photo, addressNumber, streetNumber, and age.</p>
                      <p>This following IF statement is me making an adjustment to what the API was returning. The API has people's ages set really high in some cases when the person's photo looks much younger. All I did here was -10 years if the person was aged over 50, and 20 years if the person was over 70. It definitely can still be tweaked but I just wanted to show you that you can still change this data if you would like.</p>
                      <p>The next variable is the hiring cost in BitCoin of the developer that you searched. This is not returned from the API and as you can see, I just used a Math.random function to get a random number. I console.log'd what that number would be to fixed decimal place of 4 to bring it in line with actual BitCoin values.</p>
+                     <p>Finally this line will make the <span class="ide-purple">targetFoundDiv</span> active and appear on the screen. The setTimeout in the initial eventListener function will remove the searching div and this one will replace it.</p>
+                     <p>Now we are going to build out what the innerHTML of <span class="ide-purple">targetFoundDiv</span> will be by using template literals. We will use the variables we created to pull the information from the API to fill out this section. You can add new variables if you would like, or remove ones you do not want added. </p>
                      <div class="ide-mockup">
                          <img src="/img/targetapppart3/target-app-part-3-javascript-005.png">
                      </div>
+                     <p>There is one thing we need to add in the <span class="ide-purple">smartPhoneHomeBtn</span> eventListener function and that would be the call for <span class="ide-purple">targetAppRefresh( )</span>. We have not built this function yet but all it basically will do is rebuild the <span class="ide-purple">target-app-container</span> to how it looked when we opened the application. This prevents the screen from sitting static with the random person we searched on it if we "close" and reopened the app.</p>
                      <div class="ide-mockup">
                          <img src="/img/targetapppart3/target-app-part-3-javascript-006.png">
                      </div>
-                        
+                    <p>The last thing we will build for this app is the <span class="ide-purple">targetAppRefresh( )</span> function. First create a variable for the <span class="ide-purple">target-app-container</span> called <span class="ide-purple">targetAppDiv</span>.</p>
+                    <p>Now we are going to use a template literal to rebuild the innerHTML of the <span class="ide-purple">targetAppDiv</span>. It may look like a lot of code, but all you have to do is go to the HTML and copy/paste the code from the <span class="ide-purple">target-app-inner-container</span> div. This will cause the page to rebuild itself when the home button is clicked, essentially resetting the app to the landing page.</p>
+                    <p>There you have it, our developer search project is complete!. This is a really nice basic API to work with and it gives you a lot of data to modify however you would like. I suggest you try building something on your own that uses it and see what kind of interesting things you can create.</p>
                     </div>
                 </div>
             </div>

@@ -314,7 +314,7 @@ function targetAppResults(target) {
     <p>NAME: ${firstName} ${lastName}</p>
     <p>AGE: ${age}</p>
     <p>PINGED: ${addressNumber} ${streetNumber}</p>
-    <p>PAYOUT: ${btcReward.toFixed(4)} <i class="fab fa-btc"></i></p>
+    <p>HIRING COST: ${btcReward.toFixed(4)} <i class="fab fa-btc"></i></p>
     ` 
 }
 
@@ -422,7 +422,7 @@ smartPhoneContainer.addEventListener('click', (e) => {
         setTimeout( () => {
             targetSpinnerText.classList.remove('searching');
             targetSpinnerText.innerHTML = `
-            TARGET FOUND!
+            DEVELOPER FOUND!
             `
             setTimeout( () => {
                 targetSpinnerDiv.classList.remove('active')

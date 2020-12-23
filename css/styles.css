@@ -38,6 +38,8 @@ a {
     height: auto;
     width: 90%;
     margin-bottom: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
 }
 
 .nav-header {

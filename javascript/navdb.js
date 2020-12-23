@@ -1,5 +1,10 @@
 const projectsArray = [
     {
+        'title': 'BUILD A HAMBURGER MENU',
+        'id': 'burger-menu',
+        'link': 'pages/buildburgermenu.html'
+    },
+    {
         'title': 'SMART PHONE (PART 7) - API USAGE (PART 3)',
         'id': 'target-app-part-3',
         'link': 'pages/buildtargetapppart3.html'

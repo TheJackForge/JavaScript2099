@@ -71,8 +71,7 @@
                     <h4>DEVELOPERS IN DEMAND</h4>
                     <p>The tech boom of 2099 has brought with it many challenges, but perhaps the most challenging of all is keeping up with the demand for skilled developers.</p>
                     <p><a href="#">CLICK TO READ MORE</a></p>
-                </div>
-                
+                </div>       
             </div>
         </div>
         <div id="nav-container" class="nav-container">
@@ -87,7 +86,6 @@
             </ul>
         </div>       
     </div>
-
 </div>
 
     <!-- BUILD BURGER MENU PROJECT HTML END -->
@@ -104,38 +102,99 @@
                 </div>
                 <div class="project-inner-container">
                     <div class="project-summary active" id="project-summary">
-
+                        <p>The hamburger menu!</p>
+                        <p>Ever since development started targeting mobile devices, the hamburger menu has become the most used element in terms of navigation. It doesn't take up much space, and everyone knows that when you click on it more things will appear. However to web devs that are somewhat new to JavaScript they can be a little intimidating. Trust me, when I made my first one I think I spent 4 days trying to figure it out on my own. However, once it clicked, it clicked (and brought a lot more knowledge with it.)</p>
+                        <p>Hopefully this tutorial will ease you into it and explain it in a way that makes sense. After completing this, I do feel that many people that are new to JavaScript will feel much more comfortable with building one on their own.</p>
                     </div>       
                     <div class="project-html" id="project-html">
                         <div class="ide-mockup">
-                            <img src="/img/digitalclock/digital-clock-html-001.png">
+                            <img src="/img/burgermenu/burger-menu-html-font-awesome.png">
                         </div>
-                    
+                        <p>The very first thing we will need to do for this project is to create a link to the <a href="https://fontawesome.com/" target=_blank">Font Awesome</a> CDN so we have access to their icons. If you have an account you can use that, or you can head to <a href="https://cdnjs.com/libraries/font-awesome" target="_blank">cdnjs</a> and grab the style link from the first option.</p>
+                        <div class="ide-mockup">
+                            <img src="/img/burgermenu/burger-menu-html-001.png">
+                        </div>
+                        <p>We will start by creating a div called <span class="ide-purple">.container</span> that will contain all of the code for this project. Everything else will be created inside of this div.</p>
+                        <p>Now we will create the <span class="ide-purple">.browser-container</span> div. This will be the main containar for the browser look that we are going for. From this point forward, we will start sectioning out the divs inside of this one to create the different elements of the page.</p>
+                        <p>Inside of the <span class="ide-purple">.browser-container</span> we will have three separate sections. One for the navigation bar up top, called <span class="ide-purple">.nav-bar</span>, one for the main section of the browser called <span class="ide-purple">.browser-content</span>, and one for the navigation overlay called <span class="ide-purple">.nav-container</span>.</p>
+                        <p>We will first start with the <span class="ide-purple">.nav-bar</span> div. Inside the navigation bar we will create a div that will house what is used to create the logo elements, and a button that will be used to activate the navigation overlay.</p>
+                        <p>Now we will move to the div with the class of <span class="ide-purple">.browser-content</span>. This will contain the main content for the page. It consists of a single div with the class called <span class="ide-purple">.headline-text</span> and has another div with the class of <span class="ide-purple">.headline</span> nested inside of it.</p>
+                        <p>The <span class="ide-purple">.headline</span> div can pretty much be filled with whatever you would like but you will need to style it accordingly in the CSS.</p>
+                        <p>Lastly, we will create the <span class="ide-purple">.nav-container</span> div. This will the overlay that slides up when you click the burger menu button. It will contain a button to close the menu and get back to the main page, and an unordered list of links that on an actual site would take you to the other pages. In our tutorial will we use a # in the HREF as a placeholder.</p>
+                        <p>That will be all of the HTML for this project! If you are planning on implementing this in your own project, you can add and remove things accordingly but I would wait until we go through everything so you can tweak the look of everything with the functionality.</p>
                     </div>
                     <div class="project-css" id="project-css">
                         <div class="ide-mockup">
-                            <img src="/img/digitalclock/digital-clock-css-001.png">
+                            <img src="/img/burgermenu/burger-menu-css-001.png">
                         </div>
-
-                        
+                        <p>We will start with styling the <span class="ide-purple">.container</span> div. Many of the attributes and settings in this div will establish the positioning for the project. Set all of the <span class="ide-purple">flex attribute</span> settings to center everything vertically and horizontally on the page.</p>
+                        <p>What you may want to change here is the font. I chose to use Titillium Web but you can import anything you would like from Google to use in its place.</p>            
                         <div class="ide-mockup">
-                            <img src="/img/digitalclock/digital-clock-css-002.png">
-                        </div>                
-                        <div class="ide-mockup">
-                            <img src="/img/digitalclock/digital-clock-css-003.png">
+                            <img src="/img/burgermenu/burger-menu-css-002.png">
                         </div>
+                        <p>Now we will work on styling the <span class="ide-purple">.browser-container</span>. This div will serve as the actual browser in our project. It will be what all of the other components work with, and the container that our overlay will slide into.</p>  
+                        <p>Set the <span class="ide-purple">position</span> to <span class="ide-purple">relative</span> so we can establish it as the footprint of the project. We can now set elements to <span class="ide-purple">absolute</span> and they will be based off of this div.</p>
+                        <p>We are going to set the <span class="ide-purple">overflow</span> to <span class="ide-purple">hidden</span> but I would highly recommend commenting it out for now. When you see how the components work, it starts to make much more sense. Leaving the overflow visible will allow you to see where the overlay exists outside of this div.</p>              
+                        <div class="ide-mockup">
+                            <img src="/img/burgermenu/burger-menu-css-003.png">
+                        </div>
+                        <p>These next few sections are the fun part of the CSS. This will be the overlay that slides over the browser and populates your screen with your navigation links. I personally love this style of hamburger menu navigation because it let's you let loose and style a cool page without feeling confined by the page's content.</p>
+                        <p>First set the <span class="ide-purple">position</span> to <span class="ide-purple">absolute</span> so you can freely move it around inside of the <span class="ide-purple">relative</span> positioned container.</p>
+                        <p>Set the <span class="ide-purple">z-index</span> attribute to 5 so that the overlay will exist over everything else within the browser. Think of it like throwing a blanket over top of everything else.</p>
+                        <p>The next settings are all used for positioning and the look of the page. This will center everything, round the top corners of the div, etc.</p>
+                        <p>The transform setting is going to set what we want to change when we activate the <span class="ide-purple">opened</span> class. In this case we will want the transition to take effect when we transform the <span class="ide-purple">translateY(0%) setting.</span></p>
+                        <p>The <span class="ide-purple">.opened</span> class is what will be added when we click the hamburger menu icon. It will cause the <span class="ide-purple">translateY(-100%)</span> to come into effect, cause the div to slide up to the 0% position. This will allow the navigation overlay to cover the browser div.</p>
+                        <div class="ide-mockup">
+                            <img src="/img/burgermenu/burger-menu-css-004.png">
+                        </div>
+                        <p>All of the above classes are mostly all used for styling purposes on the navigation overlay and in the navigation bar on the browswer. It's all pretty standard settings.</p>
+                        <p>The one thing that may be new to some, would be the <span class="ide-purple">space-between</span> setting for <span class="ide-purple">justify-content</span> in the nav-bar. This basically states the elements will have space will be distributed evenly between them. The first item will sit flush with the starting edge of the container, and the last item will sit flush with the ending edge of the container.</p>
+                        <div class="ide-mockup">
+                            <img src="/img/burgermenu/burger-menu-css-005.png">
+                        </div>
+                        <p>This will be the button that exists on the browser that will be clicked to open the navigation overlay. The only setting that is not used for positioning here would be the <span class="ide-purple">opacity</span> and the <span class="ide-purple">transition</span> on the opacity. When paired with the <span class="ide-purple">.closed</span> class, these settings will cause the button to fade out when it is clicked. It doesn't really effect that function of the button but it does make it look a little nicer.</p>
+                        <div class="ide-mockup">
+                            <img src="/img/burgermenu/burger-menu-css-006.png">
+                        </div>
+                        <p>This is the X button that will exist on the navigation overlay to close and slide it down. With the <span class="ide-purple">position</span> of <span class="ide-purple">absolute</span> set, the <span class="ide-purple">right</span> and <span class="ide-purple">top</span> attributes will allow you to position the button wherever you would like. In this case we have set the button 32px from the <span class="ide-purple">top</span> and 17px from the <span class="ide-purple">right</span>.</p>
+                        <div class="ide-mockup">
+                            <img src="/img/burgermenu/burger-menu-css-007.png">
+                        </div>
+                        <p>The <span class="ide-purple">.browser-content</span> is the main section of the browser that containes the photo and headline for the article. If you would like to use the same photo, you can grab it <a href="/img/burgermenu/headline-photo.jpg">here</a>. As you can see from the settings here, I used a background image for the background rather than using an image. I feel this allows you to create something much more responsive, rather than using an image that will never fully adapt to all of the different screen sizes available. The linear-gradient setting attached to the background attribute is used to darken up the image slightly so it is not too bright and overpowering.</p>
+                        <div class="ide-mockup">
+                            <img src="/img/burgermenu/burger-menu-css-008.png">
+                        </div>
+                        <p>All of the attributes connected to the class of <span class="ide-purple">.headline-text</span> are related to sizing, positioning and aesthetics. You can change these however you would like.</p>
+                        <div class="ide-mockup">
+                            <img src="/img/burgermenu/burger-menu-css-009.png">
+                        </div>
+                        <p>These are the media query settings I used to make things look a little better on different sized screens. All of my projects tend to utilize at mobile first approach so some of the changes need to be made to make things flow nicely on a bigger screen.</p>
 
                     </div>
                     <div class="project-javascript" id="project-javascript">
                         <div class="ide-mockup">
-                            <img src="/img/digitalclock/digital-clock-javascript-001.png">
+                            <img src="/img/burgermenu/burger-menu-javascript-001.png">
                         </div>
-                   
-                        <div class="ide-mockup">
-                            <img src="/img/digitalclock/digital-clock-javascript-002.png">
-                        </div>
+                        <p>One of the best things about making a hamburger menu is how you can accomplish something so substantial without having to know much JavaScript. It is one of the better projects for a beginner coming from learning HTML and CSS to try their hand at adding and removing classes with JavaScript.</p>
+                        <p>If you look at the code above, you will see that we need to grab three different elements make changes to our code. The first variable, <span class="ide-purple">burgerBtnOpen</span> is our hamburger button that will open the navigation overlay. We are using the <span class="ide-purple">querySelector</span> method to grab it. This means that we are using the element's class <span class="ide-purple">(.burger-btn-open)</span> to access it. Note that when we access an element by their class, we need to include the " . " with the class name. The second variable is going to be for <span class="ide-purple">burgerBtnClose</span>. This is the button that will close the navigation overlay when it is opened. Use the same method to grab onto this element except this time use the class <span class="ide-purple">.burger-btn-close</span>. Lastly, we are going to grab onto the whole navigation overlay div but this time we are going to grab it by it's ID, since it has one assigned to it. Instead of using the querySelector method, we will use the <span class="ide-purple">getElementById</span> method. Assign the variable by using the ID <span class="ide-purple">nav-container</span>. Note that when you grab an element by an ID, you do not have to have a " . " before the id name.</p>
                         
-                                        
+                        <p>Now we are going to add our eventListeners on both buttons. One is going to be used to open the navigation overlay <span class="ide-purple">(burgerBtnOpen)</span>, while one is going to be used to close it <span class="ide-purple">(burgerBtnClose)</span>. The way we are going to do this is by adding a class to the overlay to open it, and removing that same class to close it. Take a look at the CSS code below to see the class change that we are going to make.</p>  
+                        <div class="ide-mockup">
+                            <img src="/img/burgermenu/burger-menu-javascript-002.png">
+                        </div>
+                        <p>The standard <span class="ide-purple">.nav-container</span> class has a translateY of 0% while the <span class="ide-purple">.nav-container.opened</span> class has a translateY(-100%). What this means is when you add the class of <span class="ide-purple">.opened</span> to the <span class="ide-purple">navContainer</span>variable, it will cause the translateY to change and the overlay will slide up into place.</p>
+                        <div class="ide-mockup">
+                            <img src="/img/burgermenu/burger-menu-javascript-003.png">
+                        </div>
+                        <p>We will do a very similar thing with the opacity on the burger button. When it is open the opacity will be set to 1, but when we call the overlay, the button will take on an opacity of 0 and fade away. This is all accomplished by adding the class of <span class="ide-purple">.closed</span> to <span class="ide-purple">.burger-btn-open</span>.</p>
+                        <div class="ide-mockup">
+                            <img src="/img/burgermenu/burger-menu-javascript-001.png">
+                        </div>
+                        <p>Now let's take a look at the JavaScript code again and walk through the eventListeners. Starting with the eventListener on the <span class="ide-purple">burgerBtnOpen</span> variable. We have this set to a <span class="ide-purple">click</span> listener that calls an anonymous function. In that function we will add the class of <span class="ide-purple">.opened</span> to the <span class="ide-purple">navContainer's</span> classList. We will also add the class of <span class="ide-purple">.closed</span> to the <span class="ide-purple">burgerBtnOpen</span> variable. The first line of code will cause the overlay to slide up, while the second line will cause the button to fade away.</p>
+                        <p>Looking at the next eventListener now. This one will be made on the <span class="ide-purple">burgerBtnClose</span> variable, which is the X button on the navigation overlay. This will do the exact opposite of what the <span class="ide-purple">burgerBtnOpen</span> variable did. Instead of adding the 2 classes, it will remove them. This will cause the overlay to slide down and the button to reappear again.</p>
+                        <p>Wasn't that easy?</p>
+                        <p>Now you will know how to create a navigation overlay but more importantly, you have learned how to modify the DOM by adding and removing classes. This is a huge part of working with JavaScript in frontend development. The more you use it, the better you will get at it.</p>
+                        <p>Thank you for checking out the tutorial!</p>
                     </div>
                 </div>
             </div>

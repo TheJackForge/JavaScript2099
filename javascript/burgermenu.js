@@ -217,12 +217,12 @@ const navContainer = document.getElementById('nav-container');
 
 burgerBtnOpen.addEventListener('click', () => {
     navContainer.classList.add('opened');
-    burgerBtnOpen.style.display = 'none';
+    burgerBtnOpen.classList.add('closed')
 })
 
 burgerBtnClose.addEventListener('click', () => {
     navContainer.classList.remove('opened')
-    burgerBtnOpen.style.display = 'block';
+    burgerBtnOpen.classList.remove('closed')
 })
 
 

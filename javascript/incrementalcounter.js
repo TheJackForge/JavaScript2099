@@ -213,9 +213,32 @@ contentContainer.addEventListener('click', (e) => {
 
 const screen = document.getElementById('screen-container');
 const counterContainer = document.getElementById('counter-container');
-const seatCountText = document.querySelector('.seat-count-container-title')
+const seatCountText = document.querySelector('.seat-count-container-title');
+const seatsTakenDiv = document.querySelector('.seats-taken');
+const seatsAvailableDiv = document.querySelector('.seats-available');
+
+let seatsAvailable = 100;
+let seatsTaken = 0;
+const timing = Math.floor(Math.random() * 3) + 1;
+const timeInterval = setInterval(seatCounter, (timing * 500))
+
+function seatCounter() {
+    if (seatsAvailable < 1) {
+        clearInterval(timeInterval);
+        const status = document.querySelector('.status');
+        status.innerHTML = `
+        STATUS: <span class="red-text">FULL</span>
+        `
+    } else {
+    seatsTaken++
+    seatsAvailable--
+    seatsTakenDiv.innerText = `${seatsTaken}`;
+    seatsAvailableDiv.innerText = `${seatsAvailable}`;
+    }
+}
 
 screen.addEventListener('click', () => {
+    seatCounter();
     counterContainer.classList.add('active-width');
     setTimeout( () => {
         counterContainer.classList.add('active-height');
@@ -223,5 +246,5 @@ screen.addEventListener('click', () => {
             seatCountText.classList.add('open');
         }, 2000)
     }, 2000)
-    
 })
+

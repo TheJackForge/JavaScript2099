@@ -486,33 +486,34 @@ a {
 
 /* BURGER MENU PROJECT */
 
+.project-main-container a {
+        color: #50fa7b;
+}
+
 .container {
-    font-family: 'Titillium Web', sans-serif;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Titillium Web', sans-serif; 
     margin: 3rem auto;
     height: 30rem;
     width: 80%;
     background-color: inherit;
-    
 }
 
 .browser-container {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     position: relative;
     overflow: hidden;
     height: 100%;
     width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     background-color: #121212;
 }
 
 .nav-container {
     position: absolute;
-    transform: translateY(0%);
-    z-index: 1;
+    z-index: 5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -521,6 +522,7 @@ a {
     background-color: #EC4899;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    transform: translateY(0%);
     transition: transform 0.5s ease-in-out;
 }
 
@@ -565,6 +567,7 @@ a {
 
 .nav-news {
     font-size: 2rem;
+    margin-left: 5px;
 }
 
 .burger-btn-open {
@@ -575,18 +578,17 @@ a {
     cursor: pointer;
     margin-right: 1rem;
     opacity: 1;
-    transition: opacity 1s ease-out;
+    transition: opacity 0.3s ease-out;
 }
 
 .burger-btn-open.closed {
-
     opacity: 0;
 }
 
 .burger-btn-close {
+    position: absolute;
     right: 17px;
     top: 32px;
-    position: absolute;
     border: none;
     background: none;
     color: #121212;
@@ -601,7 +603,7 @@ a {
     border-bottom: 1px solid #EC4899;
     border-right: 1px solid #EC4899;
     border-left: 1px solid #EC4899;
-    background: linear-gradient(rgba(236,72,153,0.3), rgba(0,0,0,1)),
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
         url(/img/burgermenu/headline-photo.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -614,6 +616,7 @@ a {
     width: 100%;
     background-color: #121212;
     border: 1px solid #EC4899;
+    border-top: none;
 }
 
 .headline-text h4 {
@@ -696,28 +699,14 @@ a {
     }
 
     .browser-content {
-        display: flex;
         flex-direction: row;
-        justify-content: flex-end;
-        height: 80%;
-        border-bottom: 1px solid #EC4899;
-        border-right: 1px solid #EC4899;
-        border-left: 1px solid #EC4899;
-        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-        url(/img/burgermenu/headline-photo.jpg);
-        background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
     }
     
     .headline-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 60%;
+        height: 80%;
         width: 50%;
         background-color: #121212;
-        border: 1px solid #EC4899;
-        border-top: none;
         border-bottom-left-radius: 20px;
     }
 
@@ -728,9 +717,7 @@ a {
     }
 
     .headline-text h4 {
-        margin: none;
-        padding: none;
-        font-size: 1.6rem;
+        font-size: 1.1rem;
     }
 
 }
@@ -806,6 +793,14 @@ a {
 
     .build-modal-button-container {
         height: 20em;
+    }
+
+    .headline-text {
+        height: 60%;
+    }
+
+    .headline-text h4 {
+        font-size: 1.4rem;
     }
 }
 

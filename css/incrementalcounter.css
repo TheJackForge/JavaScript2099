@@ -467,7 +467,7 @@ a {
 /* INCREMENTAL COUNTER PROJECT */
 
 .container {
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -475,9 +475,11 @@ a {
     width: 100%;
     height: 600px;
     background-color: #1F2937;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .screen-container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -499,9 +501,9 @@ a {
     height: 0%;
     background-color: #000;
     border: 1px solid #EC4899;
-    transition: height 2s linear, width 2s linear;
     border-radius: 10px;
     overflow: hidden;
+    transition: height 2s linear;
 }
 
 .counter-container.active-width {
@@ -520,7 +522,8 @@ a {
     width: 100%;
     background-color: black;
     background: url('/img/incrementingtimer/wharf-district-001.jpg');
-    background-size:100% auto;
+    /* background-size:100% auto; */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
 }
@@ -549,7 +552,8 @@ a {
     margin: 0;
     text-align: center;
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .taken-container {
@@ -600,6 +604,10 @@ a {
     width: 100px;
     text-align: center;
     color: #f5f5f5;
+}
+
+.red-text {
+    color: #be0000;
 }
 
 /* Extra small devices (phones, 600px and down) */
